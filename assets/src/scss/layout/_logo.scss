@@ -13,45 +13,47 @@
     // When scrolled, become fixed
     &.is-scrolled {
         position: fixed;
-
-        #logo-animation {
-            //todo
-        }
     }
 }
 
 #logo-animation {
     display: block;
     width: auto;
-    height: 7vw;
+    height: 9vw;
     transition: width 0.4s ease-in-out;
 }
 
-// SVG groups
+// SVG groups - smooth transitions with movement
 #long,
 #short {
-    transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.6s cubic-bezier(0.4, 0.0, 0.2, 1),
+        transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transform-origin: left center;
 }
 
 #long {
     opacity: 1;
     pointer-events: bounding-box;
+    transform: translateX(0);
 }
 
 #short {
     opacity: 0;
     pointer-events: none;
+    transform: translateX(-30px); // Start position: off to the left
 }
 
-// When scrolled, swap visibility
+// When scrolled, swap visibility with slide animation
 .is-scrolled {
     #long {
         opacity: 0;
         pointer-events: none;
+        transform: translateX(-40px); // Slide out to the left
     }
 
     #short {
         opacity: 1;
         pointer-events: bounding-box;
+        transform: translateX(0); // Slide in to center
     }
 }

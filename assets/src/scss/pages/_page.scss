@@ -1,8 +1,9 @@
 #content {
     overflow: hidden;
-    margin-top: 15rem;
+    margin-top: 10rem;
 
     @include media-breakpoint-up(md) {
         overflow: initial;
+        margin-top: 17rem;
     }
 }
