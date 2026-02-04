@@ -3,6 +3,7 @@ import HeroGallery from './_hero-gallery';
 import BlogSlider from './_blog-slider';
 import InfoBoxSelection from './_info-box-selection';
 import Logo from './_logo';
+import HeroGalleryMousePosition from './_hero-gallery-mouse-position';
 
 const App = {
 	/**
@@ -38,6 +39,12 @@ const App = {
 			return new Logo();
 		}
 		initLogo();
+
+		// Hero Gallery Mouse Position
+		function initHeroGalleryMousePosition() {
+			return new HeroGalleryMousePosition();
+		}
+		initHeroGalleryMousePosition();
 	},
 };
 
