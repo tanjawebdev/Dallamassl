@@ -1,23 +1,23 @@
 .accordionText-wrapper {
-    display: flex;
+  display: flex;
 }
 
 .accordionText-wrapper h2 {
-    flex: 2;
+  flex: 2;
 }
 
 .accordionText-wrapper .accordion {
-    flex: 3;
+  flex: 3;
 }
 
 .accordionText-wrapper .accordion-body {
-    padding-left: 4rem;
+  padding-left: 4rem;
 }
 
 .accordion-body p {
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 /* --------------------------------------------------------
@@ -37,7 +37,7 @@
   width: 3rem;
   height: 3rem;
   transform: translateY(-50%);
-  border: 1px solid $dark-red;
+  border: 1px solid $body-color;
   border-radius: .35rem;
   background-color: none;
 }
@@ -68,7 +68,7 @@
   mask-size: 1.65rem;
 
   transform: translateY(-50%) rotate(0deg);
-  background-color: $dark-red;
+  background-color: $body-color;
   transition: transform 0.25s ease, background-color 0.25s ease;
 }
 

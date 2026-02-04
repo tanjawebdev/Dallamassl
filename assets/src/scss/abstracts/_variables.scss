@@ -11,26 +11,28 @@
  * @see https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
  */
 $font-size-root: 62.5%; // 1rem = 10px
-$font-size-base: 1.6rem;
-$line-height-base: 1.2;
+$font-size-base: 2rem;
+$line-height-base: 1.5;
 $font-weight-base: 400;
-$font-family-sans-serif: 'aptos', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'neue-haas-unica', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-family: 'NewEdge666', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
 $border-radius: .4rem;
 
-$primary: #17500C;
-$secondary: #B2CDA6;
-$dark-red: #4F1E27;
+$body-color: #000000;
+$body-bg: #ffffff;
+$primary: #0C13C8;
+$secondary: #E8E8E8;
 
 // fonts
-$h1-font-size: 4.8rem;
-$h2-font-size: 3.2rem;
-$h3-font-size: 2.4rem;
-$h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
-$headings-font-weight: 600;
-$headings-line-height: 1.1;
+$h1-font-size: 4rem;
+$h2-font-size: 6.4rem;
+$h3-font-size: 4rem;
+$h4-font-size: 2.4rem;
+$h5-font-size: 2rem;
+$h6-font-size: 1.6rem;
+$headings-font-weight: 400;
+$headings-line-height: 1.2;
 
 // button
 $input-btn-font-size: 1.4rem;
@@ -41,8 +43,6 @@ $input-btn-focus-box-shadow: none;
 $input-border-radius: 0;
 $grid-columns: 12;
 $grid-gutter-width: 3rem;
-$body-color: $dark-red;
-$body-bg: #ffffff;
 
 $grid-breakpoints: (
     xs: 0,
@@ -50,7 +50,8 @@ $grid-breakpoints: (
     md: 768px,
     lg: 992px,
     xl: 1200px,
-    xxl: 1400px
+    xxl: 1500px,
+    xxxl: 1850px
 );
 
 $container-max-widths: (
@@ -58,7 +59,8 @@ $container-max-widths: (
     md: 720px,
     lg: 960px,
     xl: 1140px,
-    xxl: 1320px
+    xxl: 1440px,
+    xxxl: 1770px
 );
 
 $spacers : (0: 0,

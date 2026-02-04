@@ -6,7 +6,7 @@ function _custom_theme_register_menu() {
         array(
             'menu-main' => __( 'Menu principal' ),
             'menu-button' => __( 'Menu button' ),
-            'menu-footer' => __( 'Menu footer' ),
+            'menu-socials' => __( 'Menu socials' ),
             'menu-legal' => __( 'Menu legal' ),
             )
     );

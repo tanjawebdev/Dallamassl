@@ -31,6 +31,10 @@
     @include media-breakpoint-up(xxl) {
         max-width: calc(map-get($container-max-widths, xxl) / 12 * 6);
     }
+
+    @include media-breakpoint-up(xxxl) {
+        max-width: calc(map-get($container-max-widths, xxxl) / 12 * 6);
+    }
 }
 
 .blog-grid {
