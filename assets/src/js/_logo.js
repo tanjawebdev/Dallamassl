@@ -9,8 +9,9 @@ export default class Logo {
         this.svg = this.container?.querySelector('#logo-animation');
         this.longLogo = this.svg?.querySelector('#long');
         this.shortLogo = this.svg?.querySelector('#short');
+        this.letterD = this.svg?.querySelector('#letter-d');
 
-        if (!this.container || !this.svg || !this.longLogo || !this.shortLogo) {
+        if (!this.container || !this.svg || !this.longLogo || !this.shortLogo || !this.letterD) {
             console.warn('Logo elements not found');
             return;
         }
