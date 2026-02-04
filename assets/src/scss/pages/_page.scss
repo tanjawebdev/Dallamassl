@@ -1,0 +1,7 @@
+#content {
+    overflow: hidden;
+
+    @include media-breakpoint-up(md) {
+        overflow: initial;
+    }
+}

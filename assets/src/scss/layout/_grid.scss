@@ -1,0 +1,38 @@
+.container-fluid {
+    padding: 0;
+}
+
+.container-full {
+    width: calc(100vw - 20px);
+    margin: 0 10px;
+}
+
+.container-lg {
+    @include media-breakpoint-down(lg) {
+        padding: 0 10px;
+    }
+}
+
+.container-small {
+    width: 100%;
+    padding-right: calc($grid-gutter-width / 2);
+    padding-left: calc($grid-gutter-width / 2);
+    margin-right: auto;
+    margin-left: auto;
+
+    @include media-breakpoint-up(lg) {
+        max-width: calc(map-get($container-max-widths, lg) / 12 * 6);
+    }
+
+    @include media-breakpoint-up(xl) {
+        max-width: calc(map-get($container-max-widths, xl) / 12 * 6);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        max-width: calc(map-get($container-max-widths, xxl) / 12 * 6);
+    }
+}
+
+.blog-grid {
+    justify-content: space-between;
+}

@@ -1,0 +1,22 @@
+.statement h1 {
+    text-align: center;
+}
+
+.statement .subtitle {
+    text-align: center;
+}
+
+.statement-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.statement {
+    margin-top: 32rem;
+    margin-bottom: 32rem;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 16rem;
+        margin-bottom: 16rem;
+    }
+}

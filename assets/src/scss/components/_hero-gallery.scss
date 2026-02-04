@@ -1,0 +1,40 @@
+.hero-gallery .splide__track {
+    height: 100vh;
+}
+
+.hero-gallery-item {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.hero-gallery-content {
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+    flex-direction: column;
+
+    @include media-breakpoint-up(md) {
+        align-items: flex-end;
+        flex-direction: row;
+        margin-bottom: 2rem;
+    }
+
+    .description {
+        margin-bottom: 0;
+    }
+}
+
+.hero-gallery .splide__pagination {
+    bottom: 2rem;
+}
+
+.hero-gallery .btn {
+    @include media-breakpoint-down(md) {
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+}

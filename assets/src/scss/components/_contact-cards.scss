@@ -1,0 +1,46 @@
+.contact_cards h2 {
+    margin-bottom: 2.4rem;
+}
+
+.contact-card-img {
+    height: 0;
+    width: 100%;
+    padding-top: 140%;
+    position: relative;
+    display: block;
+}
+
+.contact-card-employee {
+    margin-bottom: 7rem;
+}
+
+.contact-card-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-card-body {
+    padding-top: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.contact-card-name {
+    margin-bottom: 2.4rem;
+}
+
+.contact-card-departments {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-card-info a {
+    &:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}

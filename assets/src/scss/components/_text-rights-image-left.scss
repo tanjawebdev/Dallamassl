@@ -1,0 +1,77 @@
+.image-text-h2 {
+    margin-top: 8px;
+    margin-bottom: 16px;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+.text_rights_image_left .btn {
+    margin-top: 32px;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 24px;
+    }
+}
+
+.image-wrapper {
+    @include media-breakpoint-down(md) {
+        padding: 0;
+    }
+}
+
+.aspect-ratio-box {
+    position: relative;
+    /* Needed for positioning the absolute child */
+    width: 100%;
+    height: 0;
+    /* Collapse the container's height initially */
+    overflow: hidden;
+    /* Hide anything that spills out */
+    /* Add border-radius here if you want it on the container */
+    border-radius: 6px;
+}
+
+.ratio-3-4 {
+    padding-bottom: 75%;
+    /* Locks the height to 75% of the width (3:4) */
+}
+
+.aspect-ratio-image {
+    position: absolute;
+    /* Take image out of the flow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Crucial for covering the container without stretching */
+    object-fit: cover;
+
+    /* Remove the 'img-fluid' class default width if it conflicts */
+    max-width: 100%;
+}
+
+pre {
+    /* Reset default code-style properties you don't want */
+    white-space: normal;
+    /* Allows text to wrap normally */
+    font-size: 2rem;
+    font-family: inherit;
+    padding: 15px;
+    padding-left: 0;
+    border-bottom: 1px solid #4f1e2733;
+    margin-bottom: 0;
+}
+
+.text_rights_image_left .content {
+    @include media-breakpoint-down(md) {
+        margin-top: 32px;
+    }
+}
+
+.text_rights_image_left .content p {
+    margin-bottom: 0;
+}

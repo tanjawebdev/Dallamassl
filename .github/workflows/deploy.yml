@@ -1,0 +1,75 @@
+name: Deploy Theme
+
+on:
+  push:
+    branches: [ "staging", "prod" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build Theme
+        run: |
+          npm install
+          npm run build
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/github_deploy_ed25519
+          chmod 600 ~/.ssh/github_deploy_ed25519
+
+      - name: Debug SSH connectivity
+        run: |
+          echo "Testing SSH port..."
+          nc -vz ld12.einfachtoll.com 9073 || true
+
+      - name: Try SSH verbose
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER_STAGING }}
+        run: |
+          echo "Trying SSH connection..."
+          ssh -vvv -p 9073 \
+            -i ~/.ssh/github_deploy_ed25519 \
+            -o ConnectTimeout=10 \
+            -o StrictHostKeyChecking=no \
+            "$SSH_USER@$SSH_HOST" echo "OK" || true
+
+      - name: Rsync Theme to Server
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_STAGING: ${{ secrets.REMOTE_PATH_STAGING }}
+          REMOTE_PROD: ${{ secrets.REMOTE_PATH_PROD }}
+          THEME_SLUG: alwera
+        run: |
+          # Nur explizit zuordnen
+          if [ "${GITHUB_REF_NAME}" = "staging" ]; then
+            TARGET="${REMOTE_STAGING}"
+            USER="${{ secrets.SSH_USER_STAGING }}"
+          elif [ "${GITHUB_REF_NAME}" = "prod" ]; then
+            TARGET="${REMOTE_PROD}"
+            USER="${{ secrets.SSH_USER_PROD }}"
+          else
+            echo "Branch ${GITHUB_REF_NAME} wird nicht deployed."
+            exit 0
+          fi
+
+          rsync -az --delete \
+            -e "ssh -p 9073 -i ~/.ssh/github_deploy_ed25519 -o StrictHostKeyChecking=accept-new" \
+            --exclude ".git" \
+            --exclude ".github" \
+            --exclude "node_modules" \
+            --exclude "src" \
+            --exclude ".env" \
+            --exclude ".DS_Store" \
+            ./ \
+            "$USER@$SSH_HOST:$TARGET/wp-content/themes/$THEME_SLUG/"
