@@ -1,0 +1,30 @@
+.sticky-d {
+    position: relative;
+    pointer-events: none;
+}
+
+.sticky-d-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    // When fixed at 75px from top
+    &.is-fixed {
+        position: fixed;
+        top: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+    a {
+        pointer-events: all;
+        cursor: pointer;
+    }
+}
+
+.sticky-d-text {
+    position: relative;
+    top: 0;
+    left: 18rem;
+}

@@ -17,7 +17,7 @@
       <?php
       if ( is_front_page() || is_home() ) : ?>
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-             <?php get_template_part('partials/logo'); ?>
+             <?php get_template_part('partials/logo-static'); ?>
           </a>
       <?php else : ?>
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

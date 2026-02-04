@@ -133,6 +133,9 @@ while (have_rows('page_modules')) : the_row();
     case 'google_map':
       get_template_part('template-parts/flex/layout', 'google-map'); break;
 
+    case 'sticky_d':
+      get_template_part('template-parts/flex/layout', 'sticky-d'); break;
+
     case 'hero_gallery_mouse_position':
       get_template_part('template-parts/flex/layout', 'hero-gallery-mouse-position'); break;
   }

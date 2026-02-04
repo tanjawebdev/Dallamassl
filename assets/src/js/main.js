@@ -4,6 +4,7 @@ import BlogSlider from './_blog-slider';
 import InfoBoxSelection from './_info-box-selection';
 import Logo from './_logo';
 import HeroGalleryMousePosition from './_hero-gallery-mouse-position';
+import StickyD from './_sticky-d';
 
 const App = {
 	/**
@@ -45,6 +46,12 @@ const App = {
 			return new HeroGalleryMousePosition();
 		}
 		initHeroGalleryMousePosition();
+
+		// Sticky D
+		function initStickyD() {
+			return new StickyD();
+		}
+		initStickyD();
 	},
 };
 
