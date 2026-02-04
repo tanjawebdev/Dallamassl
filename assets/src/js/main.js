@@ -2,6 +2,7 @@ import General from './_general';
 import HeroGallery from './_hero-gallery';
 import BlogSlider from './_blog-slider';
 import InfoBoxSelection from './_info-box-selection';
+import Logo from './_logo';
 
 const App = {
 	/**
@@ -31,6 +32,12 @@ const App = {
 			return new InfoBoxSelection();
 		}
 		initInfoBoxSelection();
+
+		// Logo
+		function initLogo() {
+			return new Logo();
+		}
+		initLogo();
 	},
 };
 

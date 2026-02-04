@@ -12,21 +12,22 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 
-  <header id="masthead" class="site-header row">
-    <div class="site-branding col-6">
+  <header id="masthead">
+    <div id="logo">
       <?php
       if ( is_front_page() || is_home() ) : ?>
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-            <img src="<?php echo get_template_directory_uri(); ?>/static/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
+             <?php get_template_part('partials/logo'); ?>
           </a>
       <?php else : ?>
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-            <img src="<?php echo get_template_directory_uri(); ?>/static/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
+             <?php get_template_part('partials/logo'); ?>
           </a>
       <?php
       endif;
       ?>
-    </div><!-- .site-branding -->
+    </div>
+  </header>
 
     <div class="navigation col-6">
       <nav id="site-navigation" class="main-navigation">
@@ -43,7 +44,7 @@
       <span></span>
       <span></span>
     </button>
-  </header><!-- #masthead -->
+
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-menu__inner">

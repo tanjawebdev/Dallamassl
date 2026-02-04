@@ -1,0 +1,57 @@
+#logo a {
+    pointer-events: none;
+}
+
+.logo-container {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+
+    // When scrolled, become fixed
+    &.is-scrolled {
+        position: fixed;
+
+        #logo-animation {
+            //todo
+        }
+    }
+}
+
+#logo-animation {
+    display: block;
+    width: auto;
+    height: 7vw;
+    transition: width 0.4s ease-in-out;
+}
+
+// SVG groups
+#long,
+#short {
+    transition: opacity 0.4s ease-in-out;
+}
+
+#long {
+    opacity: 1;
+    pointer-events: bounding-box;
+}
+
+#short {
+    opacity: 0;
+    pointer-events: none;
+}
+
+// When scrolled, swap visibility
+.is-scrolled {
+    #long {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #short {
+        opacity: 1;
+        pointer-events: bounding-box;
+    }
+}
