@@ -49,7 +49,7 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_STAGING: ${{ secrets.REMOTE_PATH_STAGING }}
           REMOTE_PROD: ${{ secrets.REMOTE_PATH_PROD }}
-          THEME_SLUG: alwera
+          THEME_SLUG: dallamassl
         run: |
           # Nur explizit zuordnen
           if [ "${GITHUB_REF_NAME}" = "staging" ]; then

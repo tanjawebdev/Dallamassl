@@ -7,9 +7,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configuration
-const THEME_NAME = 'alwera';
+const THEME_NAME = 'dallamassl';
 const SOURCE_DIR = __dirname;
-const BUILD_DIR = path.resolve(__dirname, '..', '..', '..', 'alwera-build');
+const BUILD_DIR = path.resolve(__dirname, '..', '..', '..', 'dallamassl-build');
 const DIST_DIR = path.join(BUILD_DIR, THEME_NAME);
 
 // Files and folders to include in the final theme

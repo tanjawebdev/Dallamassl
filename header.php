@@ -51,7 +51,7 @@
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mobile-menu__brand">
           <img src="<?php echo get_template_directory_uri(); ?>/static/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
         </a>
-        <button class="menu-toggle menu-toggle--close" aria-label="<?php esc_attr_e( 'Menü schließen', 'alwera' ); ?>">
+        <button class="menu-toggle menu-toggle--close" aria-label="<?php esc_attr_e( 'Menü schließen', 'dallamassl' ); ?>">
           <span></span>
           <span></span>
         </button>

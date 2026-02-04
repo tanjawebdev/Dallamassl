@@ -25,9 +25,9 @@ Erstellt ein produktionsfertiges Theme-Paket:
 
 Der Build wird erstellt in:
 ```
-/Users/tanja/Documents/webprojects/alwera-build/
-├── alwera/              # Theme-Ordner mit allen notwendigen Dateien
-└── alwera.zip          # ZIP-Datei für WordPress-Upload
+/Users/tanja/Documents/webprojects/dallamassl-build/
+├── dallamassl/              # Theme-Ordner mit allen notwendigen Dateien
+└── dallamassl.zip          # ZIP-Datei für WordPress-Upload
 ```
 
 ## Was wird ins finale Theme kopiert?
@@ -57,7 +57,7 @@ Der Build wird erstellt in:
 
 1. **Development**: `npm run dev` für lokale Entwicklung
 2. **Build**: `npm run build:theme` für Production-Build
-3. **Upload**: Die generierte `alwera.zip` in WordPress hochladen
+3. **Upload**: Die generierte `dallamassl.zip` in WordPress hochladen
 
 ## Vorteile
 

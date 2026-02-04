@@ -77,7 +77,7 @@
         <div class="footer-legal col-lg-12">
           <?php wp_nav_menu( array( 'theme_location' => 'menu-legal', 'menu_id' => 'menu-legal' ) ); ?>
           <div class="footer-text">
-            <p> &copy; Alwera AG 2025</p>
+            <p> &copy; Dallamassl 2026</p>
           </div>
         </div>
       </div>

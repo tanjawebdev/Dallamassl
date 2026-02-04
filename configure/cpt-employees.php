@@ -10,19 +10,19 @@ add_action('init', 'projecttheme_register_employees');
 function projecttheme_register_employees() {
     
     $labels = array(
-        'name'                  => _x('Mitarbeiter', 'Post type general name', 'alwera'),
-        'singular_name'         => _x('Mitarbeiter', 'Post type singular name', 'alwera'),
-        'menu_name'             => _x('Mitarbeiter', 'Admin Menu text', 'alwera'),
-        'name_admin_bar'        => _x('Mitarbeiter', 'Add New on Toolbar', 'alwera'),
-        'add_new'               => __('Neu hinzufügen', 'alwera'),
-        'add_new_item'          => __('Neuen Mitarbeiter hinzufügen', 'alwera'),
-        'new_item'              => __('Neuer Mitarbeiter', 'alwera'),
-        'edit_item'             => __('Mitarbeiter bearbeiten', 'alwera'),
-        'view_item'             => __('Mitarbeiter ansehen', 'alwera'),
-        'all_items'             => __('Alle Mitarbeiter', 'alwera'),
-        'search_items'          => __('Mitarbeiter durchsuchen', 'alwera'),
-        'not_found'             => __('Keine Mitarbeiter gefunden.', 'alwera'),
-        'not_found_in_trash'    => __('Keine Mitarbeiter im Papierkorb gefunden.', 'alwera'),
+        'name'                  => _x('Mitarbeiter', 'Post type general name', 'dallamassl'),
+        'singular_name'         => _x('Mitarbeiter', 'Post type singular name', 'dallamassl'),
+        'menu_name'             => _x('Mitarbeiter', 'Admin Menu text', 'dallamassl'),
+        'name_admin_bar'        => _x('Mitarbeiter', 'Add New on Toolbar', 'dallamassl'),
+        'add_new'               => __('Neu hinzufügen', 'dallamassl'),
+        'add_new_item'          => __('Neuen Mitarbeiter hinzufügen', 'dallamassl'),
+        'new_item'              => __('Neuer Mitarbeiter', 'dallamassl'),
+        'edit_item'             => __('Mitarbeiter bearbeiten', 'dallamassl'),
+        'view_item'             => __('Mitarbeiter ansehen', 'dallamassl'),
+        'all_items'             => __('Alle Mitarbeiter', 'dallamassl'),
+        'search_items'          => __('Mitarbeiter durchsuchen', 'dallamassl'),
+        'not_found'             => __('Keine Mitarbeiter gefunden.', 'dallamassl'),
+        'not_found_in_trash'    => __('Keine Mitarbeiter im Papierkorb gefunden.', 'dallamassl'),
     );
 
     $args = array(
@@ -48,17 +48,17 @@ add_action('init', 'projecttheme_register_department_taxonomy');
 function projecttheme_register_department_taxonomy() {
     
     $labels = array(
-        'name'              => _x('Abteilungen', 'taxonomy general name', 'alwera'),
-        'singular_name'     => _x('Abteilung', 'taxonomy singular name', 'alwera'),
-        'search_items'      => __('Abteilungen durchsuchen', 'alwera'),
-        'all_items'         => __('Alle Abteilungen', 'alwera'),
-        'parent_item'       => __('Übergeordnete Abteilung', 'alwera'),
-        'parent_item_colon' => __('Übergeordnete Abteilung:', 'alwera'),
-        'edit_item'         => __('Abteilung bearbeiten', 'alwera'),
-        'update_item'       => __('Abteilung aktualisieren', 'alwera'),
-        'add_new_item'      => __('Neue Abteilung hinzufügen', 'alwera'),
-        'new_item_name'     => __('Name der neuen Abteilung', 'alwera'),
-        'menu_name'         => __('Abteilungen', 'alwera'),
+        'name'              => _x('Abteilungen', 'taxonomy general name', 'dallamassl'),
+        'singular_name'     => _x('Abteilung', 'taxonomy singular name', 'dallamassl'),
+        'search_items'      => __('Abteilungen durchsuchen', 'dallamassl'),
+        'all_items'         => __('Alle Abteilungen', 'dallamassl'),
+        'parent_item'       => __('Übergeordnete Abteilung', 'dallamassl'),
+        'parent_item_colon' => __('Übergeordnete Abteilung:', 'dallamassl'),
+        'edit_item'         => __('Abteilung bearbeiten', 'dallamassl'),
+        'update_item'       => __('Abteilung aktualisieren', 'dallamassl'),
+        'add_new_item'      => __('Neue Abteilung hinzufügen', 'dallamassl'),
+        'new_item_name'     => __('Name der neuen Abteilung', 'dallamassl'),
+        'menu_name'         => __('Abteilungen', 'dallamassl'),
     );
 
     $args = array(

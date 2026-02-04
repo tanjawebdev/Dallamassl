@@ -76,8 +76,8 @@ get_header(); ?>
       <?php 
       the_posts_pagination(array(
         'mid_size'  => 2,
-        'prev_text' => '<span aria-label="' . __('Previous', 'alwera') . '"></span>',
-        'next_text' => '<span aria-label="' . __('Next', 'alwera') . '"></span>',
+        'prev_text' => '<span aria-label="' . __('Previous', 'dallamassl') . '"></span>',
+        'next_text' => '<span aria-label="' . __('Next', 'dallamassl') . '"></span>',
         'screen_reader_text' => 'Pagination Blog Posts',
       )); 
       ?>
