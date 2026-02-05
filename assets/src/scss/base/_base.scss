@@ -51,7 +51,9 @@ a .hover-round {
 }
 
 a:hover .hover-round {
-    border-radius: 3rem;
+    @include media-breakpoint-up(lg) {
+        border-radius: 3rem;
+    }
 }
 
 .typo-white {

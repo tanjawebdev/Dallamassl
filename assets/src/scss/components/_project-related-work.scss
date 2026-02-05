@@ -1,11 +1,19 @@
 .project-related-work {
-    padding: 4rem 0;
+    padding: 4rem 2rem;
     background-color: $secondary;
     margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 4rem 0;
+    }
 }
 
 .project-related-work__nav {
-    padding: 8rem 0;
+    padding: 3rem 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 8rem 0;
+    }
 }
 
 .project-related-work__title {
@@ -25,6 +33,13 @@
 .project-related-work__item {
     &--empty {
         visibility: hidden;
+    }
+}
+
+.project-related-work__text-wrapper {
+    @include media-breakpoint-down(md) {
+        order: -1;
+        margin-top: 3rem;
     }
 }
 
