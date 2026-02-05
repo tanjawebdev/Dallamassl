@@ -6,13 +6,22 @@ get_header(); ?>
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <?php
-    if (function_exists('have_rows') && have_rows('page_modules')) {
-      get_template_part('templates/render', 'page-modules');
+    // Check if this is a project post type
+    if (get_post_type() === 'project') {
+      // Render project-specific flexible content
+      if (function_exists('have_rows') && have_rows('projects')) {
+        get_template_part('templates/render', 'projects');
+      }
     } else {
-      echo '<section class="section"><div class="container-lg">';
-        the_title('<h1 class="mb-4">','</h1>');
-        the_content();
-      echo '</div></section>';
+      // Render page modules for regular posts
+      if (function_exists('have_rows') && have_rows('page_modules')) {
+        get_template_part('templates/render', 'page-modules');
+      } else {
+        echo '<section class="section"><div class="container-lg">';
+          the_title('<h1 class="mb-4">','</h1>');
+          the_content();
+        echo '</div></section>';
+      }
     }
     ?>
 
