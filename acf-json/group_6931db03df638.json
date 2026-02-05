@@ -53,56 +53,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_6983a939dca93",
-                            "label": "Titel",
-                            "name": "headline",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_6983aa4edca94",
-                            "label": "Service",
-                            "name": "service",
-                            "aria-label": "",
-                            "type": "taxonomy",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "taxonomy": "department",
-                            "add_term": 0,
-                            "save_terms": 1,
-                            "load_terms": 1,
-                            "return_format": "id",
-                            "field_type": "select",
-                            "allow_null": 1,
-                            "acfe_bidirectional": {
-                                "acfe_bidirectional_enabled": "0"
-                            },
-                            "allow_in_bindings": 0,
-                            "bidirectional": 0,
-                            "multiple": 0,
-                            "bidirectional_target": []
-                        },
-                        {
                             "key": "field_6983abaedca95",
                             "label": "Großes Bild (3:2)",
                             "name": "big_picture",
@@ -176,56 +126,6 @@
                     "label": "Projekt Hero kleines Bild",
                     "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_6983acbc6985f",
-                            "label": "Titel",
-                            "name": "headline",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_6983acbc69860",
-                            "label": "Service",
-                            "name": "service",
-                            "aria-label": "",
-                            "type": "taxonomy",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "taxonomy": "department",
-                            "add_term": 0,
-                            "save_terms": 1,
-                            "load_terms": 1,
-                            "return_format": "id",
-                            "field_type": "select",
-                            "allow_null": 1,
-                            "acfe_bidirectional": {
-                                "acfe_bidirectional_enabled": "0"
-                            },
-                            "allow_in_bindings": 0,
-                            "bidirectional": 0,
-                            "multiple": 0,
-                            "bidirectional_target": []
-                        },
                         {
                             "key": "field_6983acbc69861",
                             "label": "Rechtes Bild (2:3)",
@@ -327,5 +227,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1770238831
+    "modified": 1770298772
 }

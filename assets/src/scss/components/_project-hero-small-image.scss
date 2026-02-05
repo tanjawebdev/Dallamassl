@@ -1,0 +1,32 @@
+.project-hero-small-left {
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 8rem;
+        padding-top: 20rem;
+        padding-right: 6%;
+    }
+}
+
+.project-hero-small-left-text h1 {
+    word-spacing: 100vw;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 4rem;
+    }
+}
+
+.project-hero-small-left-image {
+    @include media-breakpoint-up(lg) {
+        width: 50%;
+    }
+}
+
+.project-hero-small-left-image picture {
+    padding-top: 150%;
+}
+
+.project-hero-small-right picture {
+    padding-top: 160%;
+}
