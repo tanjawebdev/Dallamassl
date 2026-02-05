@@ -42,20 +42,24 @@ function custom_setup() {
     remove_image_size( '1536x1536' );
     remove_image_size( '2048x2048' );
 
-    // Custom image sizes
-    // add_image_size( '424x424', 424, 424, true );
-    // add_image_size( '1920', 1920, 9999 );
+    // Custom image sizes for projects
+    add_image_size( 'small', 400, 600, false );      // For small project images (soft crop)
+    add_image_size( 'medium', 800, 1200, false );    // For medium project images
+    add_image_size( 'large', 1200, 1800, false );    // For large project images
+    add_image_size( 'hero', 1600, 2400, false );     // For hero images
 }
 add_action('after_setup_theme', 'custom_setup');
 
-// remove default image sizes to avoid overcharging server - comment line if you need size
-function remove_default_image_sizes( $sizes) {
-    unset( $sizes['large']);
-    unset( $sizes['medium']);
-    unset( $sizes['medium_large']);
-    return $sizes;
-}
-add_filter('intermediate_image_sizes_advanced', 'remove_default_image_sizes');
+
+// Note: Commented out to allow custom image sizes defined above
+// If you want to remove default sizes, be more selective about which ones to remove
+// function remove_default_image_sizes( $sizes) {
+//     unset( $sizes['large']);
+//     unset( $sizes['medium']);
+//     unset( $sizes['medium_large']);
+//     return $sizes;
+// }
+// add_filter('intermediate_image_sizes_advanced', 'remove_default_image_sizes');
 
 // disabling big image sizes scaled
 add_filter( 'big_image_size_threshold', '__return_false' );
