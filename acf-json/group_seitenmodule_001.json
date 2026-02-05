@@ -2859,12 +2859,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "all"
-            },
-            {
-                "param": "post_type",
-                "operator": "!=",
-                "value": "employee"
+                "value": "page"
             }
         ]
     ],
@@ -2890,5 +2885,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1770230387
+    "modified": 1770239008
 }

@@ -138,6 +138,13 @@ while (have_rows('page_modules')) : the_row();
 
     case 'hero_gallery_mouse_position':
       get_template_part('template-parts/flex/layout', 'hero-gallery-mouse-position'); break;
+
+    case 'project_hero_big_image':
+      get_template_part('template-parts/flex/layout', 'project-hero-big-image'); break;
+
+    case 'project_related_work':
+      get_template_part('template-parts/flex/layout', 'project-related-work'); break;
+  
   }
 
   if (function_exists('section_close')) {

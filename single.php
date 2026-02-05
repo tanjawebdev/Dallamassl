@@ -19,8 +19,8 @@ get_header(); ?>
   <?php endwhile; endif; ?>
 
   <?php
-  // Blog Slider - Related Posts
-  get_template_part('template-parts/flex/layout', 'blog-slider');
+  // Related Projects - Previous/Next Projects
+  get_template_part('template-parts/flex/layout', 'project-related-work');
   ?>
 </main>
 

@@ -9,7 +9,7 @@ get_header();
 
       <section>
         <p>
-            <?php esc_attr_e('Error 404, Ooops ! Cette test page n’existe pas !','textdomaintomodify'); ?>
+            <?php esc_html_e('Error 404 - Diese Seite wurde nicht gefunden!', 'dallamassl'); ?>
         </p>
       </section>
 
