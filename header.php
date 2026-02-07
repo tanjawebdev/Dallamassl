@@ -29,55 +29,98 @@
     </div>
   </header>
 
-    <div class="navigation col-6">
-      <nav id="site-navigation" class="main-navigation">
-          <?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'menu_id' => 'menu-main' ) ); ?>
-      </nav><!-- #site-navigation -->
+  <?php
+  // Check if we're on the home page
+  $is_home = is_front_page() || is_home();
+  ?>
 
-      <nav id="site-navigation-button" class="button-navigation">
-          <?php wp_nav_menu( array( 'theme_location' => 'menu-button', 'menu_id' => 'menu-button' ) ); ?>
-      </nav><!-- #site-navigation -->
-    </div>
+  <div class="navigation" data-is-home="<?php echo $is_home ? 'true' : 'false'; ?>">
+    <nav id="site-navigation" class="main-navigation">
+      <div class="nav-label description">MENU</div>
+      
+      <?php 
+      wp_nav_menu( array( 
+        'theme_location' => 'menu-main',
+        'menu_id' => 'menu-main',
+        'menu_class' => 'nav-menu',
+        'container' => false,
+      ) ); 
+      ?>
+    </nav>
 
-    <button class="menu-toggle col-6" aria-expanded="false" aria-controls="mobile-menu">
+    <?php
+    // Get menu items and output submenu panels separately
+    $menu_name = 'menu-main';
+    $locations = get_nav_menu_locations();
+    
+    if (isset($locations[$menu_name])) {
+      $menu = wp_get_nav_menu_object($locations[$menu_name]);
+      
+      if ($menu) {
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+        
+        // Group items by parent
+        $menu_tree = array();
+        foreach ($menu_items as $item) {
+          if ($item->menu_item_parent == 0) {
+            if (!isset($menu_tree[$item->ID])) {
+              $menu_tree[$item->ID] = array();
+            }
+          } else {
+            $menu_tree[$item->menu_item_parent][] = $item;
+          }
+        }
+        
+        // Output submenu panels for each parent that has children
+        foreach ($menu_tree as $parent_id => $children) {
+          if (!empty($children)) {
+            echo '<div class="submenu-panel" data-parent-id="' . esc_attr($parent_id) . '">';
+            echo '<ul class="submenu">';
+            foreach ($children as $child) {
+              $current_class = '';
+              if (in_array('current-menu-item', $child->classes)) {
+                $current_class = ' class="current-menu-item"';
+              }
+              echo '<li' . $current_class . '>';
+              echo '<a href="' . esc_url($child->url) . '">' . esc_html($child->title) . '</a>';
+              echo '</li>';
+            }
+            echo '</ul>';
+            echo '</div>';
+          }
+        }
+      }
+    }
+    ?>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="<?php esc_attr_e( 'Menü öffnen', 'dallamassl' ); ?>">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu__inner">
-      <div class="mobile-menu__header">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mobile-menu__brand">
-          <img src="<?php echo get_template_directory_uri(); ?>/static/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
-        </a>
-        <button class="menu-toggle menu-toggle--close" aria-label="<?php esc_attr_e( 'Menü schließen', 'dallamassl' ); ?>">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <nav class="mobile-menu__nav">
-        <?php
-          wp_nav_menu(
-            array(
-              'theme_location' => 'menu-main',
-              'menu_id'        => 'mobile-menu-main',
-              'menu_class'     => 'mobile-menu__list',
-            )
-          );
-        ?>
-      </nav>
-      <div class="mobile-menu__buttons">
-        <?php
-          wp_nav_menu(
-            array(
-              'theme_location' => 'menu-button',
-              'menu_id'        => 'mobile-menu-button',
-              'menu_class'     => 'mobile-menu__button-list',
-            )
-          );
-        ?>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__inner">
+        <div class="mobile-menu__header">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mobile-menu__brand">
+            <?php get_template_part('partials/logo'); ?>
+          </a>
+          <button class="menu-toggle menu-toggle--close" aria-label="<?php esc_attr_e( 'Menü schließen', 'dallamassl' ); ?>">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav class="mobile-menu__nav">
+          <?php
+            wp_nav_menu(
+              array(
+                'theme_location' => 'menu-main',
+                'menu_id'        => 'mobile-menu-main',
+                'menu_class'     => 'mobile-menu__list',
+              )
+            );
+          ?>
+        </nav>
       </div>
     </div>
   </div>

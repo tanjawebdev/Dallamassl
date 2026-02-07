@@ -9,7 +9,7 @@ $small_images = get_sub_field('small_images');
     <div class="container-lg">
       <div class="row">
         <!-- Project Title and Services -->
-        <div class="col-12 col-lg-4 col-xxxl-5 offset-xxxl-1 project-hero-small-left">
+        <div class="col-12 col-lg-5 offset-lg-1 project-hero-small-left">
           <div class="project-hero-small-left-text">
             <h1 class="project-title"><?php the_title(); ?></h1>
             <?php 
@@ -25,9 +25,11 @@ $small_images = get_sub_field('small_images');
           </div>
           <div class="project-hero-small-left-image">
             <?php foreach ($small_images as $small_image): ?>
-              <picture class="object-fit-cover">
-                <?php echo wp_get_attachment_image($small_image['ID'], 'small', false, ['class' => 'img-fluid']); ?>
-              </picture>
+              <div class="project-hero-small-img">
+                <picture class="object-fit-cover">
+                  <?php echo wp_get_attachment_image($small_image['ID'], 'small', false, ['class' => 'img-fluid']); ?>
+                </picture>
+              </div>
             <?php endforeach; ?>
           </div>
         </div>

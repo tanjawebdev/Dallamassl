@@ -5,7 +5,6 @@ function _custom_theme_register_menu() {
     register_nav_menus(
         array(
             'menu-main' => __( 'Menu principal' ),
-            'menu-button' => __( 'Menu button' ),
             'menu-socials' => __( 'Menu socials' ),
             'menu-legal' => __( 'Menu legal' ),
             )

@@ -1,11 +1,19 @@
 .project-hero-small-left {
+    margin-bottom: 4rem;
+
     @include media-breakpoint-up(lg) {
         display: flex;
-        align-items: flex-end;
         flex-direction: column;
-        gap: 8rem;
+        gap: 10rem;
         padding-top: 20rem;
         padding-right: 6%;
+        margin-bottom: 0;
+    }
+}
+
+.project-hero-small-left-text {
+    @include media-breakpoint-up(lg) {
+        padding-left: 20%;
     }
 }
 
@@ -18,8 +26,16 @@
 }
 
 .project-hero-small-left-image {
-    @include media-breakpoint-up(lg) {
-        width: 50%;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+.project-hero-small-img {
+    width: 20%;
+
+    &:last-child {
+        margin-left: auto;
     }
 }
 
