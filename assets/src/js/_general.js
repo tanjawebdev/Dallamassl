@@ -76,8 +76,10 @@ class General {
 			// Find and show the corresponding submenu panel
 			const menuItemId = item.id.replace('menu-item-', '');
 			const panel = document.querySelector(`.submenu-panel[data-parent-id="${menuItemId}"]`);
+			const mainnav = document.querySelector(`.main-navigation`);
 			if (panel) {
 				panel.classList.add('is-open');
+				mainnav.classList.add('submenu-open');
 			}
 		}
 	}
@@ -89,6 +91,8 @@ class General {
 		this.submenuPanels.forEach((panel) => {
 			panel.classList.remove('is-open');
 		});
+		const mainnav = document.querySelector(`.main-navigation`);
+		mainnav.classList.remove('submenu-open');
 		document.body.classList.remove('submenu-open');
 	}
 
