@@ -3,12 +3,20 @@
 }
 
 .logo-container {
-    position: absolute;
-    top: 7rem;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
     transition: all 0.4s ease-in-out;
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 7rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+        margin-top: 2rem;
+    }
 
     // When scrolled, become fixed
     &.is-scrolled {
@@ -21,6 +29,13 @@
     width: auto;
     height: 9vw;
     transition: width 0.4s ease-in-out;
+}
+
+#logo svg {
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 // SVG groups - smooth transitions with movement

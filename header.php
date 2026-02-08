@@ -100,27 +100,20 @@
     </button>
 
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu__inner">
-        <div class="mobile-menu__header">
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mobile-menu__brand">
-            <?php get_template_part('partials/logo'); ?>
-          </a>
-          <button class="menu-toggle menu-toggle--close" aria-label="<?php esc_attr_e( 'Menü schließen', 'dallamassl' ); ?>">
-            <span></span>
-            <span></span>
-          </button>
+      <div class="mobile-menu__wrapper">
+        <div class="mobile-menu__inner">
+          <nav class="mobile-menu__nav">
+            <?php
+              wp_nav_menu(
+                array(
+                  'theme_location' => 'menu-main',
+                  'menu_id'        => 'mobile-menu-main',
+                  'menu_class'     => 'mobile-menu__list',
+                )
+              );
+            ?>
+          </nav>
         </div>
-        <nav class="mobile-menu__nav">
-          <?php
-            wp_nav_menu(
-              array(
-                'theme_location' => 'menu-main',
-                'menu_id'        => 'mobile-menu-main',
-                'menu_class'     => 'mobile-menu__list',
-              )
-            );
-          ?>
-        </nav>
       </div>
     </div>
   </div>
