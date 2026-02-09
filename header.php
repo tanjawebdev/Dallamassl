@@ -104,6 +104,14 @@
         <div class="mobile-menu__inner">
           <nav class="mobile-menu__nav">
             <?php
+              // Add filter to prefix mobile menu IDs
+              add_filter('nav_menu_item_id', function($menu_id, $item, $args, $depth) {
+                if ($args->menu_id === 'mobile-menu-main') {
+                  return 'mobile-' . $item->ID;
+                }
+                return $menu_id;
+              }, 10, 4);
+
               wp_nav_menu(
                 array(
                   'theme_location' => 'menu-main',
@@ -111,6 +119,9 @@
                   'menu_class'     => 'mobile-menu__list',
                 )
               );
+              
+              // Remove filter after menu is rendered
+              remove_all_filters('nav_menu_item_id');
             ?>
           </nav>
         </div>

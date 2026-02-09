@@ -31,7 +31,12 @@ class General {
 			this.mobileMenu
 				.querySelectorAll('a')
 				.forEach((link) =>
-					link.addEventListener('click', () => this.closeMobileMenu())
+					link.addEventListener('click', (e) => {
+						// Don't close menu if this is a parent item with children
+						if (!link.closest('.menu-item-has-children')) {
+							this.closeMobileMenu();
+						}
+					})
 				);
 		}
 
@@ -47,9 +52,15 @@ class General {
 		});
 
 		// Close submenu on outside click
+		// only if menu is open
 		document.addEventListener('click', (e) => {
-			if (!e.target.closest('.menu-item-has-children') && !e.target.closest('.submenu-panel')) {
-				this.closeAllSubmenus();
+			const anySubmenuOpen = this.submenuPanels.some(panel => panel.classList.contains('is-open'));
+
+			if (this.mobileMenu.classList.contains('is-open') || anySubmenuOpen) {
+				if (!e.target.closest('.menu-item-has-children') && !e.target.closest('.submenu-panel') && !e.target.closest('.menu-toggle') && !e.target.closest('.mobile-menu__wrapper')) {
+					console.log('outside click');
+					this.closeAllSubmenus();
+				}
 			}
 		});
 
@@ -65,8 +76,11 @@ class General {
 	toggleSubmenu(item) {
 		const isOpen = item.classList.contains('submenu-open');
 
-		// Close all other submenus
-		this.closeAllSubmenus();
+		console.log('toggle submenu', isOpen);
+		if (isOpen) {
+			this.closeAllSubmenus();
+			return;
+		}
 
 		// Toggle this submenu
 		if (!isOpen) {
@@ -74,31 +88,45 @@ class General {
 			document.body.classList.add('submenu-open');
 
 			// Find and show the corresponding submenu panel
-			const menuItemId = item.id.replace('menu-item-', '');
+			// Handle both desktop (menu-item-158) and mobile (mobile-158) IDs
+			let menuItemId = item.id.replace('menu-item-', '').replace('mobile-', '');
+			console.log('menuItemId:', menuItemId);
 			const panel = document.querySelector(`.submenu-panel[data-parent-id="${menuItemId}"]`);
 			const mainnav = document.querySelector(`.main-navigation`);
+			const mainmobilenav = document.querySelector(`.mobile-menu`);
+
 			if (panel) {
 				panel.classList.add('is-open');
-				mainnav.classList.add('submenu-open');
+				if (mainnav) {
+					mainnav.classList.add('submenu-open');
+					mainmobilenav.classList.add('submenu-open');
+				}
 			}
 		}
 	}
 
 	closeAllSubmenus() {
+		console.log('close all submenus NOW');
+
 		this.submenuItems.forEach((item) => {
 			item.classList.remove('submenu-open');
 		});
+
 		this.submenuPanels.forEach((panel) => {
 			panel.classList.remove('is-open');
 		});
 		const mainnav = document.querySelector(`.main-navigation`);
 		mainnav.classList.remove('submenu-open');
+		const mainmobilenav = document.querySelector(`.mobile-menu`);
+		mainmobilenav.classList.remove('submenu-open');
 		document.body.classList.remove('submenu-open');
+		this.closeMobileMenu();
 	}
 
 	toggleMobileMenu() {
 		const isOpen = this.mobileMenu.classList.contains('is-open');
 		if (isOpen) {
+			this.closeAllSubmenus();
 			this.closeMobileMenu();
 		} else {
 			this.openMobileMenu();
