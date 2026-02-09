@@ -1,0 +1,46 @@
+.project-two-big-images__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+
+    @include media-breakpoint-down(md) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+// Left Image (smaller)
+.project-two-big-images__image--left {
+    grid-column: 2 / 5;
+    aspect-ratio: 4 / 5;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 18rem;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Right Image (larger)
+.project-two-big-images__image--right {
+    grid-column: 7 / 12;
+    aspect-ratio: 5 / 4;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
