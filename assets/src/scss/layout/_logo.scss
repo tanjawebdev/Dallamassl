@@ -46,6 +46,10 @@
     transform-origin: left center;
 }
 
+#letter-d {
+    pointer-events: bounding-box;
+}
+
 #long {
     opacity: 1;
     pointer-events: bounding-box;

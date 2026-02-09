@@ -89,7 +89,7 @@
     }
 }
 
-.menu-item {
+.navigation .menu-item {
     margin-bottom: 3rem;
 
     a {
@@ -327,9 +327,11 @@
     transition: backdrop-filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
     backdrop-filter: blur(0);
+    pointer-events: none;
 
     &.is-open {
         backdrop-filter: blur(2px);
+        pointer-events: auto;
     }
 
     @include media-breakpoint-up(lg) {
