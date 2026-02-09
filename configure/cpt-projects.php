@@ -70,8 +70,8 @@ function projecttheme_register_services_taxonomy() {
         'labels'            => $labels,
         'show_ui'           => true,
         'show_admin_column' => true,                       // Show in post list
-        'query_var'         => true,
-        'rewrite'           => array('slug' => 'service'),
+        'query_var'         => false,                      // Disable URL query parameter
+        'rewrite'           => false,                      // Disable pretty URLs
         'show_in_rest'      => true,
     );
 
@@ -100,10 +100,41 @@ function projecttheme_register_project_type_taxonomy() {
         'labels'            => $labels,
         'show_ui'           => true,
         'show_admin_column' => true,                       // Show in post list
-        'query_var'         => true,
-        'rewrite'           => array('slug' => 'project-type'),
+        'query_var'         => false,                      // Disable URL query parameter
+        'rewrite'           => false,                      // Disable pretty URLs
         'show_in_rest'      => true,
             );
 
     register_taxonomy('project_type', array('project'), $args);
+}
+
+
+// Register Custom Taxonomy: Location (f.e. Vienna)
+add_action('init', 'projecttheme_register_location_taxonomy');
+
+function projecttheme_register_location_taxonomy() {
+    
+    $labels = array(
+        'name'              => _x('Locations', 'taxonomy general name', 'dallamassl'),
+        'singular_name'     => _x('Location', 'taxonomy singular name', 'dallamassl'),
+        'search_items'      => __('Locations durchsuchen', 'dallamassl'),
+        'all_items'         => __('Alle Locations', 'dallamassl'),
+        'edit_item'         => __('Location bearbeiten', 'dallamassl'),
+        'update_item'       => __('Location aktualisieren', 'dallamassl'),
+        'add_new_item'      => __('Neue Location hinzufügen', 'dallamassl'),
+        'new_item_name'     => __('Name der neuen Location', 'dallamassl'),
+        'menu_name'         => __('Locations', 'dallamassl'),
+    );
+
+    $args = array(
+        'hierarchical'      => true,                       // Like categories (checkbox style)
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,                       // Show in post list
+        'query_var'         => false,                      // Disable URL query parameter
+        'rewrite'           => false,                      // Disable pretty URLs
+        'show_in_rest'      => true,
+            );
+
+    register_taxonomy('location', array('project'), $args);
 }

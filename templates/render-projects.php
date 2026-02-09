@@ -39,6 +39,9 @@ while (have_rows('projects')) : the_row();
     case 'project_hero_small_image':
       get_template_part('template-parts/flex/layout', 'project-hero-small-image'); break;
 
+    case 'project_details_big':
+      get_template_part('template-parts/flex/layout', 'project-details-big'); break;
+
     case 'body_text':
       get_template_part('template-parts/flex/layout', 'body-text'); break;
 
