@@ -1,0 +1,88 @@
+.service-section-4__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+
+    @include media-breakpoint-down(md) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+// Content Column (Left)
+.service-section-4__content {
+    grid-column: 4 / 8;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        gap: 2rem;
+    }
+}
+
+// Service Taxonomy
+.service-section-4__service {
+    h3 {
+        margin: 0;
+    }
+}
+
+// Text Content
+.service-section-4__text {
+    p {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.service-section-4__link {
+    display: flex;
+
+    @include media-breakpoint-up(lg) {
+        align-self: flex-end;
+    }
+}
+
+// Project Teaser (Right - Portrait)
+.service-section-4__project-teaser {
+    grid-column: 10 / 12;
+    text-decoration: none;
+    color: inherit;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+}
+
+.service-section-4__project-image {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 3 / 4;
+    }
+}
+
+.service-section-4__project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.service-section-4__project-title {
+    margin: 0;
+}
+
+.service-section-4__project-type {
+    white-space: nowrap;
+}
