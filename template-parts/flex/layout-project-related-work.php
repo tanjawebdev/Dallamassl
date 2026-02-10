@@ -46,9 +46,8 @@ if ($prev_post || $next_post) :
 
 <div class="project-related-next container-lg">
   <!-- Next Project Link-->
-   <a href="<?php echo get_permalink($next_post->ID); ?>" class="project-related-work__next-link">
-    <img src="<?php echo get_template_directory_uri(); ?>/static/img/arrow-right.svg" alt="Next Project">
-    <h4>Next Project</h4>
+   <a href="<?php echo get_permalink($next_post->ID); ?>" class="btn btn-primary">
+    <span class="h4">Next Project</span>
    </a>
 </div>
 

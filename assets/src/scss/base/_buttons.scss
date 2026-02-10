@@ -1,23 +1,45 @@
 .btn {
-    padding: 1.2rem 1.6rem;
     transition: 0.3s ease-out all;
 }
 
 .btn-primary {
-    background: none;
-    border: 1px solid $primary;
-    color: $primary;
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: $body-color;
+    background-color: transparent;
+    border: none;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        background-color: currentColor;
+        mask-image: url('/wp-content/themes/dallamassl/static/img/arrow-right.svg');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        transition: transform 0.3s ease;
+    }
+
+    .h4 {
+        margin: 0.5rem 0 0 0;
+    }
 
     &:hover {
-        background: $primary;
-        color: white;
+        gap: 1.5rem;
+        color: $primary;
+        background-color: transparent;
+
+        &::before {
+            transform: translateX(0.5rem);
+        }
     }
 
-    &:active {
-        background: $primary;
-        color: white;
-        border-color: $secondary !important;
-    }
+    &:active {}
 }
 
 .btn-hero,

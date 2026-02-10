@@ -1,0 +1,88 @@
+.service-intro__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 8rem 0;
+
+    @include media-breakpoint-down(md) {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        padding: 4rem 0;
+    }
+}
+
+// Left Column
+.service-intro__headline {
+    margin-bottom: 4rem;
+    grid-column: 3 / 6;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+}
+
+.service-intro__services {
+    grid-column: 3 / 6;
+    grid-row: 2;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+}
+
+.service-intro__services-title {
+    margin-bottom: 1.5rem;
+    color: $primary;
+}
+
+.service-intro__services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-intro__service-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.service-intro__service-counter {
+    width: 7rem;
+}
+
+.service-intro__service-label {
+    margin-bottom: 0.25rem;
+}
+
+// Right Column
+.service-intro__right {
+    grid-column: 7 / 12;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+}
+
+.service-intro__text {
+    margin-bottom: 3rem;
+
+    p {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.service-intro__link {
+    align-self: flex-end;
+
+    @include media-breakpoint-down(md) {
+        align-self: flex-start;
+    }
+}
