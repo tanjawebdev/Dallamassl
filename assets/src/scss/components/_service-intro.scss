@@ -9,6 +9,10 @@
         gap: 4rem;
         padding: 4rem 0;
     }
+
+    @include media-breakpoint-up(lg) {
+        min-height: calc(100vh - 27rem);
+    }
 }
 
 // Left Column

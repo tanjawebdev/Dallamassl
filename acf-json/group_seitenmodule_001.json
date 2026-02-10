@@ -563,6 +563,449 @@
                     "acfe_flexible_settings_size": false,
                     "acfe_flexible_modal_edit_size": false
                 },
+                "layout_698b843fd2f57": {
+                    "key": "layout_698b843fd2f57",
+                    "name": "service_section_2",
+                    "label": "Service (Section 2)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_698b843fd2f69",
+                            "label": "Service",
+                            "name": "service",
+                            "aria-label": "",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "service",
+                            "add_term": 0,
+                            "save_terms": 1,
+                            "load_terms": 1,
+                            "return_format": "",
+                            "field_type": "select",
+                            "allow_null": 0,
+                            "acfe_bidirectional": {
+                                "acfe_bidirectional_enabled": "0"
+                            },
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "bidirectional": 0,
+                            "multiple": 0,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_698b843fd2f6a",
+                            "label": "Projekt Type",
+                            "name": "project_type",
+                            "aria-label": "",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "project_type",
+                            "add_term": 0,
+                            "save_terms": 1,
+                            "load_terms": 1,
+                            "return_format": "",
+                            "field_type": "select",
+                            "allow_null": 0,
+                            "acfe_bidirectional": {
+                                "acfe_bidirectional_enabled": "0"
+                            },
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "bidirectional": 0,
+                            "multiple": 0,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_698b843fd2f6b",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_textarea_code": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_698b843fd2f6c",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "allow_archives": 0,
+                            "multiple": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_698b843fd2f6d",
+                            "label": "Linktext",
+                            "name": "linktext",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_698b843fd2f6e",
+                            "label": "Projekt Teaser, Links (Querformat)",
+                            "name": "project_teaser_left",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "project"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "return_format": "object",
+                            "multiple": 0,
+                            "save_custom": 0,
+                            "save_post_status": "publish",
+                            "acfe_bidirectional": {
+                                "acfe_bidirectional_enabled": "0"
+                            },
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "bidirectional": 0,
+                            "ui": 1,
+                            "bidirectional_target": [],
+                            "save_post_type": ""
+                        },
+                        {
+                            "key": "field_698b843fd2f6f",
+                            "label": "Projekt Teaser, Rechts (Hochformat)",
+                            "name": "project_teaser_right",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "project"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "return_format": "object",
+                            "multiple": 0,
+                            "save_custom": 0,
+                            "save_post_status": "publish",
+                            "acfe_bidirectional": {
+                                "acfe_bidirectional_enabled": "0"
+                            },
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "bidirectional": 0,
+                            "ui": 1,
+                            "bidirectional_target": [],
+                            "save_post_type": ""
+                        },
+                        {
+                            "key": "field_698b843fd2f70",
+                            "label": "Stimmungstext",
+                            "name": "moodtext",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": 55,
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Service"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false
+                },
+                "layout_698b854dd2f71": {
+                    "key": "layout_698b854dd2f71",
+                    "name": "service_section_3",
+                    "label": "Service (Section 3)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_698b854ed2f83",
+                            "label": "Service",
+                            "name": "service",
+                            "aria-label": "",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "service",
+                            "add_term": 0,
+                            "save_terms": 1,
+                            "load_terms": 1,
+                            "return_format": "id",
+                            "field_type": "select",
+                            "allow_null": 0,
+                            "acfe_bidirectional": {
+                                "acfe_bidirectional_enabled": "0"
+                            },
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "bidirectional": 0,
+                            "multiple": 0,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_698b854ed2f85",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_textarea_code": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_698b854ed2f86",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "allow_archives": 0,
+                            "multiple": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_698b854ed2f87",
+                            "label": "Linktext",
+                            "name": "linktext",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_698b854ed2f8a",
+                            "label": "Stimmungstext",
+                            "name": "moodtext",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": 55,
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_698b8582d2f8b",
+                            "label": "Bild (4:5)",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "uploader": "",
+                            "return_format": "array",
+                            "library": "all",
+                            "acfe_thumbnail": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Service"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false
+                },
                 "layout_hero_gallery": {
                     "key": "layout_hero_gallery",
                     "name": "hero_gallery",
@@ -1556,5 +1999,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1770738058
+    "modified": 1770752128
 }

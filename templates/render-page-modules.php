@@ -75,6 +75,9 @@ while (have_rows('page_modules')) : the_row();
     case 'service_section_1':
       get_template_part('template-parts/flex/layout', 'service-section-1'); break;
 
+    case 'service_section_2':
+      get_template_part('template-parts/flex/layout', 'service-section-2'); break;
+
   
   }
 

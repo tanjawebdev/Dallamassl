@@ -1,0 +1,148 @@
+.service-section-2__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+
+    @include media-breakpoint-down(md) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+// Service Taxonomy (Top Left)
+.service-section-2__service {
+    grid-column: 1 / 4;
+    grid-row: 1;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+// Project Type Header (Top Middle)
+.service-section-2__project-type-header {
+    grid-column: 4 / 8;
+    grid-row: 1;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+// Text Content (Top Middle, below project type)
+.service-section-2__text {
+    grid-column: 4 / 8;
+    grid-row: 2;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 8rem;
+
+    }
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+// Link/CTA (Below text)
+.service-section-2__link {
+    grid-column: 5 / 8;
+    grid-row: 2;
+    align-self: end;
+    justify-self: end;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+// Right Project Teaser (Top Right - Portrait)
+.service-section-2__project-teaser--right {
+    grid-column: 9 / 12;
+    grid-row: 2 / 4;
+    text-decoration: none;
+    color: inherit;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+// Left Project Teaser (Bottom Left - Landscape)
+.service-section-2__project-teaser--left {
+    grid-column: 1 / 7;
+    grid-row: 3;
+    text-decoration: none;
+    color: inherit;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 10rem;
+    }
+}
+
+// Moodtext (Bottom Middle)
+.service-section-2__moodtext {
+    grid-column: 6 / 9;
+    grid-row: 3;
+    align-self: center;
+    z-index: 2;
+    pointer-events: none;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 10rem;
+    }
+}
+
+
+.service-section-2__project-image {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Right teaser - portrait
+.service-section-2__project-teaser--right .service-section-2__project-image {
+    aspect-ratio: 3 / 4;
+}
+
+// Left teaser - landscape
+.service-section-2__project-teaser--left .service-section-2__project-image {
+    aspect-ratio: 16 / 9;
+}
+
+.service-section-2__project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.service-section-2__project-title {
+    margin: 0;
+}
+
+.service-section-2__project-type {
+    white-space: nowrap;
+}
