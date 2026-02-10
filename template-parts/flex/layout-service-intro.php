@@ -17,9 +17,9 @@ $linktext = get_sub_field('linktext');
     
     <!-- Left Column: Headline & Services -->
       <?php if ($headline_text) : ?>
-        <h3 class="service-intro__headline">
+        <h1 class="service-intro__headline h3">
           <?php echo wpautop($headline_text); ?>
-        </h3>
+        </h1>
       <?php endif; ?>
 
       <?php if ($services) : ?>
