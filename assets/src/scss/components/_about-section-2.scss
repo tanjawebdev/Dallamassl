@@ -1,0 +1,96 @@
+.about-section-2__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+
+    @include media-breakpoint-down(md) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+// Large Image Left (Portrait 4:5)
+.about-section-2__image-left {
+    grid-column: 1 / 6;
+    grid-row: 1 / 3;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    picture {
+        position: relative;
+        display: block;
+        aspect-ratio: 4 / 5;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Small Description Text (Top Right)
+.about-section-2__text {
+    grid-column: 7 / 9;
+    grid-row: 1;
+    align-self: start;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    p {
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Moodtext (Center)
+.about-section-2__moodtext {
+    grid-column: 6 / 10;
+    grid-row: 2;
+    align-self: end;
+    z-index: 2;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    h2 {
+        margin: 0;
+    }
+}
+
+// Large Image Right (Portrait 4:5)
+.about-section-2__image-right {
+    grid-column: 9 / 12;
+    grid-row: 2 / 4;
+    align-self: end;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+
+    @include media-breakpoint-up(xxxl) {
+        margin-top: -8rem;
+    }
+
+    picture {
+        position: relative;
+        display: block;
+        aspect-ratio: 4 / 5;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
