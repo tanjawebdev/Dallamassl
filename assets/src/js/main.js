@@ -5,6 +5,7 @@ import InfoBoxSelection from './_info-box-selection';
 import Logo from './_logo';
 import HeroGalleryMousePosition from './_hero-gallery-mouse-position';
 import StickyD from './_sticky-d';
+import AboutSection5LogoSwap from './_about-section-5-logo-swap';
 
 const App = {
 	/**
@@ -52,6 +53,12 @@ const App = {
 			return new StickyD();
 		}
 		initStickyD();
+
+		// About Section 5 Logo Swap
+		function initAboutSection5LogoSwap() {
+			return new AboutSection5LogoSwap();
+		}
+		initAboutSection5LogoSwap();
 	},
 };
 

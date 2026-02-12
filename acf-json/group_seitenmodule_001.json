@@ -1700,6 +1700,173 @@
                     "acfe_flexible_settings_size": false,
                     "acfe_flexible_modal_edit_size": false
                 },
+                "layout_698ceb46edf09": {
+                    "key": "layout_698ceb46edf09",
+                    "name": "about_section_5",
+                    "label": "About (Section 5)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_698ceb46edf0a",
+                            "label": "Headline 1",
+                            "name": "headline_1",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_698ceb46edf0b",
+                            "label": "Text 1",
+                            "name": "moodtext_1",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_textarea_code": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_698cebeaedf0d",
+                            "label": "Headline 2",
+                            "name": "headline_2",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_698cebf1edf0f",
+                            "label": "Text 2",
+                            "name": "moodtext_2",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_textarea_code": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_698cebecedf0e",
+                            "label": "Headline 3",
+                            "name": "headline_3",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_698cebf3edf10",
+                            "label": "Text 3",
+                            "name": "moodtext_3",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_textarea_code": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "About"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false
+                },
                 "layout_hero_gallery": {
                     "key": "layout_hero_gallery",
                     "name": "hero_gallery",
@@ -2693,5 +2860,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1770841353
+    "modified": 1770843383
 }

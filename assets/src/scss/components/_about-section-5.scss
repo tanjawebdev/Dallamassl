@@ -1,0 +1,165 @@
+.about-section-5__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 8rem 0;
+
+    @include media-breakpoint-down(md) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 4rem 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 8rem 0 20rem;
+    }
+}
+
+// Welcome Text (Top)
+.about-section-5__welcome {
+    grid-column: 3 / 8;
+    grid-row: 1;
+    text-align: left;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+}
+
+.about-section-5__logo-wrapper {
+    grid-column: 1 / 13;
+    grid-row: 2;
+    position: relative;
+    height: calc(9vw + 5rem);
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        margin: 2rem 0;
+    }
+}
+
+// Large Logo (Center Top)
+.about-section-5__logo {
+    height: 9vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media-breakpoint-up(lg) {
+        top: 15rem;
+        bottom: auto;
+    }
+
+    &.is-stick-bottom {
+        bottom: 0;
+        top: auto;
+    }
+
+    svg {
+        height: 100%;
+        width: auto;
+    }
+
+    // Fixed state (when swapped with D.)
+    &.is-fixed {
+        position: fixed;
+        top: 7rem;
+        z-index: 1000;
+
+        @include media-breakpoint-down(md) {
+            top: 1rem;
+            left: 1rem;
+        }
+    }
+}
+
+// Headline 1 (Left)
+.about-section-5__headline-1 {
+    grid-column: 4 / 8;
+    grid-row: 3;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
+// Text 1 (Left)
+.about-section-5__text-1 {
+    grid-column: 5 / 8;
+    grid-row: 4;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 10rem;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+// Headline 2 (Center)
+.about-section-5__headline-2 {
+    grid-column: 8 /11;
+    grid-row: 5;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
+// Text 2 (Center)
+.about-section-5__text-2 {
+    grid-column: 9 / 12;
+    grid-row: 6;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+// Headline 3 (Right)
+.about-section-5__headline-3 {
+    grid-column: 2 /5;
+    grid-row: 6;
+    align-self: end;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
+// Text 3 (Right)
+.about-section-5__text-3 {
+    grid-column: 3/6;
+    grid-row: 7;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+
+    p {
+        margin: 0;
+    }
+}
