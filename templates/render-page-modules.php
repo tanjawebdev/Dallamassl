@@ -99,6 +99,9 @@ while (have_rows('page_modules')) : the_row();
     case 'about_section_5':
       get_template_part('template-parts/flex/layout', 'about-section-5'); break;
 
+    case 'about_section_6':
+      get_template_part('template-parts/flex/layout', 'about-section-6'); break;
+
   
   }
 
