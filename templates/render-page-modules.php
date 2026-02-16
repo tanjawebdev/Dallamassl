@@ -105,6 +105,9 @@ while (have_rows('page_modules')) : the_row();
     case 'about_section_7':
       get_template_part('template-parts/flex/layout', 'about-section-7'); break;
 
+    case 'project_overview':
+      get_template_part('template-parts/flex/layout', 'project-overview'); break;
+
   
   }
 

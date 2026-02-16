@@ -33,11 +33,11 @@ function projecttheme_register_projects() {
         'show_in_menu'       => true,                      // Show in admin menu
         'menu_position'      => 20,                        // Position in admin sidebar
         'menu_icon'          => 'dashicons-portfolio',     // Icon (portfolio/projects)
-        'supports'           => array('title', 'thumbnail', 'page-attributes'), // Add editor support
+        'supports'           => array('title', 'thumbnail', 'page-attributes'),
         'has_archive'        => true,                      // Enable archive page
         'rewrite'            => array(
             'slug'       => 'projects',                    // Use /projects/ as base URL
-            'with_front' => false                          // Don't prepend front base
+            'with_front' => false
         ),
         'show_in_rest'       => true,                      // Enable Gutenberg + REST API
         'capability_type'    => 'post',

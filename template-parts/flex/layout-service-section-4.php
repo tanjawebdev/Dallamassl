@@ -50,7 +50,8 @@ $service = $service_id ? get_term($service_id) : null;
     <?php if ($project_teaser_right) : 
       $right_id = $project_teaser_right->ID;
       $right_title = get_the_title($right_id);
-      $right_image = get_the_post_thumbnail_url($right_id, 'medium');
+      $right_image_acf = get_field('featured_image_portrait', $right_id);
+      $right_image = $right_image_acf ? $right_image_acf['url'] : '';
       $right_types = get_the_terms($right_id, 'project_type');
       $right_type_name = ($right_types && !is_wp_error($right_types)) ? $right_types[0]->name : '';
       $right_url = get_permalink($right_id);

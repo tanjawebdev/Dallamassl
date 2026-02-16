@@ -33,7 +33,8 @@ $project_type = $project_type_id ? get_term($project_type_id) : null;
     <?php if ($project_teaser_left) : 
       $left_id = $project_teaser_left->ID;
       $left_title = get_the_title($left_id);
-      $left_image = get_the_post_thumbnail_url($left_id, 'medium');
+      $left_image_acf = get_field('featured_image_portrait', $left_id);
+      $left_image = $left_image_acf ? $left_image_acf['url'] : '';
       $left_types = get_the_terms($left_id, 'project_type');
       $left_type_name = ($left_types && !is_wp_error($left_types)) ? $left_types[0]->name : '';
       $left_url = get_permalink($left_id);
@@ -90,7 +91,8 @@ $project_type = $project_type_id ? get_term($project_type_id) : null;
     <?php if ($project_teaser_right) : 
       $right_id = $project_teaser_right->ID;
       $right_title = get_the_title($right_id);
-      $right_image = get_the_post_thumbnail_url($right_id, 'medium');
+      $right_image_acf = get_field('featured_image_landscape', $right_id);
+      $right_image = $right_image_acf ? $right_image_acf['url'] : '';
       $right_types = get_the_terms($right_id, 'project_type');
       $right_type_name = ($right_types && !is_wp_error($right_types)) ? $right_types[0]->name : '';
       $right_url = get_permalink($right_id);

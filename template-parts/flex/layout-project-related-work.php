@@ -60,7 +60,8 @@ if ($prev_post || $next_post) :
           <!-- Previous Project -->
           <div class="project-related-work__item <?php echo !$prev_post ? 'project-related-work__item--empty' : ''; ?>">
             <?php if ($prev_post) : 
-              $prev_thumbnail = get_the_post_thumbnail_url($prev_post->ID, 'large');
+              $prev_thumbnail_acf = get_field('featured_image_landscape', $prev_post->ID);
+              $prev_thumbnail = $prev_thumbnail_acf ? $prev_thumbnail_acf['url'] : '';
               $prev_types = get_the_terms($prev_post->ID, 'project_type');
               $prev_type_label = $prev_types && !is_wp_error($prev_types) ? esc_html($prev_types[0]->name) : '';
             ?>
@@ -94,7 +95,8 @@ if ($prev_post || $next_post) :
           <!-- Next Project -->
           <div class="project-related-work__item <?php echo !$next_post ? 'project-related-work__item--empty' : ''; ?>">
             <?php if ($next_post) : 
-              $next_thumbnail = get_the_post_thumbnail_url($next_post->ID, 'large');
+              $next_thumbnail_acf = get_field('featured_image_landscape', $next_post->ID);
+              $next_thumbnail = $next_thumbnail_acf ? $next_thumbnail_acf['url'] : '';
                 $next_types = get_the_terms($next_post->ID, 'project_type');
                 $next_type_label = $next_types && !is_wp_error($next_types) ? esc_html($next_types[0]->name) : '';
               ?>
