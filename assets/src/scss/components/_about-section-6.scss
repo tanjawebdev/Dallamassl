@@ -1,5 +1,9 @@
+.about_section_6 {
+    margin-bottom: 0;
+}
+
 .about-section-6 {
-    padding: 8rem 0;
+    padding: 8rem 0 0;
 
     @include media-breakpoint-down(md) {
         padding: 4rem 0;
@@ -37,15 +41,21 @@
     }
 }
 
+.about-section-6__captions {
+    display: flex;
+    justify-content: space-between;
+}
+
 // Top Text - Upper right area
 .about-section-6__text-top {
     grid-column: 7 / 11;
     grid-row: 1;
-    align-self: center;
-    padding-top: 2rem;
-    // min grid row height?
+    align-content: center;
     min-height: 15rem;
 
+    @include media-breakpoint-up(lg) {
+        min-height: 35rem;
+    }
 
     @include media-breakpoint-down(md) {
         grid-column: 1;

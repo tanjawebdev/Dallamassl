@@ -9,6 +9,8 @@ $image_left = get_sub_field('image_left');
 $moodtext = get_sub_field('moodtext');
 $text_top = get_sub_field('text_top');
 $image_right = get_sub_field('image_right');
+$caption_left = get_sub_field('caption_left');
+$caption_right = get_sub_field('caption_right');
 ?>
 
 <section class="about-section-6">
@@ -25,6 +27,10 @@ $image_right = get_sub_field('image_right');
           ['class' => 'about-section-6__img']
         ); 
         ?>
+        <div class="about-section-6__captions">
+          <p class="description"><?php echo esc_html($caption_left); ?></p>
+          <p class="description"><?php echo esc_html($caption_right); ?></p>
+        </div>
       </div>
     <?php endif; ?>
 

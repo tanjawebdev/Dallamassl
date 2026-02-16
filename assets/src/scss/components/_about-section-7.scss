@@ -1,0 +1,46 @@
+.about-section-7 {
+    padding: 0 0 8rem;
+
+    @include media-breakpoint-down(md) {
+        padding: 0 0 4rem;
+    }
+}
+
+.about-section-7__container {
+    max-width: 100%;
+}
+
+.about-section-7__header {
+    margin-bottom: 4rem;
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 2rem;
+    }
+}
+
+.about-section-7__title {
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+    @include media-breakpoint-down(md) {
+        hyphens: auto;
+    }
+}
+
+.about-section-7__partners {
+    @include media-breakpoint-down(md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+.about-section-7__partner {
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 5rem;
+    }
+
+    &>span {
+        margin-bottom: 0.5rem;
+    }
+}
