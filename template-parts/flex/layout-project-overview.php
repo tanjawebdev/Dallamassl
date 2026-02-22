@@ -26,6 +26,10 @@ $moodtexts = get_sub_field('moodtexts');
     <div class="project-overview__grid container-lg">
       <?php 
       $index = 0;
+      $moodtext_index = 0; // tracks which moodtext to show next (cycles through the repeater)
+      $moodtext_count = $moodtexts ? count($moodtexts) : 0;
+      
+
       while ($projects_query->have_posts()) : $projects_query->the_post(); 
         $project_id = get_the_ID();
         $project_title = get_the_title();
@@ -33,6 +37,18 @@ $moodtexts = get_sub_field('moodtexts');
         
         // Calculate position in the repeating pattern (0-4)
         $position = $index % 5;
+
+        // Insert a moodtext after each complete 5-project cycle (before positions 0, except the very first)
+        if (($position === 0 || $position === 4) && $moodtext_count > 0) :
+          $current_moodtext = $moodtexts[$moodtext_index % $moodtext_count];
+          $moodtext_class = ($moodtext_index % 2 === 0) ? 'description' : 'h4';
+      ?>
+        <div class="project-overview__moodtext <?php echo $moodtext_class; ?>">
+          <?php echo wpautop($current_moodtext['text']); ?>
+        </div>
+      <?php
+          $moodtext_index++;
+        endif;
         
         // Determine which image to use based on position
         // Positions 0, 1, 3 = portrait | Positions 2, 4 = landscape
@@ -73,15 +89,4 @@ $moodtexts = get_sub_field('moodtexts');
     </div>
     <?php wp_reset_postdata(); ?>
   <?php endif; ?>
-
-  <div class="project-overview__container container-lg">    
-    <?php if ($moodtexts) : ?>
-      <?php foreach ($moodtexts as $moodtext) : ?>
-        <div class="project-overview__moodtext">
-          <?php echo wpautop($moodtext['text']); ?>
-        </div>
-      <?php endforeach; ?>
-    <?php endif; ?>
-
-  </div>
 </section>
