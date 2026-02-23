@@ -111,6 +111,9 @@ while (have_rows('page_modules')) : the_row();
     case 'project_quotes':
       get_template_part('template-parts/flex/layout', 'project-quote'); break;
 
+    case 'contact':
+      get_template_part('template-parts/flex/layout', 'contact'); break;
+
   }
 
   if (function_exists('section_close')) {
