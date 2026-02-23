@@ -1,0 +1,112 @@
+.project_quotes {
+    background-color: $secondary;
+    padding: 2rem 0 4rem;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 4rem 0 8rem;
+    }
+}
+
+
+.project-quote {
+    padding: 8rem 0;
+
+    @include media-breakpoint-down(md) {
+        padding: 4rem 0;
+    }
+}
+
+// Header with title
+.project-quote__header {
+    margin-bottom: 6rem;
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 3rem;
+    }
+}
+
+// Horizontal scroll container
+.project-quote__slider {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    //scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 2rem 2rem;
+
+    // Hide scrollbar
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+// Individual quote card
+.project-quote__card {
+    flex: 0 0 auto;
+    width: 40vw;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    background-color: $body-bg;
+    border-radius: 4rem;
+    padding: 3.5rem 3.5rem 1.5rem 3.5rem;
+
+    @include media-breakpoint-down(md) {
+        width: 300px;
+        padding: 1.5rem;
+    }
+}
+
+.project-quote__top-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 8rem;
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 4rem;
+    }
+}
+
+// Large decorative quotation mark
+.project-quote__icon {
+    width: 79px;
+    height: 56px;
+    display: block;
+    background-color: currentColor;
+    mask-image: url('/wp-content/themes/dallamassl/static/img/quotes.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: transform 0.3s ease;
+
+    @include media-breakpoint-down(md) {
+        width: 50px;
+        height: 35px;
+    }
+}
+
+// Quote text
+.project-quote__text {
+    margin-bottom: 2rem;
+    max-width: 70%;
+    font-weight: 600;
+    flex: 1;
+}
+
+// Author attribution
+.project-quote__author {
+    margin-top: auto;
+    text-align: right;
+}
+
+// Footer with contact link
+.project-quote__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+}

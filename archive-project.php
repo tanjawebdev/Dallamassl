@@ -13,14 +13,8 @@ get_header();
 <main id="main" class="site-main">
   
   <?php
-  // Option 1: Check if there's an ACF Options page for project archive
-  if (function_exists('have_rows') && have_rows('page_modules', 'option')) {
-    get_template_part('templates/render', 'page-modules');
-  } 
-  // Option 2: You can also create a regular page and pull its ACF content here
-  else {
-    // Get the page titled "Projects" to use its ACF content
-    $projects_page = get_page_by_path('projects');
+  // Get the "Projects" page to use its ACF content
+  $projects_page = get_page_by_path('projects');
     
     if ($projects_page && function_exists('have_rows') && have_rows('page_modules', $projects_page->ID)) {
       global $post;
@@ -29,7 +23,6 @@ get_header();
       setup_postdata($post);
       
       get_template_part('templates/render', 'page-modules');
-      
       $post = $old_post;
       if ($post) {
         setup_postdata($post);
@@ -61,7 +54,6 @@ get_header();
       </section>
       <?php
     }
-  }
   ?>
 
 </main>

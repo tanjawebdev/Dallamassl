@@ -204,6 +204,181 @@
                     "acfe_flexible_settings_size": false,
                     "acfe_flexible_modal_edit_size": false
                 },
+                "layout_699b707f4059f": {
+                    "key": "layout_699b707f4059f",
+                    "name": "project_quotes",
+                    "label": "Quotes",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_699b7139115b4",
+                            "label": "Überschrift",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_699b707f405a0",
+                            "label": "Zitate",
+                            "name": "quote",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_repeater_stylised_button": 0,
+                            "layout": "block",
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "acfe_permissions": "",
+                            "collapsed": "",
+                            "button_label": "Eintrag hinzufügen",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_699b707f405a1",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_permissions": "",
+                                    "default_value": "",
+                                    "acfe_textarea_code": 0,
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "",
+                                    "parent_repeater": "field_699b707f405a0"
+                                },
+                                {
+                                    "key": "field_699b7115115b3",
+                                    "label": "Autor:in",
+                                    "name": "autor",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_permissions": "",
+                                    "default_value": "",
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_699b707f405a0"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_699c3808ab137",
+                            "label": "Container",
+                            "name": "container",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "container-lg": "container-lg",
+                                "container-fluid": "container-fluid"
+                            },
+                            "default_value": "container-fluid",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_699c3ca0b78c5",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Project"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false
+                },
                 "layout_698a4e2a58d27": {
                     "key": "layout_698a4e2a58d27",
                     "name": "service_intro",
@@ -3251,5 +3426,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1771243398
+    "modified": 1771846863
 }

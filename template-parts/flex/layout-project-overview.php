@@ -12,6 +12,10 @@ $moodtexts = get_sub_field('moodtexts');
 <section class="project-overview">
 
   <?php
+  // Save current post context so we can restore it after our custom query
+  global $post;
+  $saved_post = $post;
+
   // Query all published projects
   $projects_query = new WP_Query(array(
     'post_type' => 'project',
@@ -89,4 +93,10 @@ $moodtexts = get_sub_field('moodtexts');
     </div>
     <?php wp_reset_postdata(); ?>
   <?php endif; ?>
+
+  <?php
+  // Restore the post context to the Projects page so ACF's flexible content loop continues
+  $post = $saved_post;
+  setup_postdata($post);
+  ?>
 </section>
