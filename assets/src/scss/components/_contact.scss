@@ -1,5 +1,5 @@
 .contact {
-    padding: 8rem 0;
+    padding: 15rem 0 0;
 
     @include media-breakpoint-down(md) {
         padding: 4rem 0;
@@ -8,8 +8,8 @@
 
 .contact__grid {
     display: grid;
-    grid-template-columns: 5fr 7fr;
-    gap: 4rem;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
 
     @include media-breakpoint-down(lg) {
         grid-template-columns: 1fr;
@@ -17,26 +17,35 @@
     }
 }
 
+.contact__left {
+    grid-column: 2/6;
+}
+
+.contact__right {
+    grid-column: 6/12;
+}
+
 // Left column
 .contact__headline {
-    margin-bottom: 4rem;
-    text-transform: uppercase;
+    margin-bottom: 15rem;
+
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 2rem;
+    }
 }
 
 .contact__moodtext {
-    max-width: 80%;
-    text-transform: uppercase;
-
-    @include media-breakpoint-down(lg) {
-        max-width: 100%;
-    }
+    padding-right: 2rem;
 }
 
 // Right column
 .contact__address {
     margin-bottom: 3rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid currentColor;
+
+    @include media-breakpoint-up(lg) {
+        padding-left: 10%;
+    }
 
     p {
         margin-bottom: 0.25rem;
@@ -44,6 +53,16 @@
 
     a {
         color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.6rem;
+            text-decoration-thickness: 3px;
+        }
+    }
+
+    a[href^="mailto:"] {
+        border-bottom: 3px solid currentColor;
     }
 }
 
@@ -56,13 +75,29 @@
 
     .wpforms-field {
         padding: 0;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 10%;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .wpforms-field-textarea {
+        @include media-breakpoint-up(lg) {
+            padding-left: 0;
+        }
     }
 
     .wpforms-field-label {
-        font-size: 0.875rem;
-        font-weight: 400;
-        margin-bottom: 0.25rem;
+        font-size: 3.6rem !important;
+        font-weight: 300 !important;
+        line-height: 2 !important;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 2.4rem !important;
+            line-height: 1 !important;
+        }
     }
 
     input[type="text"],
@@ -71,15 +106,21 @@
     textarea {
         width: 100%;
         background: transparent;
-        border: none;
-        border-bottom: 1px solid currentColor;
-        border-radius: 0;
-        padding: 0.5rem 0;
-        font-size: 1rem;
-        font-family: inherit;
-        color: inherit;
-        outline: none;
-        transition: border-color 0.3s ease;
+        border: none !important;
+        border-bottom: 1px solid black !important;
+        border-radius: 0 !important;
+        padding: 0.5rem 0 !important;
+        font-size: 2rem !important;
+        font-family: inherit !important;
+        color: black !important;
+        outline: none !important;
+        transition: border-color 0.3s ease !important;
+
+        //placeholder?
+        &::placeholder {
+            color: #6e6e6e !important;
+            opacity: 1 !important;
+        }
 
         &:focus {
             border-bottom-color: $primary;
@@ -90,12 +131,18 @@
     textarea {
         min-height: 150px;
         resize: vertical;
-        border: 1px solid currentColor;
-        padding: 1rem;
+        padding: 2rem !important;
         margin-top: 0.5rem;
+        background: rgb(235, 235, 235) !important;
+        border-radius: 3rem !important;
+        border: none !important;
 
         &:focus {
             border-color: $primary;
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-height: 15vw !important;
         }
     }
 
@@ -108,20 +155,26 @@
     }
 
     .wpforms-submit {
-        background-color: $body-color;
+        background-color: $body-color !important;
         color: $body-bg;
         border: none;
-        border-radius: 2rem;
-        padding: 1rem 3rem;
-        font-size: 1rem;
-        font-family: inherit;
+        height: auto !important;
+        border-radius: 1rem !important;
+        padding: 2rem 4rem 1rem !important;
+        font-size: 4rem !important;
+        line-height: 1 !important;
+        font-family: $headings-font-family !important;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: 0;
         cursor: pointer;
-        transition: opacity 0.3s ease;
+        transition: background-color 0.3s ease;
+
+        &::before {
+            display: none;
+        }
 
         &:hover {
-            opacity: 0.8;
+            background-color: $primary !important;
         }
     }
 

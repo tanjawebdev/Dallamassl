@@ -18,13 +18,13 @@ $wpforms_code = get_sub_field('wpforms_code');
     <?php endif; ?>
 
     <?php if ($moodtext) : ?>
-      <p class="contact__moodtext h4"><?php echo esc_html($moodtext); ?></p>
+      <p class="contact__moodtext h3"><?php echo esc_html($moodtext); ?></p>
     <?php endif; ?>
   </div>
 
   <div class="contact__right">
     <?php if ($address) : ?>
-      <div class="contact__address">
+      <div class="contact__address h4">
         <?php echo wp_kses_post($address); ?>
       </div>
     <?php endif; ?>
