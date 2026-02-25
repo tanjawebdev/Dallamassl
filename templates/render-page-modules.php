@@ -114,6 +114,9 @@ while (have_rows('page_modules')) : the_row();
     case 'contact':
       get_template_part('template-parts/flex/layout', 'contact'); break;
 
+    case 'home_project_teaser':
+      get_template_part('template-parts/flex/layout', 'home-project-teaser'); break;
+
   }
 
   if (function_exists('section_close')) {

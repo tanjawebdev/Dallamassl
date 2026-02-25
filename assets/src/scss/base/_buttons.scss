@@ -1,5 +1,6 @@
 .btn {
     transition: 0.3s ease-out all;
+    font-family: $headings-font-family;
 }
 
 .btn-primary {
@@ -41,6 +42,26 @@
     }
 
     &:active {}
+}
+
+.btn-big {
+    font-size: 4rem;
+    line-height: 1.2;
+    text-align: left;
+    display: inline-block;
+
+    @include media-breakpoint-up(lg) {
+        max-width: 350px;
+    }
+
+    &::before {
+        display: block;
+        float: left;
+        height: 3rem;
+        width: 3rem;
+        margin-top: 3px;
+        margin-right: 1rem;
+    }
 }
 
 .btn-hero,
