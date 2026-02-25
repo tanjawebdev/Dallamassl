@@ -117,6 +117,9 @@ while (have_rows('page_modules')) : the_row();
     case 'home_project_teaser':
       get_template_part('template-parts/flex/layout', 'home-project-teaser'); break;
 
+    case 'home_about_teaser':
+      get_template_part('template-parts/flex/layout', 'home-about-teaser'); break;
+
   }
 
   if (function_exists('section_close')) {
