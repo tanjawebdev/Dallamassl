@@ -375,6 +375,257 @@
                     "acfe_flexible_settings_size": false,
                     "acfe_flexible_modal_edit_size": false
                 },
+                "layout_69a0192a9824e": {
+                    "key": "layout_69a0192a9824e",
+                    "name": "home_service_teaser",
+                    "label": "Home Service Teaser",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69a0194198262",
+                            "label": "Headline",
+                            "name": "headline",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_69a0196898263",
+                            "label": "Subheadline rechts",
+                            "name": "subheadline",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_69a0199998264",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_69a019aa98265",
+                            "label": "Projektablauf",
+                            "name": "milestones",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_repeater_stylised_button": 0,
+                            "layout": "table",
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "acfe_permissions": "",
+                            "collapsed": "",
+                            "button_label": "Eintrag hinzufügen",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_69a019e398266",
+                                    "label": "Projektpunkt",
+                                    "name": "step",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_69a019aa98265"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_69a01a2198267",
+                            "label": "Services",
+                            "name": "services",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_repeater_stylised_button": 0,
+                            "layout": "table",
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Eintrag hinzufügen",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_69a01a3598268",
+                                    "label": "Dienstleistung",
+                                    "name": "service",
+                                    "aria-label": "",
+                                    "type": "taxonomy",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_permissions": "",
+                                    "taxonomy": "service",
+                                    "add_term": 1,
+                                    "save_terms": 0,
+                                    "load_terms": 0,
+                                    "return_format": "id",
+                                    "field_type": "select",
+                                    "allow_null": 0,
+                                    "acfe_bidirectional": {
+                                        "acfe_bidirectional_enabled": "0"
+                                    },
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "allow_in_bindings": 0,
+                                    "bidirectional": 0,
+                                    "multiple": 0,
+                                    "bidirectional_target": [],
+                                    "parent_repeater": "field_69a01a2198267"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_69a01a8f98269",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "allow_archives": 0,
+                            "multiple": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_69a01aa59826a",
+                            "label": "Linktext",
+                            "name": "linktext",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Home"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false
+                },
                 "layout_699f67a980ed6": {
                     "key": "layout_699f67a980ed6",
                     "name": "home_about_teaser",
@@ -1153,8 +1404,8 @@
                             },
                             "taxonomy": "service",
                             "add_term": 0,
-                            "save_terms": 1,
-                            "load_terms": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
                             "return_format": "id",
                             "field_type": "select",
                             "allow_null": 0,
@@ -1185,8 +1436,8 @@
                             },
                             "taxonomy": "project_type",
                             "add_term": 0,
-                            "save_terms": 1,
-                            "load_terms": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
                             "return_format": "id",
                             "field_type": "select",
                             "allow_null": 0,
@@ -1413,9 +1664,9 @@
                             },
                             "taxonomy": "service",
                             "add_term": 0,
-                            "save_terms": 1,
-                            "load_terms": 1,
-                            "return_format": "",
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
                             "field_type": "select",
                             "allow_null": 0,
                             "acfe_bidirectional": {
@@ -1445,9 +1696,9 @@
                             },
                             "taxonomy": "project_type",
                             "add_term": 0,
-                            "save_terms": 1,
-                            "load_terms": 1,
-                            "return_format": "",
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "object",
                             "field_type": "select",
                             "allow_null": 0,
                             "acfe_bidirectional": {
@@ -1673,8 +1924,8 @@
                             },
                             "taxonomy": "service",
                             "add_term": 0,
-                            "save_terms": 1,
-                            "load_terms": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
                             "return_format": "id",
                             "field_type": "select",
                             "allow_null": 0,
@@ -1856,9 +2107,9 @@
                             },
                             "taxonomy": "service",
                             "add_term": 0,
-                            "save_terms": 1,
-                            "load_terms": 1,
-                            "return_format": "object",
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
                             "field_type": "select",
                             "allow_null": 0,
                             "acfe_bidirectional": {
@@ -4009,5 +4260,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1772054731
+    "modified": 1772107244
 }

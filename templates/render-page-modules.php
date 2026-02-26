@@ -120,6 +120,9 @@ while (have_rows('page_modules')) : the_row();
     case 'home_about_teaser':
       get_template_part('template-parts/flex/layout', 'home-about-teaser'); break;
 
+    case 'home_service_teaser':
+      get_template_part('template-parts/flex/layout', 'home-service-teaser'); break;
+
   }
 
   if (function_exists('section_close')) {

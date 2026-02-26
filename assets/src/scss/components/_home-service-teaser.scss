@@ -1,0 +1,117 @@
+.home-service-teaser__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+
+    @include media-breakpoint-down(md) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+// Headline (top left)
+.home-service-teaser__headline {
+    grid-column: 1 / 4;
+    grid-row: 1;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+// Milestones (middle, numbered list)
+.home-service-teaser__milestones {
+    grid-column: 3/6;
+    grid-row: 3;
+    align-self: center;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 3rem;
+    }
+}
+
+.home-service-teaser__milestone-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.home-service-teaser__milestone-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+// Subheadline (top right)
+.home-service-teaser__subheadline {
+    grid-column: 7 / 10;
+    grid-row: 2;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+// Text (below subheadline)
+.home-service-teaser__text {
+    grid-column: 7 / 11;
+    grid-row: 3;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 3rem;
+    }
+}
+
+// Services taxonomy descriptions (bottom row)
+.home-service-teaser__services {
+    grid-column: 1 / 9;
+    grid-row: 4;
+    display: flex;
+    gap: 3rem;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+.home-service-teaser__service-item {
+    flex: 1;
+    min-width: 0;
+
+    a {
+        transition: 0.3s ease all;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+// Link/CTA (bottom right)
+.home-service-teaser__link {
+    grid-column: 9 / 12;
+    grid-row: 4;
+    align-self: end;
+    justify-self: end;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: start;
+    }
+}

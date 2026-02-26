@@ -15,7 +15,7 @@ $project_teaser_right = get_sub_field('project_teaser_right'); // Post Object
 $service = $service_id ? get_term($service_id) : null;
 ?>
 
-<section class="service-section-4">
+<section class="service-section-4" id="service-<?php echo esc_attr($service_id); ?>">
   <div class="service-section-4__grid">
     
     <!-- Content Column (Left) -->

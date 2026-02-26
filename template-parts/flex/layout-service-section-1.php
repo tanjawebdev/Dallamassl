@@ -19,7 +19,7 @@ $service = $service_id ? get_term($service_id) : null;
 $project_type = $project_type_id ? get_term($project_type_id) : null;
 ?>
 
-<section class="service-section-1">
+<section class="service-section-1" id="service-<?php echo esc_attr($service_id); ?>">
   <div class="service-section-1__grid">
     
     <!-- Service Taxonomy (Top Left) -->

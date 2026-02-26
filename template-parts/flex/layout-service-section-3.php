@@ -16,7 +16,7 @@ $image = get_sub_field('image'); // Image field
 $service = $service_id ? get_term($service_id) : null;
 ?>
 
-<section class="service-section-3">
+<section class="service-section-3" id="service-<?php echo esc_attr($service_id); ?>">
   <div class="service-section-3__grid">
     
     <!-- Image (Left) -->
