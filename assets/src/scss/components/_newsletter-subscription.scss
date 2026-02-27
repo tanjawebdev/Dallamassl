@@ -1,0 +1,95 @@
+.newsletter__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.newsletter__headline {
+    grid-column: 1 / 4;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+}
+
+.newsletter__form {
+    grid-column: 6 / 11;
+
+    @include media-breakpoint-down(md) {
+        grid-column: 1;
+    }
+}
+
+// MC4WP form overrides
+.newsletter__form {
+    .mc4wp-form-fields {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+    }
+
+    label {
+        margin-bottom: 1rem;
+    }
+
+    input[type="email"] {
+        flex: 1;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0.5rem 0;
+        font-family: inherit;
+        color: inherit;
+        outline: none;
+        transition: border-color 0.3s ease;
+
+        &::placeholder {
+            color: inherit;
+            opacity: 0.6;
+        }
+
+        &:focus {
+            border-bottom-color: $primary;
+        }
+    }
+
+    button[type="submit"],
+    input[type="submit"] {
+        background: transparent;
+        border: none;
+        padding: 0;
+        font-family: $headings-font-family;
+        color: inherit;
+        cursor: pointer;
+        white-space: nowrap;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.3s ease;
+
+        &::before {
+            display: none;
+        }
+
+        &:hover {
+            color: $primary;
+
+            &::before {
+                transform: translateX(0.3rem);
+            }
+        }
+    }
+
+    // Hide MC4WP default response messages styling
+    .mc4wp-response {
+        margin-top: 1rem;
+    }
+}

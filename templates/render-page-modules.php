@@ -123,6 +123,9 @@ while (have_rows('page_modules')) : the_row();
     case 'home_service_teaser':
       get_template_part('template-parts/flex/layout', 'home-service-teaser'); break;
 
+    case 'newsletter_subscription':
+      get_template_part('template-parts/flex/layout', 'newsletter-subscription'); break;
+
   }
 
   if (function_exists('section_close')) {
