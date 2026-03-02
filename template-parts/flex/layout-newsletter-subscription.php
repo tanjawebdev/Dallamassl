@@ -6,6 +6,7 @@
 
 // Get ACF fields
 $headline = get_sub_field('headline');
+$formid = get_sub_field('form_id');
 ?>
 
 <div class="newsletter__grid container-lg">
@@ -17,7 +18,7 @@ $headline = get_sub_field('headline');
   <?php endif; ?>
 
   <div class="newsletter__form">
-    <?php echo do_shortcode('[mc4wp_form id="362"]'); ?>
+    <?php echo do_shortcode('[mc4wp_form id="' . esc_html($formid) . '"]'); ?>
   </div>
 
 </div>
