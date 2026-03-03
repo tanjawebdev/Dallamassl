@@ -38,7 +38,7 @@ $interval = get_sub_field('interval') ?: 3000;
               <div class="hero-media">
                 <?php if ($item['image']): ?>
                   <picture class="hero-picture">
-                    <?php echo wp_get_attachment_image($item['image']['ID'], 'large', false, ['class' => 'img-fluid']); ?>
+                    <?php echo wp_get_attachment_image($item['image']['ID'], 'large_size', false, ['class' => 'img-fluid']); ?>
                   </picture>
                 <?php endif; ?>
 

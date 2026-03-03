@@ -33,7 +33,7 @@ $blog_query = new WP_Query($args);
                 <article <?php post_class('blog-teaser'); ?>>
                   <?php if (has_post_thumbnail()) : ?>
                     <a href="<?php the_permalink(); ?>" class="blog-teaser__image">
-                      <?php the_post_thumbnail('large'); ?>
+                      <?php the_post_thumbnail('large_size'); ?>
                     </a>
                   <?php endif; ?>
 

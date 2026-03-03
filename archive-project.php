@@ -41,7 +41,7 @@ get_header();
                   <article>
                     <a href="<?php the_permalink(); ?>">
                       <?php if (has_post_thumbnail()) : ?>
-                        <?php the_post_thumbnail('medium'); ?>
+                        <?php the_post_thumbnail('medium_size'); ?>
                       <?php endif; ?>
                       <h2><?php the_title(); ?></h2>
                     </a>

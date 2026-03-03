@@ -22,7 +22,7 @@ $caption_right = get_sub_field('caption_right');
         <?php 
         echo wp_get_attachment_image(
           $image_left['ID'], 
-          'large',
+          'large_size',
           false,
           ['class' => 'about-section-6__img']
         ); 
@@ -54,7 +54,7 @@ $caption_right = get_sub_field('caption_right');
         <?php 
         echo wp_get_attachment_image(
           $image_right['ID'], 
-          'large',
+          'large_size',
           false,
           ['class' => 'about-section-6__img']
         ); 

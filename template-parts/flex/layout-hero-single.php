@@ -24,7 +24,7 @@ $title_tag = in_array($title_tag, ['h1', 'h2', 'h3']) ? $title_tag : 'h2';
 
     <?php if ($image): ?>
       <picture class="hero-picture">
-        <?php echo wp_get_attachment_image($image['ID'], 'large', false, ['class' => 'img-fluid']); ?>
+        <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['class' => 'img-fluid']); ?>
       </picture>
     <?php endif; ?>
 

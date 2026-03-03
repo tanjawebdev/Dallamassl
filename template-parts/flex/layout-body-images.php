@@ -9,7 +9,7 @@ $images = get_sub_field('images');
       <?php foreach ($images as $img): ?>
         <div class="body-image flex-shrink-0 col-md-6 w-75 w-sm-50 w-md-auto">
           <picture>
-            <?php echo wp_get_attachment_image($img['ID'], 'medium', false, ['class' => 'img-fluid']); ?>
+            <?php echo wp_get_attachment_image($img['ID'], 'medium_size', false, ['class' => 'img-fluid']); ?>
           </picture>
         </div>
       <?php endforeach; ?>

@@ -25,14 +25,14 @@ $small_picture = get_sub_field('small_picture');
           </div>
           <div class="project-hero-big-left-image">
             <picture class="object-fit-cover">
-              <?php echo wp_get_attachment_image($small_picture['ID'], 'small', false, ['class' => 'img-fluid']); ?>
+              <?php echo wp_get_attachment_image($small_picture['ID'], 'small_size', false, ['class' => 'img-fluid']); ?>
             </picture>
           </div>
         </div>
 
         <div class="col-12 col-lg-7 project-hero-big-right">
           <picture class="object-fit-cover">
-            <?php echo wp_get_attachment_image($big_picture['ID'], 'large', false, ['class' => 'img-fluid']); ?>
+            <?php echo wp_get_attachment_image($big_picture['ID'], 'large_size', false, ['class' => 'img-fluid']); ?>
           </picture>
         </div>
       </div>

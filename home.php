@@ -35,7 +35,7 @@ get_header(); ?>
           <article <?php post_class('blog-teaser col-lg-4'); ?>>
             <?php if (has_post_thumbnail()) : ?>
               <a href="<?php the_permalink(); ?>" class="blog-teaser__image">
-                <?php the_post_thumbnail('large'); ?>
+                <?php the_post_thumbnail('large_size'); ?>
               </a>
             <?php endif; ?>
 

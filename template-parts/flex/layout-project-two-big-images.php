@@ -16,7 +16,7 @@ $right_image = get_sub_field('right_image');
     <?php if ($left_image) : ?>
       <div class="project-two-big-images__image project-two-big-images__image--left">
         <picture>
-          <?php echo wp_get_attachment_image($left_image['ID'], 'medium', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($left_image['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>
@@ -25,7 +25,7 @@ $right_image = get_sub_field('right_image');
     <?php if ($right_image) : ?>
       <div class="project-two-big-images__image project-two-big-images__image--right">
         <picture>
-          <?php echo wp_get_attachment_image($right_image['ID'], 'large', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($right_image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>

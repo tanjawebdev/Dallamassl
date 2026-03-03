@@ -25,7 +25,7 @@ $image_bottom_right = get_sub_field('image_bottom-right');
     <?php if ($image_top_right) : ?>
       <div class="project-text-three-images__image project-text-three-images__image--top-right">
         <picture>
-          <?php echo wp_get_attachment_image($image_top_right['ID'], 'medium', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($image_top_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>
@@ -34,7 +34,7 @@ $image_bottom_right = get_sub_field('image_bottom-right');
     <?php if ($image_bottom_left) : ?>
       <div class="project-text-three-images__image project-text-three-images__image--bottom-left">
         <picture>
-          <?php echo wp_get_attachment_image($image_bottom_left['ID'], 'medium', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($image_bottom_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>
@@ -43,7 +43,7 @@ $image_bottom_right = get_sub_field('image_bottom-right');
     <?php if ($image_bottom_right) : ?>
       <div class="project-text-three-images__image project-text-three-images__image--bottom-right">
         <picture>
-          <?php echo wp_get_attachment_image($image_bottom_right['ID'], 'medium', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($image_bottom_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>

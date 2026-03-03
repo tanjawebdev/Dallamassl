@@ -21,7 +21,7 @@ $linktext = get_sub_field('linktext');
     <div class="home-about-teaser__gallery">
       <?php foreach ($gallery as $img) : ?>
         <div class="home-about-teaser__gallery-item">
-          <?php echo wp_get_attachment_image($img['ID'], 'small', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($img['ID'], 'small_size', false, ['loading' => 'lazy']); ?>
 
         </div>
       <?php endforeach; ?>

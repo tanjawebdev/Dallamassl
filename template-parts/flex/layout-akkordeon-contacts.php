@@ -56,7 +56,7 @@ $departments = get_terms(array(
                   <?php if (has_post_thumbnail()): ?>
                     <div class="contact-image-wrapper">
                       <picture>
-                        <?php the_post_thumbnail('medium', ['class' => 'contact-image']); ?>
+                        <?php the_post_thumbnail('medium_size', ['class' => 'contact-image']); ?>
                       </picture>
                     </div>
                   <?php endif; ?>

@@ -27,7 +27,7 @@ $small_images = get_sub_field('small_images');
         <?php foreach ($small_images as $image) : ?>
           <div class="project-text-small-images__gallery-item">
             <picture>
-              <?php echo wp_get_attachment_image($image['ID'], 'small', false, ['loading' => 'lazy']); ?>
+              <?php echo wp_get_attachment_image($image['ID'], 'small_size', false, ['loading' => 'lazy']); ?>
             </picture>
           </div>
         <?php endforeach; ?>

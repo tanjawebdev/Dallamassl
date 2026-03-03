@@ -26,7 +26,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     <div class="project-details-big__image project-details-big__image--big-top-left">
       <?php if ($image_big_top_left) : ?>
         <picture>
-          <?php echo wp_get_attachment_image($image_big_top_left['ID'], 'medium', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($image_big_top_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       <?php endif; ?>
     </div>
@@ -42,7 +42,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     <div class="project-details-big__image project-details-big__image--small-top-right">
       <?php if ($image_small_top_right) : ?>
         <picture>
-          <?php echo wp_get_attachment_image($image_small_top_right['ID'], 'small', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($image_small_top_right['ID'], 'small_size', false, ['loading' => 'lazy']); ?>
         </picture>
       <?php endif; ?>
     </div>
@@ -51,7 +51,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     <div class="project-details-big__image project-details-big__image--big-top-right">
       <?php if ($image_big_top_right) : ?>
         <picture>
-          <?php echo wp_get_attachment_image($image_big_top_right['ID'], 'medium', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($image_big_top_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       <?php endif; ?>
     </div>
@@ -104,7 +104,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     <div class="project-details-big__image project-details-big__image--big-bottom-left">
       <?php if ($image_big_bottom_left) : ?>
         <picture>
-          <?php echo wp_get_attachment_image($image_big_bottom_left['ID'], 'medium', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($image_big_bottom_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       <?php endif; ?>
     </div>
@@ -113,7 +113,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     <div class="project-details-big__image project-details-big__image--big-bottom-right">
       <?php if ($image_big_bottom_right) : ?>
         <picture>
-          <?php echo wp_get_attachment_image($image_big_bottom_right['ID'], 'medium', false, ['loading' => 'lazy']); ?>
+          <?php echo wp_get_attachment_image($image_big_bottom_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       <?php endif; ?>
     </div>

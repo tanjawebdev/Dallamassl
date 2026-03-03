@@ -17,7 +17,7 @@ $headline = get_sub_field('headline') ?: '';
           <?php 
           echo wp_get_attachment_image(
             $image['ID'], 
-            'large', 
+            'large_size', 
             false, 
             [
               'class' => 'gallery-image',

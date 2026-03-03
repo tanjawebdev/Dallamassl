@@ -42,10 +42,10 @@ function custom_setup() {
     remove_image_size( '2048x2048' );
 
     // Custom image sizes for projects
-    add_image_size( 'small', 400, 600, false );      // For small project images (soft crop)
-    add_image_size( 'medium', 800, 1200, false );    // For medium project images
-    add_image_size( 'large', 1200, 1800, false );    // For large project images
-    add_image_size( 'hero', 1600, 2400, false );     // For hero images
+    add_image_size( 'small_size', 400, 600, false );      // For small project images (soft crop)
+    add_image_size( 'medium_size', 800, 1200, false );    // For medium project images
+    add_image_size( 'large_size', 1200, 1800, false );    // For large project images
+    add_image_size( 'hero_size', 1600, 2400, false );     // For hero images
 }
 add_action('after_setup_theme', 'custom_setup');
 
