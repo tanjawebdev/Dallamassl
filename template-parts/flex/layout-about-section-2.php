@@ -18,7 +18,7 @@ $big_image_right = get_sub_field('big_image_right');
     <?php if ($big_image_left) : ?>
       <div class="about-section-2__image-left">
         <picture>
-          <img src="<?php echo esc_url($big_image_left['url']); ?>" alt="<?php echo esc_attr($big_image_left['alt']); ?>" loading="lazy">
+          <?php echo wp_get_attachment_image($big_image_left['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>
@@ -41,7 +41,7 @@ $big_image_right = get_sub_field('big_image_right');
     <?php if ($big_image_right) : ?>
       <div class="about-section-2__image-right">
         <picture>
-          <img src="<?php echo esc_url($big_image_right['url']); ?>" alt="<?php echo esc_attr($big_image_right['alt']); ?>" loading="lazy">
+          <?php echo wp_get_attachment_image($big_image_right['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>

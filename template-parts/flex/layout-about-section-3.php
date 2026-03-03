@@ -27,7 +27,7 @@ $images_small_bottom_right = get_sub_field('images_small_bottom-right');
     <?php if ($image_left) : ?>
       <div class="about-section-3__image-left">
         <picture>
-          <img src="<?php echo esc_url($image_left['url']); ?>" alt="<?php echo esc_attr($image_left['alt']); ?>" loading="lazy">
+          <?php echo wp_get_attachment_image($image_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>
@@ -43,7 +43,7 @@ $images_small_bottom_right = get_sub_field('images_small_bottom-right');
     <?php if ($image_top_one) : ?>
       <div class="about-section-3__image-top-one">
         <picture>
-          <img src="<?php echo esc_url($image_top_one['url']); ?>" alt="<?php echo esc_attr($image_top_one['alt']); ?>" loading="lazy">
+          <?php echo wp_get_attachment_image($image_top_one['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>
@@ -52,7 +52,7 @@ $images_small_bottom_right = get_sub_field('images_small_bottom-right');
     <?php if ($image_top_two) : ?>
       <div class="about-section-3__image-top-two">
         <picture>
-          <img src="<?php echo esc_url($image_top_two['url']); ?>" alt="<?php echo esc_attr($image_top_two['alt']); ?>" loading="lazy">
+          <?php echo wp_get_attachment_image($image_top_two['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>
@@ -63,7 +63,7 @@ $images_small_bottom_right = get_sub_field('images_small_bottom-right');
         <?php foreach ($images_small_bottom_right as $image) : ?>
           <div class="about-section-3__small-image">
             <picture>
-              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy">
+              <?php echo wp_get_attachment_image($image['ID'], 'small_size', false, ['loading' => 'lazy']); ?>
             </picture>
           </div>
         <?php endforeach; ?>

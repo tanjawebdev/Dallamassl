@@ -24,7 +24,7 @@ $image = get_sub_field('image');
     <?php if ($image) : ?>
       <div class="about-section-4__image">
         <picture>
-          <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy">
+          <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
     <?php endif; ?>

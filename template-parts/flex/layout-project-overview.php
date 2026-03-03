@@ -64,7 +64,7 @@ $moodtexts = get_sub_field('moodtexts');
           $featured_image_acf = get_field('featured_image_landscape', $project_id);
         }
         
-        $featured_image = $featured_image_acf ? $featured_image_acf['url'] : '';
+        $featured_image_acf = $featured_image_acf ? $featured_image_acf : null;
         
         // Get project type taxonomy
         $project_types = get_the_terms($project_id, 'project_type');
@@ -72,9 +72,9 @@ $moodtexts = get_sub_field('moodtexts');
       ?>
         <div class="project-overview__teaser project-overview__teaser--pos-<?php echo $position; ?>">
           <a href="<?php echo esc_url($project_url); ?>" class="project-overview__link">
-            <?php if ($featured_image) : ?>
+            <?php if ($featured_image_acf) : ?>
               <div class="project-overview__image hover-round">
-                <img src="<?php echo esc_url($featured_image); ?>" alt="<?php echo esc_attr($project_title); ?>" loading="lazy">
+                <?php echo wp_get_attachment_image($featured_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
               </div>
             <?php endif; ?>
             

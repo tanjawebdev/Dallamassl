@@ -51,15 +51,14 @@ $service = $service_id ? get_term($service_id) : null;
       $right_id = $project_teaser_right->ID;
       $right_title = get_the_title($right_id);
       $right_image_acf = get_field('featured_image_portrait', $right_id);
-      $right_image = $right_image_acf ? $right_image_acf['url'] : '';
       $right_types = get_the_terms($right_id, 'project_type');
       $right_type_name = ($right_types && !is_wp_error($right_types)) ? $right_types[0]->name : '';
       $right_url = get_permalink($right_id);
     ?>
-      <?php if ($right_image) : ?>
+      <?php if ($right_image_acf) : ?>
         <a href="<?php echo esc_url($right_url); ?>" class="service-section-4__project-teaser">
           <div class="service-section-4__project-image hover-round">
-            <img src="<?php echo esc_url($right_image); ?>" alt="<?php echo esc_attr($right_title); ?>" loading="lazy">
+            <?php echo wp_get_attachment_image($right_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
           </div>
           <div class="service-section-4__project-meta">
             <span class="service-section-4__project-title description"><?php echo esc_html($right_title); ?></span>

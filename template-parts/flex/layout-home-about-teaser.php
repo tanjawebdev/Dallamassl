@@ -31,7 +31,7 @@ $linktext = get_sub_field('linktext');
   <!-- Large image (right) -->
   <?php if ($image) : ?>
     <div class="home-about-teaser__image">
-      <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy">
+      <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
     </div>
   <?php endif; ?>
 

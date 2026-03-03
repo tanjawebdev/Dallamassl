@@ -22,7 +22,7 @@ $service = $service_id ? get_term($service_id) : null;
     <!-- Image (Left) -->
     <?php if ($image) : ?>
       <div class="service-section-3__image">
-        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy">
+        <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
       </div>
     <?php endif; ?>
 

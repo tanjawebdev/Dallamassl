@@ -61,14 +61,13 @@ if ($prev_post || $next_post) :
           <div class="project-related-work__item <?php echo !$prev_post ? 'project-related-work__item--empty' : ''; ?>">
             <?php if ($prev_post) : 
               $prev_thumbnail_acf = get_field('featured_image_landscape', $prev_post->ID);
-              $prev_thumbnail = $prev_thumbnail_acf ? $prev_thumbnail_acf['url'] : '';
               $prev_types = get_the_terms($prev_post->ID, 'project_type');
               $prev_type_label = $prev_types && !is_wp_error($prev_types) ? esc_html($prev_types[0]->name) : '';
             ?>
               <a href="<?php echo get_permalink($prev_post->ID); ?>" class="project-related-work__link">
-                <div class="project-related-work__image hover-round <?php echo !$prev_thumbnail ? 'project-related-work__image--placeholder' : ''; ?>">
-                  <?php if ($prev_thumbnail) : ?>
-                    <img src="<?php echo esc_url($prev_thumbnail); ?>" alt="<?php echo esc_attr(get_the_title($prev_post->ID)); ?>" class="img-fluid">
+                <div class="project-related-work__image hover-round <?php echo !$prev_thumbnail_acf ? 'project-related-work__image--placeholder' : ''; ?>">
+                  <?php if ($prev_thumbnail_acf) : ?>
+                    <?php echo wp_get_attachment_image($prev_thumbnail_acf['ID'], 'medium_size', false, ['class' => 'img-fluid', 'loading' => 'lazy']); ?>
                   <?php endif; ?>
                 </div>
                 <div class="project-related-work__meta">
@@ -96,14 +95,13 @@ if ($prev_post || $next_post) :
           <div class="project-related-work__item <?php echo !$next_post ? 'project-related-work__item--empty' : ''; ?>">
             <?php if ($next_post) : 
               $next_thumbnail_acf = get_field('featured_image_landscape', $next_post->ID);
-              $next_thumbnail = $next_thumbnail_acf ? $next_thumbnail_acf['url'] : '';
                 $next_types = get_the_terms($next_post->ID, 'project_type');
                 $next_type_label = $next_types && !is_wp_error($next_types) ? esc_html($next_types[0]->name) : '';
               ?>
                 <a href="<?php echo get_permalink($next_post->ID); ?>" class="project-related-work__link">
-                  <div class="project-related-work__image hover-round <?php echo !$next_thumbnail ? 'project-related-work__image--placeholder' : ''; ?>">
-                    <?php if ($next_thumbnail) : ?>
-                      <img src="<?php echo esc_url($next_thumbnail); ?>" alt="<?php echo esc_attr(get_the_title($next_post->ID)); ?>" class="img-fluid">
+                  <div class="project-related-work__image hover-round <?php echo !$next_thumbnail_acf ? 'project-related-work__image--placeholder' : ''; ?>">
+                    <?php if ($next_thumbnail_acf) : ?>
+                      <?php echo wp_get_attachment_image($next_thumbnail_acf['ID'], 'medium_size', false, ['class' => 'img-fluid', 'loading' => 'lazy']); ?>
                     <?php endif; ?>
                   </div>
                   <div class="project-related-work__meta">

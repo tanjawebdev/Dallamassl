@@ -23,14 +23,14 @@ $small_image = get_sub_field('small_image');
     <!-- Small Image (Bottom Left) -->
     <?php if ($small_image) : ?>
       <div class="about-section-1__small-image">
-        <img src="<?php echo esc_url($small_image['url']); ?>" alt="<?php echo esc_attr($small_image['alt']); ?>" loading="lazy">
+        <?php echo wp_get_attachment_image($small_image['ID'], 'small_size', false, ['loading' => 'lazy']); ?>
       </div>
     <?php endif; ?>
 
     <!-- Large Image (Right) -->
     <?php if ($big_image) : ?>
       <div class="about-section-1__big-image">
-        <img src="<?php echo esc_url($big_image['url']); ?>" alt="<?php echo esc_attr($big_image['alt']); ?>" loading="lazy">
+        <?php echo wp_get_attachment_image($big_image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
       </div>
     <?php endif; ?>
 
