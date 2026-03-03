@@ -126,6 +126,9 @@ while (have_rows('page_modules')) : the_row();
     case 'newsletter_subscription':
       get_template_part('template-parts/flex/layout', 'newsletter-subscription'); break;
 
+    case 'spacer':
+      get_template_part('template-parts/flex/layout', 'spacer'); break;
+
   }
 
   if (function_exists('section_close')) {

@@ -4285,6 +4285,63 @@
                     "acfe_flexible_settings": false,
                     "acfe_flexible_settings_size": false,
                     "acfe_flexible_modal_edit_size": false
+                },
+                "layout_69a6cea2f35fd": {
+                    "key": "layout_69a6cea2f35fd",
+                    "name": "spacer",
+                    "label": "Spacer",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69a6ceabf35ff",
+                            "label": "Abstandgröße",
+                            "name": "spacingvalue",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "30": "30px Abstand",
+                                "60": "60px Abstand",
+                                "120": "120px Abstand",
+                                "180": "180px Abstand",
+                                "240": "240px Abstand"
+                            },
+                            "default_value": 60,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Basic"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false
                 }
             },
             "acfe_settings": "",
@@ -4328,5 +4385,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1772458245
+    "modified": 1772539732
 }
