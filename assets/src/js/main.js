@@ -6,6 +6,7 @@ import Logo from './_logo';
 import HeroGalleryMousePosition from './_hero-gallery-mouse-position';
 import StickyD from './_sticky-d';
 import AboutSection5LogoSwap from './_about-section-5-logo-swap';
+import BadgeRotate from './_badge-rotate';
 
 const App = {
 	/**
@@ -59,6 +60,12 @@ const App = {
 			return new AboutSection5LogoSwap();
 		}
 		initAboutSection5LogoSwap();
+
+		// Badge Rotate – footer overlap
+		function initBadgeRotate() {
+			return new BadgeRotate();
+		}
+		initBadgeRotate();
 	},
 };
 

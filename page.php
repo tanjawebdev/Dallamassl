@@ -22,4 +22,8 @@ get_header(); ?>
   ?>
 </main>
 
+<?php if ( is_front_page() || is_home() ) : ?>
+  <?php get_template_part( 'partials/badge-rotate' ); ?>
+<?php endif; ?>
+
 <?php get_footer(); ?>
