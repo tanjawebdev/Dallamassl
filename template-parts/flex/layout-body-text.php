@@ -7,7 +7,7 @@ $offset_class = ($use_lg_cols && $alignment === 'middle') ? 'offset-lg-3' : '';
 $classes = trim("$column_class $offset_class");
 ?>
 
-<div class="<?php echo $classes; ?>">
+<div class="col-12 col-lg-8 offset-lg-2">
   <?php if ($text): ?>
     <div class="body-text rte">
       <?php echo wp_kses_post($text); ?>
