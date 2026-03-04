@@ -10,6 +10,7 @@ $services = get_sub_field('services');
 $text = get_sub_field('text');
 $link = get_sub_field('link');
 $linktext = get_sub_field('linktext');
+$image = get_sub_field('image');
 ?>
 
 <section class="service-intro">
@@ -61,5 +62,10 @@ $linktext = get_sub_field('linktext');
       <?php endif; ?>
     </div>
 
+    <?php if ($image) : ?>
+      <div class="service-intro__image">
+        <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
+      </div>
+    <?php endif; ?>
   </div>
 </section>
