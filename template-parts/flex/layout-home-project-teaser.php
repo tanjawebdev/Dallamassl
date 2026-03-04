@@ -47,6 +47,9 @@ $project_teaser_three = get_sub_field('project_teaser_three'); // Post Object â€
       <a href="<?php echo esc_url($t1_url); ?>" class="home-project-teaser__teaser home-project-teaser__teaser--one">
         <div class="home-project-teaser__image hover-round">
           <?php echo wp_get_attachment_image($t1_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+          <div class="hover-card-overlay">
+            <?php echo esc_html($t1_title); ?>
+          </div>
         </div>
         <div class="home-project-teaser__meta">
           <span class="home-project-teaser__title description"><?php echo esc_html($t1_title); ?></span>
@@ -77,6 +80,9 @@ $project_teaser_three = get_sub_field('project_teaser_three'); // Post Object â€
       <a href="<?php echo esc_url($t2_url); ?>" class="home-project-teaser__teaser">
         <div class="home-project-teaser__image hover-round">
           <?php echo wp_get_attachment_image($t2_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+          <div class="hover-card-overlay">
+            <?php echo esc_html($t1_title); ?>
+          </div>
         </div>
         <div class="home-project-teaser__meta">
           <span class="home-project-teaser__title description"><?php echo esc_html($t2_title); ?></span>
@@ -108,6 +114,9 @@ $project_teaser_three = get_sub_field('project_teaser_three'); // Post Object â€
       <a href="<?php echo esc_url($t3_url); ?>" class="home-project-teaser__teaser home-project-teaser__teaser--three">
         <div class="home-project-teaser__image hover-round">
           <?php echo wp_get_attachment_image($t3_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+          <div class="hover-card-overlay">
+            <?php echo esc_html($t1_title); ?>
+          </div>
         </div>
         <div class="home-project-teaser__meta">
           <span class="home-project-teaser__title description"><?php echo esc_html($t3_title); ?></span>
