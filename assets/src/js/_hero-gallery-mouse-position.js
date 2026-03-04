@@ -43,6 +43,7 @@ class HeroGalleryMousePosition {
 
 			// init first image as active
 			items[0].classList.add('is-active');
+			gallery.classList.add('is-loaded');
 
 			// Mouse move handler
 			const handleMouseMove = (e) => {
