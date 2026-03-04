@@ -68,6 +68,9 @@ if ($prev_post || $next_post) :
                 <div class="project-related-work__image hover-round <?php echo !$prev_thumbnail_acf ? 'project-related-work__image--placeholder' : ''; ?>">
                   <?php if ($prev_thumbnail_acf) : ?>
                     <?php echo wp_get_attachment_image($prev_thumbnail_acf['ID'], 'medium_size', false, ['class' => 'img-fluid', 'loading' => 'lazy']); ?>
+                    <div class="hover-card-overlay">
+                      <?php echo get_the_title($prev_post->ID); ?>
+                    </div>
                   <?php endif; ?>
                 </div>
                 <div class="project-related-work__meta">
@@ -102,6 +105,9 @@ if ($prev_post || $next_post) :
                   <div class="project-related-work__image hover-round <?php echo !$next_thumbnail_acf ? 'project-related-work__image--placeholder' : ''; ?>">
                     <?php if ($next_thumbnail_acf) : ?>
                       <?php echo wp_get_attachment_image($next_thumbnail_acf['ID'], 'medium_size', false, ['class' => 'img-fluid', 'loading' => 'lazy']); ?>
+                      <div class="hover-card-overlay">
+                        <?php echo get_the_title($next_post->ID); ?>
+                      </div>
                     <?php endif; ?>
                   </div>
                   <div class="project-related-work__meta">

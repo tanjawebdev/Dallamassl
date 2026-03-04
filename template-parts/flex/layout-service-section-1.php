@@ -42,6 +42,9 @@ $project_type = $project_type_id ? get_term($project_type_id) : null;
         <a href="<?php echo esc_url($left_url); ?>" class="service-section-1__project-teaser service-section-1__project-teaser--left">
           <div class="service-section-1__project-image hover-round">
             <?php echo wp_get_attachment_image($left_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+            <div class="hover-card-overlay">
+              <?php echo esc_html($left_title); ?>
+            </div>
           </div>
           <div class="service-section-1__project-meta">
             <span class="service-section-1__project-title description"><?php echo esc_html($left_title); ?></span>
@@ -99,6 +102,9 @@ $project_type = $project_type_id ? get_term($project_type_id) : null;
         <a href="<?php echo esc_url($right_url); ?>" class="service-section-1__project-teaser service-section-1__project-teaser--right">
           <div class="service-section-1__project-image hover-round">
             <?php echo wp_get_attachment_image($right_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+            <div class="hover-card-overlay">
+              <?php echo esc_html($right_title); ?>
+            </div>
           </div>
           <div class="service-section-1__project-meta">
             <span class="service-section-1__project-title description"><?php echo esc_html($right_title); ?></span>

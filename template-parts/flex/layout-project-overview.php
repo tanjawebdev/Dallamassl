@@ -75,6 +75,9 @@ $moodtexts = get_sub_field('moodtexts');
             <?php if ($featured_image_acf) : ?>
               <div class="project-overview__image hover-round">
                 <?php echo wp_get_attachment_image($featured_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+                <div class="hover-card-overlay">
+                  <?php echo esc_html($project_title); ?>
+                </div>
               </div>
             <?php endif; ?>
             
