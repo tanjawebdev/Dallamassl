@@ -41,7 +41,7 @@
 
 // Large Logo (Center Top)
 .about-section-5__logo {
-    height: 9vw;
+    height: 12.2rem;
     position: absolute;
     top: 0;
     left: 50%;
@@ -65,7 +65,7 @@
     // Fixed state (when swapped with D.)
     &.is-fixed {
         position: fixed;
-        top: 7rem;
+        top: 4.9rem;
         z-index: 1000;
 
         @include media-breakpoint-down(md) {

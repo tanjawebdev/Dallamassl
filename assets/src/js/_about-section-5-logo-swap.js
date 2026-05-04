@@ -27,21 +27,19 @@ export default class AboutSection5LogoSwap {
 
     handleScroll() {
         const sectionRect = this.section.getBoundingClientRect();
-        const logoRect = this.sectionLogo.getBoundingClientRect();
         // Get the position of the fixed "D."
         const fixedDRect = this.fixedDContainer.getBoundingClientRect();
-        const logoReachedD = logoRect.top <= fixedDRect.top;
 
         // EXIT: Section has ended when its bottom edge passes the "D." position
-        const sectionEnded = sectionRect.bottom <= fixedDRect.bottom; // Add buffer
+        const sectionEnded = sectionRect.bottom <= fixedDRect.bottom;
 
-        // START: Section not active when its top edge passes the "D." position
-        const sectionStarted = sectionRect.top <= fixedDRect.top - 100; // Add buffer
+        // START: Section is active when its top edge passes the "D." position
+        const sectionStarted = sectionRect.top <= fixedDRect.top - 140;
 
-        // Only activate when logo has reached D position AND section hasn't ended yet
-        var shouldActivate = logoReachedD && !sectionEnded && sectionStarted;
+        // Activate when section has scrolled into range and hasn't ended yet
+        var shouldActivate = sectionStarted && !sectionEnded;
 
-        var stickBottom = logoReachedD && sectionEnded && sectionStarted;
+        var stickBottom = sectionEnded && sectionStarted;
 
         if (stickBottom) {
             this.sectionLogo.classList.add('is-stick-bottom');
