@@ -21,7 +21,7 @@ export default class BadgeRotate {
         const footerRect = this.footer.getBoundingClientRect();
 
         // Badge overlaps footer when badge bottom is below footer top
-        if (badgeRect.bottom > footerRect.top) {
+        if (badgeRect.bottom > footerRect.top || window.scrollY < 500) {
             this.badge.classList.add('is-hidden');
         } else {
             this.badge.classList.remove('is-hidden');

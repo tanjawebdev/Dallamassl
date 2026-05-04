@@ -8,10 +8,11 @@
     transform: translateX(-50%);
     z-index: 1000;
     transition: all 0.4s ease-in-out;
+    top: 0;
 
     @include media-breakpoint-up(lg) {
         position: absolute;
-        top: 7rem;
+        top: 4.9rem;
     }
 
     @include media-breakpoint-down(lg) {
@@ -32,9 +33,11 @@
 }
 
 #logo svg {
+    width: 60%;
+    height: auto;
+
     @include media-breakpoint-down(lg) {
         width: 100%;
-        height: auto;
     }
 }
 

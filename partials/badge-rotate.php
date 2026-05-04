@@ -6,7 +6,7 @@
  */
 ?>
 
-<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="badge-rotate" aria-label="Get in touch">
+<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="badge-rotate is-hidden" aria-label="Get in touch">
   <?php
     $svg_path = get_template_directory() . '/static/img/get-in-touch.svg';
     if ( file_exists( $svg_path ) ) {
