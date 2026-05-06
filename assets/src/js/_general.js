@@ -19,6 +19,7 @@ class General {
 		this.mobileMenu = document.querySelector('.mobile-menu');
 		this.submenuItems = Array.from(document.querySelectorAll('.menu-item-has-children'));
 		this.submenuPanels = Array.from(document.querySelectorAll('.submenu-panel'));
+		this.closeMenuButtons = Array.from(document.querySelectorAll('.close-menu'));
 	}
 
 	bindEvents() {
@@ -45,10 +46,22 @@ class General {
 			const link = item.querySelector('a');
 			if (link) {
 				link.addEventListener('click', (e) => {
+					// If submenu is already open, let the link navigate
+					if (item.classList.contains('submenu-open')) {
+						return;
+					}
+					// Submenu not open yet — open it
 					e.preventDefault();
 					this.toggleSubmenu(item);
 				});
 			}
+		});
+
+		// Close-menu button click handlers
+		this.closeMenuButtons.forEach((btn) => {
+			btn.addEventListener('click', () => {
+				this.closeAllSubmenus();
+			});
 		});
 
 		// Close submenu on outside click

@@ -77,6 +77,10 @@
     padding-right: 3rem;
     pointer-events: none;
 
+    span {
+        opacity: 0;
+    }
+
     &:before {
         content: "";
         display: block;
@@ -157,9 +161,12 @@
 .navigation[data-is-home="true"] {
     #site-navigation .nav-label {
         margin-bottom: 3rem;
-        font-weight: 700;
         position: relative;
         padding-right: 8rem;
+
+        span {
+            opacity: 1;
+        }
 
         &:before {
             content: "";
@@ -173,16 +180,18 @@
         }
     }
 
-    .menu-item a {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    //.menu-item a {
+    //    opacity: 1;
+    //    transform: translateX(0);
+    //}
 }
 
 // Show all menu items on hover
 .main-navigation:hover {
-    .menu-item a {
-        opacity: 1;
+
+    .menu-item a,
+    .nav-label span {
+        opacity: 1 !important;
         transform: translateX(0);
     }
 }
@@ -217,6 +226,42 @@
         position: absolute;
         left: 0;
         top: 12.5rem;
+    }
+}
+
+// Close button (X) inside submenu panel
+.close-menu {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10;
+
+    &__line {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $body-bg;
+        transition: transform 0.3s ease, height 0.3s ease;
+
+        &--one {
+            transform: rotate(45deg);
+        }
+
+        &--two {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &:hover {
+        .close-menu__line {
+            height: 1.5px;
+        }
     }
 }
 

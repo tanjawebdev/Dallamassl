@@ -36,7 +36,7 @@
 
   <div class="navigation" data-is-home="<?php echo $is_home ? 'true' : 'false'; ?>">
     <nav id="site-navigation" class="main-navigation">
-      <div class="nav-label description">MENU</div>
+      <div class="nav-label description"><span>MENU</span></div>
       
       <?php 
       wp_nav_menu( array( 
@@ -75,6 +75,7 @@
         foreach ($menu_tree as $parent_id => $children) {
           if (!empty($children)) {
             echo '<div class="submenu-panel" data-parent-id="' . esc_attr($parent_id) . '">';
+            echo '<div class="close-menu" data-parent-id="' . esc_attr($parent_id) . '"><span class="close-menu__line close-menu__line--one"></span><span class="close-menu__line close-menu__line--two"></span></div>';
             echo '<ul class="submenu">';
             foreach ($children as $child) {
               $current_class = '';
