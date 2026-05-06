@@ -1,7 +1,7 @@
 <?php
 /**
  * Service Section 2 Layout
- * Complex grid with service taxonomy, project teasers, text, and moodtext
+ * Complex grid with service taxonomy, project teasers, text
  */
 
 // Get ACF fields
@@ -11,7 +11,6 @@ $link = get_sub_field('link');
 $linktext = get_sub_field('linktext');
 $project_teaser_left = get_sub_field('project_teaser_left'); // Post Object
 $project_teaser_right = get_sub_field('project_teaser_right'); // Post Object
-$moodtext = get_sub_field('moodtext');
 
 // Convert term IDs to term objects
 $service = $service_id ? get_term($service_id) : null;
@@ -80,13 +79,6 @@ $service = $service_id ? get_term($service_id) : null;
           </div>
         </a>
       <?php endif; ?>
-    <?php endif; ?>
-
-    <!-- Moodtext (Bottom Middle) -->
-    <?php if ($moodtext) : ?>
-      <div class="service-section-2__moodtext">
-        <h3><?php echo esc_html($moodtext); ?></h3>
-      </div>
     <?php endif; ?>
 
   </div>

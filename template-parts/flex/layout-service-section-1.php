@@ -11,7 +11,6 @@ $link = get_sub_field('link');
 $linktext = get_sub_field('linktext');
 $project_teaser_left = get_sub_field('project_teaser_left'); // Post Object
 $project_teaser_right = get_sub_field('project_teaser_right'); // Post Object
-$moodtext = get_sub_field('moodtext');
 
 // Convert term IDs to term objects
 $service = $service_id ? get_term($service_id) : null;
@@ -63,14 +62,6 @@ $service = $service_id ? get_term($service_id) : null;
         </a>
       </div>
     <?php endif; ?>
-
-    <!-- Moodtext (Bottom Left) -->
-    <?php if ($moodtext) : ?>
-      <div class="service-section-1__moodtext">
-        <h3><?php echo esc_html($moodtext); ?></h3>
-      </div>
-    <?php endif; ?>
-
 
         <!-- Right Project Teaser -->
     <?php if ($project_teaser_right) : 

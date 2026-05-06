@@ -1,3 +1,10 @@
+.service-section-3 {
+    @include media-breakpoint-up(lg) {
+        margin-top: -15rem;
+    }
+}
+
+
 .service-section-3__grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -12,11 +19,7 @@
 
 // Image (Left)
 .service-section-3__image {
-    grid-column: 2 / 5;
-
-    @include media-breakpoint-up(lg) {
-        margin-top: 20rem;
-    }
+    grid-column: 9 / 12;
 
     @include media-breakpoint-down(md) {
         grid-column: 1;
@@ -32,10 +35,12 @@
 
 // Content Column (Right)
 .service-section-3__content {
-    grid-column: 6 / 10;
+    grid-column: 3 / 7;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    grid-row: 1;
+    align-self: center;
 
     @include media-breakpoint-down(md) {
         grid-column: 1;
@@ -64,14 +69,5 @@
 .service-section-3__link {
     @include media-breakpoint-up(lg) {
         align-self: flex-end;
-    }
-}
-
-// Moodtext
-.service-section-3__moodtext {
-
-
-    @include media-breakpoint-up(lg) {
-        margin: 10rem 0 10rem;
     }
 }

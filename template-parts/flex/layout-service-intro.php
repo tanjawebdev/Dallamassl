@@ -50,22 +50,6 @@ $image = get_sub_field('image');
           <?php echo wpautop($text); ?>
         </div>
       <?php endif; ?>
-
-      <?php if ($link) : ?>
-        <div class="service-intro__link">
-          <a href="<?php echo esc_url($link); ?>" class="service-intro__cta btn btn-primary">
-            <span class="service-intro__cta-text h4">
-              <?php echo $linktext ? esc_html($linktext) : 'CONTACT US'; ?>
-            </span>
-          </a>
-        </div>
-      <?php endif; ?>
     </div>
-
-    <?php if ($image) : ?>
-      <div class="service-intro__image">
-        <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
-      </div>
-    <?php endif; ?>
   </div>
 </section>
