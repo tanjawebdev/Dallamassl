@@ -11,24 +11,9 @@
     }
 }
 
-// Moodtext/Headline (Left)
-.about-section-4__moodtext {
-    grid-column: 2 / 8;
-    grid-row: 2;
-    z-index: 2;
-
-    @include media-breakpoint-down(md) {
-        grid-column: 1;
-    }
-
-    h2 {
-        margin: 0;
-    }
-}
-
 // Large Image Center (1:1)
 .about-section-4__image {
-    grid-column: 4 / 10;
+    grid-column: 3 / 9;
     grid-row: 1 / 4;
 
     @include media-breakpoint-down(md) {
@@ -50,7 +35,7 @@
 
 // Small Text Right
 .about-section-4__text-right {
-    grid-column: 11 / 13;
+    grid-column: 10 / 12;
     grid-row: 1;
     align-self: start;
 

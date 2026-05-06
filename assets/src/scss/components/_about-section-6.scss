@@ -1,9 +1,4 @@
-.about_section_6 {
-    margin-bottom: 0;
-}
-
 .about-section-6 {
-    padding: 8rem 0 0;
 
     @include media-breakpoint-down(md) {
         padding: 4rem 0;
@@ -48,13 +43,13 @@
 
 // Top Text - Upper right area
 .about-section-6__text-top {
-    grid-column: 7 / 11;
+    grid-column: 7 / 10;
     grid-row: 1;
     align-content: center;
     min-height: 15rem;
 
     @include media-breakpoint-up(lg) {
-        min-height: 35rem;
+        min-height: 25rem;
     }
 
     @include media-breakpoint-down(md) {
@@ -66,9 +61,9 @@
 
 // Mood Text - Center statement, bold and prominent
 .about-section-6__moodtext {
-    grid-column: 6 / 9;
+    grid-column: 7 / 11;
     grid-row: 2;
-    align-self: start;
+    align-self: end;
     z-index: 2;
 
     @include media-breakpoint-down(md) {

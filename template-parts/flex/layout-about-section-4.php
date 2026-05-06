@@ -6,19 +6,12 @@
 
 // Get ACF fields
 $text_right = get_sub_field('text_right');
-$moodtext = get_sub_field('moodtext');
 $image = get_sub_field('image');
 ?>
 
 <section class="about-section-4">
   <div class="about-section-4__grid">
-    
-    <!-- Moodtext/Headline (Left) -->
-    <?php if ($moodtext) : ?>
-      <div class="about-section-4__moodtext">
-        <h3><?php echo esc_html($moodtext); ?></h3>
-      </div>
-    <?php endif; ?>
+
 
     <!-- Large Image Center (1:1) -->
     <?php if ($image) : ?>
