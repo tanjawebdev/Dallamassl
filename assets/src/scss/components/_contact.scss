@@ -1,5 +1,5 @@
 .contact {
-    padding: 15rem 0 0;
+    padding: 10rem 0 0;
 
     @include media-breakpoint-down(md) {
         padding: 4rem 0;
@@ -17,12 +17,9 @@
     }
 }
 
-.contact__left {
+.contact__headline-part {
     grid-column: 2/6;
-}
-
-.contact__right {
-    grid-column: 6/12;
+    grid-row: 1;
 }
 
 // Left column
@@ -34,18 +31,12 @@
     }
 }
 
-.contact__moodtext {
-    padding-right: 2rem;
-}
-
 // Right column
 .contact__address {
+    grid-column: 8/12;
+    grid-row: 1;
     margin-bottom: 3rem;
     padding-bottom: 3rem;
-
-    @include media-breakpoint-up(lg) {
-        padding-left: 10%;
-    }
 
     p {
         margin-bottom: 0.25rem;
@@ -68,9 +59,16 @@
 
 // WPForms overrides — strip default form styling, keep inputs minimal
 .contact__form {
+    grid-column: 1/13;
+    grid-row: 2;
+
     .wpforms-container {
         margin: 0;
         padding: 0;
+    }
+
+    .wpforms-field-container {
+        position: relative;
     }
 
     .wpforms-field {
@@ -78,7 +76,7 @@
         margin-bottom: 1rem;
 
         @include media-breakpoint-up(lg) {
-            padding-left: 10% !important;
+            padding-left: 9% !important;
             margin-bottom: 3rem;
         }
     }
@@ -90,9 +88,10 @@
     }
 
     .wpforms-field-label {
-        font-size: 3.6rem !important;
-        font-weight: 300 !important;
-        line-height: 2 !important;
+        font-size: 2.4rem !important;
+        font-family: $headings-font-family !important;
+        font-weight: 400;
+        text-transform: uppercase;
 
         @include media-breakpoint-down(lg) {
             font-size: 2.4rem !important;
@@ -133,8 +132,8 @@
         resize: vertical;
         padding: 2rem !important;
         margin-top: 0.5rem;
-        background: rgb(235, 235, 235) !important;
-        border-radius: 3rem !important;
+        background: #F2EEE8 !important;
+        border-radius: 1rem !important;
         border: none !important;
 
         &:focus {
@@ -143,6 +142,30 @@
 
         @include media-breakpoint-up(lg) {
             min-height: 15vw !important;
+        }
+    }
+
+    .wpforms-field-text,
+    .wpforms-field-email,
+    .wpforms-field-name {
+        width: 50%;
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+
+    .wpforms-field-textarea {
+        width: 50%;
+        position: absolute;
+        top: -3rem;
+        right: 0;
+
+        @include media-breakpoint-down(md) {
+            position: relative;
+            width: 100%;
+            top: auto;
+            right: auto;
         }
     }
 
@@ -155,13 +178,14 @@
     }
 
     .wpforms-submit {
-        background-color: $body-color !important;
-        color: $body-bg;
+        background-color: $body-bg !important;
+        color: $body-color !important;
         border: none;
         height: auto !important;
         border-radius: 1rem !important;
-        padding: 2rem 4rem 1rem !important;
+        padding: 3rem 0 1rem 2rem !important;
         font-size: 4rem !important;
+        font-weight: 400 !important;
         line-height: 1 !important;
         font-family: $headings-font-family !important;
         text-transform: uppercase;
@@ -170,11 +194,15 @@
         transition: background-color 0.3s ease;
 
         &::before {
-            display: none;
+            width: 3rem;
+            height: 3rem;
+            margin-top: -1rem;
         }
 
         &:hover {
-            background-color: $primary !important;
+            background-color: $body-bg !important;
+            background: none !important;
+            color: $primary !important;
         }
     }
 

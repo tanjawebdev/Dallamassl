@@ -1196,30 +1196,6 @@
                             "append": ""
                         },
                         {
-                            "key": "field_699c7d243c629",
-                            "label": "Moodtext links",
-                            "name": "moodtext",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "acfe_settings": "",
-                            "acfe_validate": "",
-                            "maxlength": "",
-                            "acfe_permissions": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
                             "key": "field_699c7d383c62a",
                             "label": "Anschrift",
                             "name": "address",
@@ -4130,5 +4106,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1778086828
+    "modified": 1778087314
 }
