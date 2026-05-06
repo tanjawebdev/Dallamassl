@@ -78,35 +78,7 @@ function projecttheme_register_services_taxonomy() {
     register_taxonomy('service', array('project'), $args);
 }
 
-// Register Custom Taxonomy: Project Type (B2B/B2C)
-add_action('init', 'projecttheme_register_project_type_taxonomy');
 
-function projecttheme_register_project_type_taxonomy() {
-    
-    $labels = array(
-        'name'              => _x('Project Types', 'taxonomy general name', 'dallamassl'),
-        'singular_name'     => _x('Project Type', 'taxonomy singular name', 'dallamassl'),
-        'search_items'      => __('Project Types durchsuchen', 'dallamassl'),
-        'all_items'         => __('Alle Project Types', 'dallamassl'),
-        'edit_item'         => __('Project Type bearbeiten', 'dallamassl'),
-        'update_item'       => __('Project Type aktualisieren', 'dallamassl'),
-        'add_new_item'      => __('Neuen Project Type hinzufügen', 'dallamassl'),
-        'new_item_name'     => __('Name des neuen Project Types', 'dallamassl'),
-        'menu_name'         => __('Project Types', 'dallamassl'),
-    );
-
-    $args = array(
-        'hierarchical'      => true,                       // Like categories (checkbox style)
-        'labels'            => $labels,
-        'show_ui'           => true,
-        'show_admin_column' => true,                       // Show in post list
-        'query_var'         => false,                      // Disable URL query parameter
-        'rewrite'           => false,                      // Disable pretty URLs
-        'show_in_rest'      => true,
-            );
-
-    register_taxonomy('project_type', array('project'), $args);
-}
 
 
 // Register Custom Taxonomy: Location (f.e. Vienna)

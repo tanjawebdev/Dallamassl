@@ -14,7 +14,6 @@ $moodtext_top_right = get_sub_field('moodtext_top-right');
 $project_details_text = get_sub_field('project_details_text');
 
 // Get taxonomies
-$project_types = get_the_terms(get_the_ID(), 'project_type');
 $services = get_the_terms(get_the_ID(), 'service');
 $locations = get_the_terms(get_the_ID(), 'location');
 ?>
@@ -65,13 +64,6 @@ $locations = get_the_terms(get_the_ID(), 'location');
           <h4><?php echo esc_html(get_the_title()); ?></h4>
         </div>
 
-        <?php if ($project_types && !is_wp_error($project_types)) : ?>
-          <div class="project-details-big__meta-item project-details-big__meta-item--project-types">
-            <h4 class="project-details-big__meta-value">
-              <?php echo esc_html($project_types[0]->name); ?>
-            </h4>
-          </div>
-        <?php endif; ?>
 
         <?php if ($services && !is_wp_error($services)) : ?>
           <div class="project-details-big__meta-item project-details-big__meta-item--services">

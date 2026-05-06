@@ -6,7 +6,6 @@
 
 // Get ACF fields
 $service_id = get_sub_field('service'); // Taxonomy (returns ID)
-$project_type_id = get_sub_field('project_type'); // Taxonomy (returns ID)
 $text = get_sub_field('text');
 $link = get_sub_field('link');
 $linktext = get_sub_field('linktext');
@@ -16,7 +15,6 @@ $moodtext = get_sub_field('moodtext');
 
 // Convert term IDs to term objects
 $service = $service_id ? get_term($service_id) : null;
-$project_type = $project_type_id ? get_term($project_type_id) : null;
 ?>
 
 <section class="service-section-1" id="service-<?php echo esc_attr($service_id); ?>">
@@ -34,33 +32,18 @@ $project_type = $project_type_id ? get_term($project_type_id) : null;
       $left_id = $project_teaser_left->ID;
       $left_title = get_the_title($left_id);
       $left_image_acf = get_field('featured_image_portrait', $left_id);
-      $left_types = get_the_terms($left_id, 'project_type');
-      $left_type_name = ($left_types && !is_wp_error($left_types)) ? $left_types[0]->name : '';
       $left_url = get_permalink($left_id);
     ?>
       <?php if ($left_image_acf) : ?>
         <a href="<?php echo esc_url($left_url); ?>" class="service-section-1__project-teaser service-section-1__project-teaser--left">
           <div class="service-section-1__project-image hover-round">
             <?php echo wp_get_attachment_image($left_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
-            <div class="hover-card-overlay">
-              <?php echo esc_html($left_title); ?>
-            </div>
           </div>
           <div class="service-section-1__project-meta">
             <span class="service-section-1__project-title description"><?php echo esc_html($left_title); ?></span>
-            <?php if ($left_type_name) : ?>
-              <span class="service-section-1__project-type description"><?php echo esc_html($left_type_name); ?></span>
-            <?php endif; ?>
           </div>
         </a>
       <?php endif; ?>
-    <?php endif; ?>
-    
-        <!-- Project Type Taxonomy (Top Right) -->
-    <?php if ($project_type && !is_wp_error($project_type)) : ?>
-      <div class="service-section-1__project-type-header">
-        <h3><?php echo esc_html($project_type->description); ?></h3>
-      </div>
     <?php endif; ?>
 
         <!-- Text Content (Middle Right) -->
@@ -94,23 +77,15 @@ $project_type = $project_type_id ? get_term($project_type_id) : null;
       $right_id = $project_teaser_right->ID;
       $right_title = get_the_title($right_id);
       $right_image_acf = get_field('featured_image_landscape', $right_id);
-      $right_types = get_the_terms($right_id, 'project_type');
-      $right_type_name = ($right_types && !is_wp_error($right_types)) ? $right_types[0]->name : '';
       $right_url = get_permalink($right_id);
     ?>
       <?php if ($right_image_acf) : ?>
         <a href="<?php echo esc_url($right_url); ?>" class="service-section-1__project-teaser service-section-1__project-teaser--right">
           <div class="service-section-1__project-image hover-round">
             <?php echo wp_get_attachment_image($right_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
-            <div class="hover-card-overlay">
-              <?php echo esc_html($right_title); ?>
-            </div>
           </div>
           <div class="service-section-1__project-meta">
             <span class="service-section-1__project-title description"><?php echo esc_html($right_title); ?></span>
-            <?php if ($right_type_name) : ?>
-              <span class="service-section-1__project-type description"><?php echo esc_html($right_type_name); ?></span>
-            <?php endif; ?>
           </div>
         </a>
       <?php endif; ?>

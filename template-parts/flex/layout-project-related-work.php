@@ -7,8 +7,8 @@
 global $post;
 
 // Get previous and next projects
-$prev_post = get_previous_post(false, '', 'project_type');
-$next_post = get_next_post(false, '', 'project_type');
+$prev_post = get_previous_post();
+$next_post = get_next_post();
 
 // Wrap-around logic: if no previous, get the last project
 if (!$prev_post) {
@@ -61,23 +61,15 @@ if ($prev_post || $next_post) :
           <div class="project-related-work__item <?php echo !$prev_post ? 'project-related-work__item--empty' : ''; ?>">
             <?php if ($prev_post) : 
               $prev_thumbnail_acf = get_field('featured_image_landscape', $prev_post->ID);
-              $prev_types = get_the_terms($prev_post->ID, 'project_type');
-              $prev_type_label = $prev_types && !is_wp_error($prev_types) ? esc_html($prev_types[0]->name) : '';
             ?>
               <a href="<?php echo get_permalink($prev_post->ID); ?>" class="project-related-work__link">
                 <div class="project-related-work__image hover-round <?php echo !$prev_thumbnail_acf ? 'project-related-work__image--placeholder' : ''; ?>">
                   <?php if ($prev_thumbnail_acf) : ?>
                     <?php echo wp_get_attachment_image($prev_thumbnail_acf['ID'], 'medium_size', false, ['class' => 'img-fluid', 'loading' => 'lazy']); ?>
-                    <div class="hover-card-overlay">
-                      <?php echo get_the_title($prev_post->ID); ?>
-                    </div>
                   <?php endif; ?>
                 </div>
                 <div class="project-related-work__meta">
                   <span class="project-related-work__project-title description"><?php echo get_the_title($prev_post->ID); ?></span>
-                  <?php if ($prev_type_label) : ?>
-                    <span class="project-related-work__type description"><?php echo $prev_type_label; ?></span>
-                  <?php endif; ?>
                 </div>
               </a>
             <?php endif; ?>
@@ -98,23 +90,15 @@ if ($prev_post || $next_post) :
           <div class="project-related-work__item <?php echo !$next_post ? 'project-related-work__item--empty' : ''; ?>">
             <?php if ($next_post) : 
               $next_thumbnail_acf = get_field('featured_image_landscape', $next_post->ID);
-                $next_types = get_the_terms($next_post->ID, 'project_type');
-                $next_type_label = $next_types && !is_wp_error($next_types) ? esc_html($next_types[0]->name) : '';
               ?>
                 <a href="<?php echo get_permalink($next_post->ID); ?>" class="project-related-work__link">
                   <div class="project-related-work__image hover-round <?php echo !$next_thumbnail_acf ? 'project-related-work__image--placeholder' : ''; ?>">
                     <?php if ($next_thumbnail_acf) : ?>
                       <?php echo wp_get_attachment_image($next_thumbnail_acf['ID'], 'medium_size', false, ['class' => 'img-fluid', 'loading' => 'lazy']); ?>
-                      <div class="hover-card-overlay">
-                        <?php echo get_the_title($next_post->ID); ?>
-                      </div>
                     <?php endif; ?>
                   </div>
                   <div class="project-related-work__meta">
                     <span class="project-related-work__project-title description"><?php echo get_the_title($next_post->ID); ?></span>
-                    <?php if ($next_type_label) : ?>
-                      <span class="project-related-work__type description"><?php echo $next_type_label; ?></span>
-                    <?php endif; ?>
                   </div>
                 </a>
               <?php endif; ?>

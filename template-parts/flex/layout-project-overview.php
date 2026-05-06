@@ -66,26 +66,17 @@ $moodtexts = get_sub_field('moodtexts');
         
         $featured_image_acf = $featured_image_acf ? $featured_image_acf : null;
         
-        // Get project type taxonomy
-        $project_types = get_the_terms($project_id, 'project_type');
-        $project_type_label = ($project_types && !is_wp_error($project_types)) ? esc_html($project_types[0]->name) : '';
       ?>
         <div class="project-overview__teaser project-overview__teaser--pos-<?php echo $position; ?>">
           <a href="<?php echo esc_url($project_url); ?>" class="project-overview__link">
             <?php if ($featured_image_acf) : ?>
               <div class="project-overview__image hover-round">
                 <?php echo wp_get_attachment_image($featured_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
-                <div class="hover-card-overlay">
-                  <?php echo esc_html($project_title); ?>
-                </div>
               </div>
             <?php endif; ?>
             
             <div class="project-overview__meta">
               <span class="project-overview__title description"><?php echo esc_html($project_title); ?></span>
-              <?php if ($project_type_label) : ?>
-                <span class="project-overview__type description"><?php echo $project_type_label; ?></span>
-              <?php endif; ?>
             </div>
           </a>
         </div>

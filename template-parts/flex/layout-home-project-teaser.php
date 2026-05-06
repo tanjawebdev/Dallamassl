@@ -41,19 +41,14 @@ $project_teaser_three = get_sub_field('project_teaser_three'); // Post Object â€
     $t1_title = get_the_title($t1_id);
     $t1_image_acf = get_field('featured_image_portrait', $t1_id);
     $t1_url = get_permalink($t1_id);
-    $t1_year = get_the_date('Y', $t1_id);
   ?>
     <?php if ($t1_image_acf) : ?>
       <a href="<?php echo esc_url($t1_url); ?>" class="home-project-teaser__teaser home-project-teaser__teaser--one">
         <div class="home-project-teaser__image hover-round">
           <?php echo wp_get_attachment_image($t1_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
-          <div class="hover-card-overlay">
-            <?php echo esc_html($t1_title); ?>
-          </div>
         </div>
         <div class="home-project-teaser__meta">
           <span class="home-project-teaser__title description"><?php echo esc_html($t1_title); ?></span>
-          <span class="home-project-teaser__year description"><?php echo esc_html($t1_year); ?></span>
         </div>
       </a>
     <?php endif; ?>
@@ -74,19 +69,14 @@ $project_teaser_three = get_sub_field('project_teaser_three'); // Post Object â€
     $t2_title = get_the_title($t2_id);
     $t2_image_acf = get_field('featured_image_portrait', $t2_id);
     $t2_url = get_permalink($t2_id);
-    $t2_year = get_the_date('Y', $t2_id);
   ?>
     <?php if ($t2_image_acf) : ?>
       <a href="<?php echo esc_url($t2_url); ?>" class="home-project-teaser__teaser">
         <div class="home-project-teaser__image hover-round">
           <?php echo wp_get_attachment_image($t2_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
-          <div class="hover-card-overlay">
-            <?php echo esc_html($t1_title); ?>
-          </div>
         </div>
         <div class="home-project-teaser__meta">
           <span class="home-project-teaser__title description"><?php echo esc_html($t2_title); ?></span>
-          <span class="home-project-teaser__year description"><?php echo esc_html($t2_year); ?></span>
         </div>
       </a>
     <?php endif; ?>
@@ -108,19 +98,14 @@ $project_teaser_three = get_sub_field('project_teaser_three'); // Post Object â€
     $t3_title = get_the_title($t3_id);
     $t3_image_acf = get_field('featured_image_landscape', $t3_id);
     $t3_url = get_permalink($t3_id);
-    $t3_year = get_the_date('Y', $t3_id);
   ?>
     <?php if ($t3_image_acf) : ?>
       <a href="<?php echo esc_url($t3_url); ?>" class="home-project-teaser__teaser home-project-teaser__teaser--three">
         <div class="home-project-teaser__image hover-round">
           <?php echo wp_get_attachment_image($t3_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
-          <div class="hover-card-overlay">
-            <?php echo esc_html($t1_title); ?>
-          </div>
         </div>
         <div class="home-project-teaser__meta">
           <span class="home-project-teaser__title description"><?php echo esc_html($t3_title); ?></span>
-          <span class="home-project-teaser__year description"><?php echo esc_html($t3_year); ?></span>
         </div>
       </a>
     <?php endif; ?>
