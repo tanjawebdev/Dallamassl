@@ -70,6 +70,7 @@ function projecttheme_register_services_taxonomy() {
         'labels'            => $labels,
         'show_ui'           => true,
         'show_admin_column' => true,                       // Show in post list
+        'publicly_queryable' => false,                     // No front-end archive pages
         'query_var'         => false,                      // Disable URL query parameter
         'rewrite'           => false,                      // Disable pretty URLs
         'show_in_rest'      => true,

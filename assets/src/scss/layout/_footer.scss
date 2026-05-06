@@ -8,7 +8,7 @@ footer {
     }
 
     @include media-breakpoint-up(lg) {
-        padding: 6rem 0 3rem;
+        padding: 6rem 0;
     }
 }
 
@@ -39,7 +39,7 @@ footer {
 
     @include media-breakpoint-up(md) {
         gap: 0;
-        margin-bottom: 12rem;
+        margin-bottom: 10rem;
     }
 }
 
@@ -108,13 +108,17 @@ footer {
 /* Bottom Section - Logo and Copyright */
 .footer-bottom {
     position: relative;
-    padding-top: 3rem;
-    padding-bottom: 6rem;
 }
 
 .footer-logo-large {
+    width: 90%;
+
+    @include media-breakpoint-up(lg) {
+        width: 60%;
+    }
+
     img {
-        width: 93.5%;
+        width: 100%;
     }
 }
 
