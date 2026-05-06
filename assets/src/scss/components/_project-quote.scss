@@ -4,7 +4,7 @@
     margin-bottom: 0;
 
     @include media-breakpoint-up(lg) {
-        padding: 4rem 0 8rem;
+        padding: 8rem 0 5rem;
     }
 }
 
@@ -26,46 +26,29 @@
     }
 }
 
-// Horizontal scroll container
+// Horizontal scroll container handled by Splide
 .project-quote__slider {
-    display: flex;
-    gap: 2rem;
-    overflow-x: auto;
-    //scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 2rem 2rem;
+    // Styles for splide container if needed
+}
 
-    // Hide scrollbar
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
+.project-quote__card {
+    padding: 0 1rem;
 }
 
 // Individual quote card
-.project-quote__card {
-    flex: 0 0 auto;
-    width: 40vw;
-    scroll-snap-align: start;
+.project-quote__card-inner {
     display: flex;
     flex-direction: column;
     background-color: $body-bg;
     border-radius: 4rem;
-    padding: 3.5rem 3.5rem 1.5rem 3.5rem;
-
-    @include media-breakpoint-down(md) {
-        width: 300px;
-        padding: 1.5rem;
-    }
+    padding: 2.4rem 3rem 3rem 2.4rem;
 }
 
 .project-quote__top-content {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
 
     @include media-breakpoint-down(md) {
         margin-bottom: 4rem;
@@ -74,7 +57,7 @@
 
 // Large decorative quotation mark
 .project-quote__icon {
-    width: 79px;
+    width: 60px;
     height: 56px;
     display: block;
     background-color: currentColor;
@@ -93,9 +76,9 @@
 // Quote text
 .project-quote__text {
     margin-bottom: 2rem;
-    max-width: 70%;
-    font-weight: 600;
+    max-width: 80%;
     flex: 1;
+    margin-top: 2rem
 }
 
 // Author attribution
@@ -108,5 +91,5 @@
 .project-quote__footer {
     display: flex;
     justify-content: flex-end;
-    margin-top: 3rem;
+    margin-top: 6rem;
 }

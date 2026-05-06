@@ -45,7 +45,7 @@ $moodtexts = get_sub_field('moodtexts');
         // Insert a moodtext after each complete 5-project cycle (before positions 0, except the very first)
         if (($position === 0 || $position === 4) && $moodtext_count > 0) :
           $current_moodtext = $moodtexts[$moodtext_index % $moodtext_count];
-          $moodtext_class = ($moodtext_index % 2 === 0) ? 'description' : 'h4';
+          $moodtext_class = ($moodtext_index % 2 === 0) ? 'description' : 'h3';
       ?>
         <div class="project-overview__moodtext <?php echo $moodtext_class; ?>">
           <?php echo wpautop($current_moodtext['text']); ?>

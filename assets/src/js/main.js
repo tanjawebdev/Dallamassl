@@ -1,12 +1,12 @@
 import General from './_general';
 import HeroGallery from './_hero-gallery';
-import BlogSlider from './_blog-slider';
 import InfoBoxSelection from './_info-box-selection';
 import Logo from './_logo';
 import HeroGalleryMousePosition from './_hero-gallery-mouse-position';
 import StickyD from './_sticky-d';
 import AboutSection5LogoSwap from './_about-section-5-logo-swap';
 import BadgeRotate from './_badge-rotate';
+import ProjectQuoteSlider from './_project-quote-slider';
 
 const App = {
 	/**
@@ -24,12 +24,6 @@ const App = {
 			return new HeroGallery();
 		}
 		initHeroGallery();
-
-		// Blog Slider (Splide carousel)
-		function initBlogSlider() {
-			return new BlogSlider();
-		}
-		initBlogSlider();
 
 		// Info Box Selection (tabbed interface)
 		function initInfoBoxSelection() {
@@ -66,6 +60,12 @@ const App = {
 			return new BadgeRotate();
 		}
 		initBadgeRotate();
+
+		// Project Quote Slider (Splide carousel)
+		function initProjectQuoteSlider() {
+			return new ProjectQuoteSlider();
+		}
+		initProjectQuoteSlider();
 	},
 };
 

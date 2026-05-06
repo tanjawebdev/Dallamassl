@@ -39,7 +39,7 @@
 }
 
 .project-overview__moodtext.description {
-    grid-column: 6 / 9;
+    grid-column: 6 / 8;
     grid-row: span 2;
 
     @include media-breakpoint-up(lg) {
@@ -152,7 +152,6 @@
 .project-overview__image {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 1rem;
 
     img {
         width: 100%;

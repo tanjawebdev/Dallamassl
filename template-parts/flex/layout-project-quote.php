@@ -17,20 +17,26 @@ $link = get_sub_field('link');
 </div>
 
 <?php if ($quotes && is_array($quotes)) : ?>
-  <div class="project-quote__slider">
-    <?php foreach ($quotes as $quote) : ?>
-      <div class="project-quote__card">
-        <div class="project-quote__top-content">
-          <div class="project-quote__icon"></div>
-          <?php if (!empty($quote['text'])) : ?>
-            <p class="project-quote__text"><?php echo esc_html($quote['text']); ?></p>
-          <?php endif; ?>
-        </div>
-        <?php if (!empty($quote['autor'])) : ?>
-          <span class="project-quote__author h5">&ndash; <?php echo esc_html($quote['autor']); ?></span>
-        <?php endif; ?>
+  <div class="project-quote__slider splide container-lg">
+    <div class="splide__track">
+      <div class="splide__list">
+        <?php foreach ($quotes as $quote) : ?>
+          <div class="project-quote__card splide__slide col-lg-4">
+            <div class="project-quote__card-inner">
+              <div class="project-quote__top-content">
+                <div class="project-quote__icon"></div>
+                <?php if (!empty($quote['text'])) : ?>
+                  <p class="project-quote__text"><?php echo esc_html($quote['text']); ?></p>
+                <?php endif; ?>
+              </div>
+              <?php if (!empty($quote['autor'])) : ?>
+                <span class="project-quote__author">&ndash; <?php echo esc_html($quote['autor']); ?></span>
+              <?php endif; ?>
+            </div>
+          </div>
+        <?php endforeach; ?>
       </div>
-    <?php endforeach; ?>
+    </div>
   </div>
 <?php endif; ?>
 

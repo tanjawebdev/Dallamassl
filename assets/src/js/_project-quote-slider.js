@@ -1,23 +1,27 @@
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
 
-class BlogSlider {
+class ProjectQuoteSlider {
     constructor() {
         this.init();
     }
 
     init() {
-        const blogSliders = document.querySelectorAll('.blog-slider');
+        const quoteSliders = document.querySelectorAll('.project-quote__slider');
 
-        blogSliders.forEach((slider) => {
+        quoteSliders.forEach((slider) => {
             new Splide(slider, {
                 type: 'loop',
-                perPage: 3.5,
+                perPage: 3,
                 perMove: 1,
-                arrows: true,
-                pagination: true,
+                arrows: false,
+                pagination: false,
+                autoplay: true,
+                interval: 3000,
+                pauseOnHover: true,
+                pauseOnFocus: true,
                 breakpoints: {
-                    1024: {
+                    1500: {
                         perPage: 2,
                         padding: '2rem',
                         gap: '1rem',
@@ -35,4 +39,4 @@ class BlogSlider {
     }
 }
 
-export default BlogSlider;
+export default ProjectQuoteSlider;
