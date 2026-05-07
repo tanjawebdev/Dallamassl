@@ -7,8 +7,9 @@
 $images = get_sub_field('images'); // ACF Gallery field
 $headline = get_sub_field('headline') ?: '';
 ?>
-
-<h3><?php echo esc_html($headline); ?></h3>
+<?php if ($headline): ?>
+  <h3><?php echo esc_html($headline); ?></h3>
+<?php endif; ?>
 <?php if ($images): ?>
   <div class="hero-gallery-mouse-position" data-hero-gallery-mouse>
     <div class="gallery-container">

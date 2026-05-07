@@ -54,7 +54,7 @@
                     "sub_fields": [
                         {
                             "key": "field_69836fec1c3e0",
-                            "label": "Bilder",
+                            "label": "Bilder (Seitenverhältnis 10:7)",
                             "name": "images",
                             "aria-label": "",
                             "type": "gallery",
@@ -68,6 +68,8 @@
                             },
                             "return_format": "array",
                             "library": "all",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
                             "min": "",
                             "max": 20,
                             "min_width": "",
@@ -77,6 +79,7 @@
                             "max_height": 3000,
                             "max_size": "",
                             "mime_types": "",
+                            "acfe_permissions": "",
                             "insert": "append",
                             "preview_size": "medium"
                         },
@@ -4106,5 +4109,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1778087314
+    "modified": 1778168514
 }
