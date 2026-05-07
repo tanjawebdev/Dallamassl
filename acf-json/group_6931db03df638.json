@@ -785,8 +785,8 @@
                 },
                 "layout_698a466f97928": {
                     "key": "layout_698a466f97928",
-                    "name": "project_text-three-images",
-                    "label": "Text und 3 große Bilder",
+                    "name": "project_text-left-image-right",
+                    "label": "Text links, Bild rechts",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -812,6 +812,147 @@
                         },
                         {
                             "key": "field_698a46a99792b",
+                            "label": "Bild rechts (2:3)",
+                            "name": "image_top-right",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "uploader": "",
+                            "return_format": "",
+                            "library": "",
+                            "acfe_thumbnail": 0,
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false,
+                    "acfe_flexible_category": false
+                },
+                "layout_69fca236ec6b3": {
+                    "key": "layout_69fca236ec6b3",
+                    "name": "project_two-big-images-2",
+                    "label": "Zwei große Bilder #2",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69fca236ec6b6",
+                            "label": "Bild links",
+                            "name": "image_bottom-left",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "uploader": "",
+                            "return_format": "",
+                            "library": "",
+                            "acfe_thumbnail": 0,
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_69fca236ec6b7",
+                            "label": "Bild rechts",
+                            "name": "image_bottom-right",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "uploader": "",
+                            "return_format": "",
+                            "library": "",
+                            "acfe_thumbnail": 0,
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false,
+                    "acfe_flexible_category": false
+                },
+                "layout_69fca237ec6b8": {
+                    "key": "layout_69fca237ec6b8",
+                    "name": "project_text-three-images_kopieren2",
+                    "label": "Text und 3 große Bilder (kopieren2)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69fca237ec6b9",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_69fca237ec6ba",
                             "label": "Bild rechts oben (2:3)",
                             "name": "image_top-right",
                             "aria-label": "",
@@ -839,7 +980,7 @@
                             "preview_size": "medium"
                         },
                         {
-                            "key": "field_698a46d49792c",
+                            "key": "field_69fca237ec6bb",
                             "label": "Bild links unten (4:5)",
                             "name": "image_bottom-left",
                             "aria-label": "",
@@ -867,7 +1008,7 @@
                             "preview_size": "medium"
                         },
                         {
-                            "key": "field_698a47109792d",
+                            "key": "field_69fca237ec6bc",
                             "label": "Bild rechts unten (3:2)",
                             "name": "image_bottom-right",
                             "aria-label": "",
@@ -939,5 +1080,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1771242239
+    "modified": 1778164433
 }

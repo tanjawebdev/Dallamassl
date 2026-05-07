@@ -87,11 +87,12 @@
 .project-details-big__moodtext {
     grid-column: 7 / 11;
     grid-row: 1;
-    padding: 8rem 0 4rem;
+    padding: 0 0 12rem;
 
     @include media-breakpoint-down(md) {
         grid-column: 1;
         grid-row: auto;
+        padding: 0;
     }
 
     p {
@@ -155,7 +156,7 @@
     grid-column: 7 / 10;
 
     @include media-breakpoint-up(xxl) {
-        grid-column: 7 / 9;
+        grid-column: 6 / 8;
     }
 }
 
@@ -181,5 +182,6 @@
 
     @include media-breakpoint-up(xxl) {
         grid-column: 6 / 9;
+        margin: 4rem 0;
     }
 }

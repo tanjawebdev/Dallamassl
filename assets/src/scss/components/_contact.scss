@@ -1,6 +1,10 @@
 .contact {
     padding: 10rem 0 0;
 
+    @include media-breakpoint-down(xxxxl) {
+        padding: 5rem 0 0;
+    }
+
     @include media-breakpoint-down(md) {
         padding: 4rem 0;
     }
@@ -192,6 +196,10 @@
         letter-spacing: 0;
         cursor: pointer;
         transition: background-color 0.3s ease;
+
+        @include media-breakpoint-down(xxxxl) {
+            padding: 0 0 1rem 2rem !important;
+        }
 
         &::before {
             width: 3rem;

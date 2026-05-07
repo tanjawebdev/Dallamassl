@@ -156,10 +156,10 @@
 }
 
 .project-details-small__meta-item--services {
-    grid-column: 7 / 10;
+    grid-column: 6 / 8;
 
     @include media-breakpoint-up(xxl) {
-        grid-column: 7 / 9;
+        grid-column: 6 / 8;
     }
 }
 
@@ -181,5 +181,6 @@
 
     @include media-breakpoint-up(xxl) {
         grid-column: 6 / 9;
+        margin: 4rem 0;
     }
 }
