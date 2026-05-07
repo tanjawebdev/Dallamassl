@@ -4,6 +4,10 @@
     gap: 2rem;
     padding: 12rem 0 0;
 
+    @include media-breakpoint-down(xxl) {
+        padding: 6rem 0;
+    }
+
     @include media-breakpoint-down(md) {
         grid-template-columns: 1fr;
         gap: 4rem;
@@ -16,11 +20,15 @@
     margin-bottom: 4rem;
     grid-column: 3 / 6;
 
+    @include media-breakpoint-down(xxl) {
+        margin-bottom: 5rem;
+    }
+
     @include media-breakpoint-down(md) {
         grid-column: 1;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xxl) {
         margin-bottom: 12rem;
     }
 }

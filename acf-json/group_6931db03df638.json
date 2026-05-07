@@ -825,8 +825,8 @@
                                 "id": ""
                             },
                             "uploader": "",
-                            "return_format": "",
-                            "library": "",
+                            "return_format": "array",
+                            "library": "all",
                             "acfe_thumbnail": 0,
                             "min_width": "",
                             "min_height": "",
@@ -871,8 +871,8 @@
                                 "id": ""
                             },
                             "uploader": "",
-                            "return_format": "",
-                            "library": "",
+                            "return_format": "array",
+                            "library": "all",
                             "acfe_thumbnail": 0,
                             "min_width": "",
                             "min_height": "",
@@ -899,8 +899,8 @@
                                 "id": ""
                             },
                             "uploader": "",
-                            "return_format": "",
-                            "library": "",
+                            "return_format": "array",
+                            "library": "all",
                             "acfe_thumbnail": 0,
                             "min_width": "",
                             "min_height": "",
@@ -926,8 +926,8 @@
                 },
                 "layout_69fca237ec6b8": {
                     "key": "layout_69fca237ec6b8",
-                    "name": "project_text-three-images_kopieren2",
-                    "label": "Text und 3 große Bilder (kopieren2)",
+                    "name": "project_text-three-images",
+                    "label": "Text und 3 große Bilder",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1080,5 +1080,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1778164433
+    "modified": 1778165580
 }

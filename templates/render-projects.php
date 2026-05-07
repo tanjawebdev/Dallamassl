@@ -57,6 +57,12 @@ while (have_rows('projects')) : the_row();
     case 'project_text-three-images':
       get_template_part('template-parts/flex/layout', 'project-text-three-images'); break;
 
+    case 'project_text-left-image-right':
+      get_template_part('template-parts/flex/layout', 'project-text-left-image-right'); break;
+
+    case 'project_two-big-images-2':
+      get_template_part('template-parts/flex/layout', 'project-two-big-images-2'); break;
+
     case 'body_text':
       get_template_part('template-parts/flex/layout', 'body-text'); break;
 
