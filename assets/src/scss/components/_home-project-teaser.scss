@@ -3,9 +3,13 @@
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 2rem;
 
+    @include media-breakpoint-down(lg) {
+        padding: 0;
+    }
+
     @include media-breakpoint-down(md) {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
     }
 }
 
@@ -34,10 +38,9 @@
 }
 
 .home-project-teaser__subheadline {
-    margin-bottom: 3rem;
-
     @include media-breakpoint-up(lg) {
         max-width: 300px;
+        margin-bottom: 3rem;
     }
 }
 
@@ -76,7 +79,7 @@
 
     @include media-breakpoint-down(md) {
         grid-column: 1;
-        grid-row: auto;
+        grid-row: 2;
     }
 
     @include media-breakpoint-up(lg) {
@@ -116,11 +119,19 @@
 // Portrait teaser 1
 .home-project-teaser__teaser--one .home-project-teaser__image {
     aspect-ratio: 3 / 4;
+
+    @include media-breakpoint-down(md) {
+        aspect-ratio: 16 / 9;
+    }
 }
 
 // Portrait teaser 2
 .home-project-teaser__teaser--two .home-project-teaser__image {
     aspect-ratio: 3 / 5;
+
+    @include media-breakpoint-down(md) {
+        aspect-ratio: 16 / 9;
+    }
 }
 
 // Landscape teaser

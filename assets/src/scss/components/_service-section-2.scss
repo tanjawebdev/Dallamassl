@@ -10,9 +10,10 @@
     gap: 2rem;
     padding: 4rem 0;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         grid-template-columns: 1fr;
         gap: 3rem;
+        padding-bottom: 0;
     }
 }
 
@@ -44,16 +45,15 @@
 .service-section-2__text {
     grid-column: 4 / 8;
     grid-row: 2;
-    margin-bottom: 2rem;
 
     @include media-breakpoint-up(lg) {
         margin-bottom: 8rem;
-
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         grid-column: 1;
         grid-row: auto;
+        margin-bottom: 0;
     }
 }
 

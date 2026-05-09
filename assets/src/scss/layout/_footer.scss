@@ -111,7 +111,7 @@ footer {
 }
 
 .footer-logo-large {
-    width: 90%;
+    width: 70%;
 
     @include media-breakpoint-up(lg) {
         width: 60%;
@@ -128,9 +128,16 @@ footer {
     bottom: 0;
     right: 0;
 
+    @include media-breakpoint-down(lg) {
+        margin-top: 1rem;
+        position: relative;
+        text-align: right;
+        font-size: 1rem;
+    }
+
     p {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
         letter-spacing: 0.05em;
 
         @include media-breakpoint-up(lg) {

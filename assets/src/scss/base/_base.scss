@@ -27,7 +27,11 @@ a:active {
 }
 
 main>section {
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 8rem;
+    }
 
     @include media-breakpoint-up(lg) {
         margin-bottom: 12rem;
@@ -85,5 +89,59 @@ picture.object-fit-cover img {
     h5,
     p {
         color: #FFFFFF;
+    }
+}
+
+h1,
+.h1 {
+    font-size: $h1-font-size;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $h1-font-size-lg;
+    }
+}
+
+h2,
+.h2 {
+    font-size: $h2-font-size;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $h2-font-size-lg;
+    }
+}
+
+h3,
+.h3 {
+    font-size: $h3-font-size;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $h3-font-size-lg;
+    }
+}
+
+h4,
+.h4 {
+    font-size: $h4-font-size;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $h4-font-size-lg;
+    }
+}
+
+h5,
+.h5 {
+    font-size: $h5-font-size;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $h5-font-size-lg;
+    }
+}
+
+h6,
+.h6 {
+    font-size: $h6-font-size;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $h6-font-size-lg;
     }
 }

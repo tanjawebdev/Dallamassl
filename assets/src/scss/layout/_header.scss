@@ -108,7 +108,7 @@
         @include media-breakpoint-down(lg) {
             opacity: 1;
             transform: translateX(0);
-            padding-right: 0;
+            //padding-right: 0;
         }
     }
 
@@ -368,6 +368,8 @@
 
     // Burger animation when menu is open
     &[aria-expanded="true"] {
+        height: 24px;
+
         span {
             background-color: #fff;
 
@@ -433,7 +435,7 @@
 }
 
 .mobile-menu__inner {
-    padding: 10rem 2rem 2rem;
+    padding: 10rem 0 2rem;
 }
 
 .mobile-menu__header {
@@ -489,8 +491,9 @@
         transition: opacity 0.3s ease;
         font-size: 2rem;
         margin-left: 1.5rem;
-        padding-right: 2rem;
+        margin-right: 2rem;
         opacity: 1;
+        padding: 0 !important;
 
         &:hover {
             opacity: 0.7;
@@ -539,6 +542,7 @@
 .mobile-menu.submenu-open .sub-menu {
     opacity: 1;
     pointer-events: auto;
+    padding-left: 2rem;
 }
 
 // Prevent body scroll when menu is open

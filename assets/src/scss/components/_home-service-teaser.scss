@@ -3,9 +3,13 @@
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 2rem;
 
+    @include media-breakpoint-down(lg) {
+        padding: 0;
+    }
+
     @include media-breakpoint-down(md) {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
     }
 }
 
@@ -59,6 +63,12 @@
     }
 }
 
+.home-service-teaser__milestone-item .h4 {
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 1rem;
+    }
+}
+
 // Text (below subheadline)
 .home-service-teaser__text {
     grid-column: 7 / 11;
@@ -81,11 +91,13 @@
     display: flex;
     gap: 3rem;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         grid-column: 1;
         grid-row: auto;
         flex-wrap: wrap;
+        flex-direction: column;
         gap: 2rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -113,5 +125,12 @@
         grid-column: 1;
         grid-row: auto;
         justify-self: start;
+    }
+
+    span {
+        @include media-breakpoint-down(lg) {
+            margin-top: 5px;
+            display: flex;
+        }
     }
 }

@@ -11,9 +11,10 @@
     gap: 2rem;
     padding: 4rem 0;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         grid-template-columns: 1fr;
         gap: 3rem;
+        padding: 0;
     }
 }
 

@@ -45,13 +45,14 @@
 }
 
 .btn-big {
-    font-size: 4rem;
+    font-size: 2.4rem;
     line-height: 1.2;
     text-align: left;
     display: inline-block;
 
     @include media-breakpoint-up(lg) {
         max-width: 350px;
+        font-size: 4rem;
     }
 
     &::before {

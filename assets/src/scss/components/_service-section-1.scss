@@ -4,9 +4,10 @@
     gap: 2rem;
     padding: 4rem 0;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
+        padding: 0;
     }
 }
 
@@ -72,11 +73,11 @@
     justify-self: end;
     margin: 10rem 0;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         grid-column: 1;
         grid-row: auto;
         justify-self: start;
-        margin-bottom: 0;
+        margin: 0;
     }
 }
 
@@ -96,6 +97,10 @@
 // Shared Project Teaser Styles
 .service-section-1__project-teaser {
     transition: opacity 0.3s ease;
+
+    @include media-breakpoint-down(lg) {
+        order: 3;
+    }
 }
 
 .service-section-1__project-image {
