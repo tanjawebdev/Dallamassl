@@ -129,9 +129,8 @@ footer {
     right: 0;
 
     @include media-breakpoint-down(lg) {
-        margin-top: 1rem;
+        margin-top: 1.2rem;
         position: relative;
-        text-align: right;
         font-size: 1rem;
     }
 
