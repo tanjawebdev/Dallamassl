@@ -42,7 +42,7 @@ class HeroGalleryMousePosition {
 	}
 
 	/**
-	 * Mobile: cycle through images automatically every 300ms
+	 * Mobile: cycle through images automatically every 600ms
 	 * Each image gets z-index: 2 in turn, others fall back
 	 */
 	galleryMobileAnimation(gallery, items) {
@@ -61,7 +61,7 @@ class HeroGalleryMousePosition {
 
 			// Activate next
 			items[currentIndex].classList.add('is-active');
-		}, 300);
+		}, 600);
 
 		// Store so we can cancel on breakpoint change
 		this.mobileIntervals.set(gallery, intervalId);

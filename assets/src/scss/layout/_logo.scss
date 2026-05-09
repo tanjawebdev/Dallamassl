@@ -16,12 +16,28 @@
     }
 
     @include media-breakpoint-down(lg) {
-        margin-top: 2rem;
+        margin-top: 1.2rem;
     }
 
     // When scrolled, become fixed
     &.is-scrolled {
         position: fixed;
+    }
+}
+
+.logo-home-mobile {
+    display: none;
+
+    @include media-breakpoint-down(lg) {
+        display: block;
+    }
+}
+
+.logo-home-desktop {
+    display: block;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
     }
 }
 

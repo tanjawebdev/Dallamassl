@@ -1,5 +1,5 @@
 .hero-gallery-mouse-position {
-    height: calc(100vh - 5.5rem);
+    height: calc(100vh - 20rem);
     overflow: hidden;
 
     @include media-breakpoint-up(lg) {
@@ -9,6 +9,10 @@
 
 .hero_gallery_mouse_position {
     position: relative;
+
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 0;
+    }
 }
 
 .hero_gallery_mouse_position h3 {

@@ -8,18 +8,32 @@
     top: 0;
     left: 0;
 
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+
     // When fixed at 75px from top
     &.is-fixed {
-        position: fixed;
-        top: 75px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
+        @include media-breakpoint-up(lg) {
+
+            position: fixed;
+            top: 75px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
     }
 
     a {
         pointer-events: all;
         cursor: pointer;
+    }
+
+    svg {
+        @include media-breakpoint-down(lg) {
+            width: 8%;
+            height: auto;
+        }
     }
 }
 
@@ -28,8 +42,17 @@
     top: 0;
     left: 18rem;
     width: 50%;
+
+    @include media-breakpoint-down(lg) {
+        left: auto;
+        width: auto;
+    }
 }
 
 .sticky-d-text h1 {
     line-height: 4.7rem;
+
+    @include media-breakpoint-down(lg) {
+        line-height: 1em;
+    }
 }

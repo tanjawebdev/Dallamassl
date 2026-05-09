@@ -16,8 +16,11 @@
     <div id="logo">
       <?php
       if ( is_front_page() || is_home() ) : ?>
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-home-desktop">
              <?php get_template_part('partials/logo-static'); ?>
+          </a>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-home-mobile">
+             <?php get_template_part('partials/logo'); ?>
           </a>
       <?php else : ?>
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -93,6 +96,8 @@
       }
     }
     ?>
+
+    <div class="mobile-header-background"></div>
 
     <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="<?php esc_attr_e( 'Menü öffnen', 'dallamassl' ); ?>">
       <span></span>

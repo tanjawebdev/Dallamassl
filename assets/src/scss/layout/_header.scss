@@ -104,6 +104,12 @@
         opacity: 0;
         transform: translateX(20px);
         transition: opacity 0.3s ease, transform 0.3s ease;
+
+        @include media-breakpoint-down(lg) {
+            opacity: 1;
+            transform: translateX(0);
+            padding-right: 0;
+        }
     }
 
     // Current menu item (when on subpage)
@@ -123,6 +129,10 @@
         position: absolute;
         right: 0;
         top: 50%;
+
+        @include media-breakpoint-down(lg) {
+            background-color: $body-bg;
+        }
     }
 
     // Items with submenus
@@ -152,7 +162,7 @@
     opacity: 1;
 }
 
-#site-navigation.submenu-open .menu-item.submenu-open {
+#site-navigation.submenu-open .menu-item {
     pointer-events: auto;
 }
 
@@ -312,17 +322,33 @@
     }
 }
 
+// Mobile header background
+.mobile-header-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    z-index: 3;
+    pointer-events: none;
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
 // Mobile menu toggle button
 .menu-toggle {
     position: fixed;
-    top: 2rem;
-    right: 2rem;
+    top: 1.4rem;
+    right: 1rem;
     z-index: 1001;
     background: none;
     border: none;
     padding: 0;
     width: 30px;
-    height: 24px;
+    height: 22px;
     cursor: pointer;
     display: none;
 
@@ -374,6 +400,10 @@
     backdrop-filter: blur(0);
     pointer-events: none;
 
+    &.submenu-open {
+        background-color: $body-color;
+    }
+
     &.is-open {
         backdrop-filter: blur(2px);
         pointer-events: auto;
@@ -423,8 +453,9 @@
     }
 }
 
-.mobile-menu.submenu-open .menu-item {
+.mobile-menu.submenu-open .current-menu-item>a {
     font-weight: 500;
+    border-bottom: none;
 }
 
 
@@ -446,7 +477,10 @@
         }
 
         &.submenu-open {
-            font-weight: 700 !important;
+            &>a {
+                font-weight: 700 !important;
+                border-bottom: 1px solid $body-bg;
+            }
         }
     }
 
@@ -463,8 +497,9 @@
         }
     }
 
-    .current-menu-item {
+    .current-menu-item>a {
         font-weight: 700;
+        border-bottom: 1px solid $body-bg;
     }
 
     // Nested submenus in mobile
@@ -479,11 +514,11 @@
         transition: all 0.5s ease;
 
         .menu-item {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
             text-align: left;
 
             &:before {
-                width: 2rem;
+                width: 1rem;
                 right: auto;
                 left: -2rem;
             }
