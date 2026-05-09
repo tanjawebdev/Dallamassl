@@ -11,8 +11,9 @@
     gap: 2rem;
     position: relative;
 
-    @include media-breakpoint-down(md) {
-        grid-template-columns: 1fr;
+    @include media-breakpoint-down(lg) {
+        display: flex;
+        flex-direction: column;
         gap: 3rem;
     }
 }

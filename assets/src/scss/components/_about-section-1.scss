@@ -9,10 +9,11 @@
     padding: 3rem 0 4rem;
     position: relative;
 
-    @include media-breakpoint-down(md) {
-        grid-template-columns: 1fr;
+    @include media-breakpoint-down(lg) {
+        display: flex;
+        flex-direction: column;
         gap: 3rem;
-        padding: 3rem 0 4rem;
+        padding: 3rem 0 0;
     }
 }
 
@@ -41,8 +42,8 @@
     grid-row: 2;
     aspect-ratio: 3 / 5;
 
-    @include media-breakpoint-down(md) {
-        grid-column: 1;
+    @include media-breakpoint-down(lg) {
+        display: none;
     }
 
     @include media-breakpoint-up(lg) {
