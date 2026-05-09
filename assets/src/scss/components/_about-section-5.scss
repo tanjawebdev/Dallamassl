@@ -8,8 +8,8 @@
     @include media-breakpoint-down(lg) {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
-        padding: 4rem 0;
+        gap: 1.5rem;
+        padding: 0;
     }
 
     @include media-breakpoint-up(lg) {
@@ -34,23 +34,24 @@
     position: relative;
     height: calc(9vw + 5rem);
 
-    @include media-breakpoint-down(md) {
-        grid-column: 1;
-        margin: 2rem 0;
+    @include media-breakpoint-down(lg) {
+        display: none;
     }
 }
 
 // Large Logo (Center Top)
 .about-section-5__logo {
-    height: 12.2rem;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
     @include media-breakpoint-up(lg) {
-        top: 15rem;
-        bottom: auto;
+        height: 12.2rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 0;
+        margin-bottom: 4rem;
     }
 
     &.is-stick-bottom {
@@ -61,17 +62,19 @@
     svg {
         height: 100%;
         width: auto;
+
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
     }
+
 
     // Fixed state (when swapped with D.)
     &.is-fixed {
-        position: fixed;
-        top: 4.9rem;
-        z-index: 1000;
-
-        @include media-breakpoint-down(md) {
-            top: 1rem;
-            left: 1rem;
+        @include media-breakpoint-up(lg) {
+            position: fixed;
+            top: 4.9rem;
+            z-index: 1000;
         }
     }
 }
@@ -99,8 +102,9 @@
     grid-column: 5 / 8;
     grid-row: 4;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         grid-column: 1;
+        margin-bottom: 4rem;
     }
 
     @include media-breakpoint-up(lg) {
@@ -131,8 +135,9 @@
     grid-column: 9 / 12;
     grid-row: 6;
 
-    @include media-breakpoint-down(md) {
-        grid-column: 1;
+    @include media-breakpoint-down(lg) {
+
+        margin-bottom: 4rem;
     }
 
     p {
