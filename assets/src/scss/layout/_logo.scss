@@ -53,7 +53,8 @@
     height: auto;
 
     @include media-breakpoint-down(lg) {
-        width: 70%;
+        width: auto;
+        height: 30px;
     }
 }
 

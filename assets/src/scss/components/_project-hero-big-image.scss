@@ -7,6 +7,11 @@
         padding-top: 25rem;
         padding-right: 6%;
     }
+
+    @include media-breakpoint-down(lg) {
+        padding: 0 5px;
+        margin-top: 4rem;
+    }
 }
 
 .project-hero-big-left-text h1 {
@@ -16,13 +21,22 @@
 }
 
 .project-hero-big-left-image {
+    display: none;
+
     @include media-breakpoint-up(lg) {
         width: 50%;
+        display: block;
     }
 }
 
 .project-hero-big-left-image picture {
     padding-top: 150%;
+}
+
+.project-hero-big-right {
+    @include media-breakpoint-down(lg) {
+        padding: 0 5px;
+    }
 }
 
 .project-hero-big-right picture {

@@ -54,27 +54,47 @@ $moodtexts = get_sub_field('moodtexts');
           $moodtext_index++;
         endif;
         
-        // Determine which image to use based on position
-        // Positions 0, 1, 3 = portrait | Positions 2, 4 = landscape
-        $use_portrait = in_array($position, [0, 1, 3]);
-        
-        if ($use_portrait) {
-          $featured_image_acf = get_field('featured_image_portrait', $project_id);
+        // Desktop: portrait for pos 0,1,3 — landscape for pos 2,4
+        // Mobile: portrait for all EXCEPT pos-4 (landscape on mobile too)
+        $use_portrait_desktop = in_array($position, [0, 1, 3]);
+
+        if ($use_portrait_desktop) {
+          $desktop_image_acf = get_field('featured_image_portrait', $project_id);
         } else {
-          $featured_image_acf = get_field('featured_image_landscape', $project_id);
+          $desktop_image_acf = get_field('featured_image_landscape', $project_id);
         }
-        
-        $featured_image_acf = $featured_image_acf ? $featured_image_acf : null;
-        
+
+        // Pos-4: landscape on both desktop and mobile
+        // Pos-2: landscape on desktop, portrait on mobile
+        if ($position === 4) {
+          $mobile_image_acf = get_field('featured_image_landscape', $project_id);
+        } else {
+          $mobile_image_acf = get_field('featured_image_portrait', $project_id);
+        }
+
+        // Fallback chain
+        $desktop_image_acf = $desktop_image_acf ?: $mobile_image_acf;
+        $mobile_image_acf  = $mobile_image_acf  ?: $desktop_image_acf;
+
       ?>
         <div class="project-overview__teaser project-overview__teaser--pos-<?php echo $position; ?>">
           <a href="<?php echo esc_url($project_url); ?>" class="project-overview__link">
-            <?php if ($featured_image_acf) : ?>
+            <?php if ($desktop_image_acf || $mobile_image_acf) : ?>
               <div class="project-overview__image hover-round">
-                <?php echo wp_get_attachment_image($featured_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+                <picture>
+                  <?php if ($mobile_image_acf && $position === 2) :
+                    // pos-2: desktop=landscape, mobile=portrait → inject <source>
+                    $mobile_src = wp_get_attachment_image_src($mobile_image_acf['ID'], 'medium_size');
+                  ?>
+                    <source media="(max-width: 991px)" srcset="<?php echo esc_url($mobile_src[0]); ?>">
+                  <?php endif; ?>
+                  <?php if ($desktop_image_acf) : ?>
+                    <?php echo wp_get_attachment_image($desktop_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy', 'alt' => esc_attr($project_title)]); ?>
+                  <?php endif; ?>
+                </picture>
               </div>
             <?php endif; ?>
-            
+
             <div class="project-overview__meta">
               <span class="project-overview__title description"><?php echo esc_html($project_title); ?></span>
             </div>
