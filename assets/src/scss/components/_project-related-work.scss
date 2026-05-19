@@ -15,7 +15,7 @@
 }
 
 .project-related-work__nav {
-    padding: 3rem 0;
+    padding: 3rem 10px;
 
     @include media-breakpoint-up(lg) {
         padding: 8rem 0;
@@ -24,7 +24,7 @@
 
 .project-related-work__title {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 
     @include media-breakpoint-up(lg) {
         padding-top: 4rem;
@@ -95,5 +95,11 @@
 
     @media (max-width: 768px) {
         order: -1;
+    }
+
+    @include media-breakpoint-down(lg) {
+        br {
+            display: none;
+        }
     }
 }

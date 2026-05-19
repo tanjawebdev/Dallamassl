@@ -1,6 +1,12 @@
 .project-hero-small-left {
     margin-bottom: 4rem;
 
+    @include media-breakpoint-down(lg) {
+        padding: 0 5px;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
     @include media-breakpoint-up(lg) {
         display: flex;
         flex-direction: column;
@@ -22,10 +28,9 @@
 }
 
 .project-hero-small-left-text h1 {
-    word-spacing: 100vw;
-
     @include media-breakpoint-up(lg) {
         margin-bottom: 4rem;
+        word-spacing: 100vw;
     }
 }
 
@@ -33,6 +38,10 @@
     width: 100%;
     display: flex;
     gap: 2rem;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
 }
 
 .project-hero-small-img {
@@ -45,6 +54,12 @@
 
 .project-hero-small-left-image picture {
     padding-top: 150%;
+}
+
+.project-hero-small-right {
+    @include media-breakpoint-down(lg) {
+        padding: 0 5px;
+    }
 }
 
 .project-hero-small-right picture {

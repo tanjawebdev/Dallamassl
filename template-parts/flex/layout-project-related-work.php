@@ -55,7 +55,7 @@ if ($prev_post || $next_post) :
 <section class="section project-related-work">
   <div class="container-lg">
     <div class="row">
-      <div class="col-12 col-md-3 offset-md-1 project-related-work__nav">
+      <div class="col-6 col-md-3 offset-md-1 project-related-work__nav">
         <div class="project-related-work__content">
           <!-- Previous Project -->
           <div class="project-related-work__item <?php echo !$prev_post ? 'project-related-work__item--empty' : ''; ?>">
@@ -80,11 +80,11 @@ if ($prev_post || $next_post) :
       <div class="col-12 col-md-4 project-related-work__text-wrapper">
         <h4 class="project-related-work__title">RELATED WORK</h4>
         <h3 class="project-related-work__tagline">
-          <p>THE<br>ESSENCE<br>OF ROOMS</p>
+          <p>THE <br>ESSENCE <br>OF ROOMS</p>
         </h3>
       </div>
 
-      <div class="col-12 col-md-3 project-related-work__nav">
+      <div class="col-6 col-md-3 project-related-work__nav">
         <div class="project-related-work__content">
           <!-- Next Project -->
           <div class="project-related-work__item <?php echo !$next_post ? 'project-related-work__item--empty' : ''; ?>">
