@@ -21,8 +21,8 @@ $locations = get_the_terms(get_the_ID(), 'location');
 <section class="project-details-big">
   <div class="project-details-big__grid">
     
-    <!-- Big Top Left Image -->
-    <div class="project-details-big__image project-details-big__image--big-top-left">
+    <!-- Big Top Left Image (desktop: grid-positioned individually) -->
+    <div class="project-details-big__image project-details-big__image--big-top-left project-details-big__desktop-only">
       <?php if ($image_big_top_left) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_big_top_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
@@ -30,14 +30,14 @@ $locations = get_the_terms(get_the_ID(), 'location');
       <?php endif; ?>
     </div>
 
-    <!-- Mood Text Top Right -->
-    <div class="project-details-big__moodtext">
+    <!-- Mood Text Top Right (desktop only) -->
+    <div class="project-details-big__moodtext project-details-big__desktop-only">
       <?php if ($moodtext_top_right) : ?>
         <h3><?php echo esc_html($moodtext_top_right); ?></h3>
       <?php endif; ?>
     </div>
 
-    <!-- Small Top Right Image -->
+    <!-- Small Top Right Image (hidden on mobile via CSS) -->
     <div class="project-details-big__image project-details-big__image--small-top-right">
       <?php if ($image_small_top_right) : ?>
         <picture>
@@ -46,12 +46,30 @@ $locations = get_the_terms(get_the_ID(), 'location');
       <?php endif; ?>
     </div>
 
-    <!-- Big Top Right Image -->
-    <div class="project-details-big__image project-details-big__image--big-top-right">
+    <!-- Big Top Right Image (desktop: grid-positioned individually) -->
+    <div class="project-details-big__image project-details-big__image--big-top-right project-details-big__desktop-only">
       <?php if ($image_big_top_right) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_big_top_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
+      <?php endif; ?>
+    </div>
+
+    <!-- Mobile: big-top-left + big-top-right side by side -->
+    <div class="project-details-big__images-mobile-row">
+      <?php if ($image_big_top_left) : ?>
+        <div class="project-details-big__image project-details-big__image--big-top-left">
+          <picture>
+            <?php echo wp_get_attachment_image($image_big_top_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+          </picture>
+        </div>
+      <?php endif; ?>
+      <?php if ($image_big_top_right) : ?>
+        <div class="project-details-big__image project-details-big__image--big-top-right">
+          <picture>
+            <?php echo wp_get_attachment_image($image_big_top_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+          </picture>
+        </div>
       <?php endif; ?>
     </div>
 
@@ -92,8 +110,8 @@ $locations = get_the_terms(get_the_ID(), 'location');
       </div>
     </div>
 
-    <!-- Big Bottom Left Image -->
-    <div class="project-details-big__image project-details-big__image--big-bottom-left">
+    <!-- Big Bottom Left Image (desktop only individual) -->
+    <div class="project-details-big__image project-details-big__image--big-bottom-left project-details-big__desktop-only">
       <?php if ($image_big_bottom_left) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_big_bottom_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
@@ -101,12 +119,30 @@ $locations = get_the_terms(get_the_ID(), 'location');
       <?php endif; ?>
     </div>
 
-    <!-- Big Bottom Right Image -->
-    <div class="project-details-big__image project-details-big__image--big-bottom-right">
+    <!-- Big Bottom Right Image (desktop only individual) -->
+    <div class="project-details-big__image project-details-big__image--big-bottom-right project-details-big__desktop-only">
       <?php if ($image_big_bottom_right) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_big_bottom_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
+      <?php endif; ?>
+    </div>
+
+    <!-- Mobile: bottom images side by side -->
+    <div class="project-details-big__images-mobile-row--bottom">
+      <?php if ($image_big_bottom_left) : ?>
+        <div class="project-details-big__image project-details-big__image--big-bottom-left">
+          <picture>
+            <?php echo wp_get_attachment_image($image_big_bottom_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+          </picture>
+        </div>
+      <?php endif; ?>
+      <?php if ($image_big_bottom_right) : ?>
+        <div class="project-details-big__image project-details-big__image--big-bottom-right">
+          <picture>
+            <?php echo wp_get_attachment_image($image_big_bottom_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
+          </picture>
+        </div>
       <?php endif; ?>
     </div>
 

@@ -169,6 +169,12 @@
     }
 }
 
+.project-details-small__meta-item h4 {
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 0;
+    }
+}
+
 .project-details-small__meta-item--project-types {
     grid-column: 6;
 
