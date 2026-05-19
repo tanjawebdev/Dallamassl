@@ -13,7 +13,7 @@
     @include media-breakpoint-down(lg) {
         grid-template-columns: 1fr;
         gap: 3rem;
-        padding-bottom: 0;
+        padding: 0;
     }
 }
 

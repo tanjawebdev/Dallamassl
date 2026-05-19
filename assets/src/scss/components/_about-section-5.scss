@@ -42,11 +42,10 @@
 // Large Logo (Center Top)
 .about-section-5__logo {
     @include media-breakpoint-up(lg) {
-        height: 12.2rem;
+        width: 60%;
+        height: auto;
         position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 14rem;
     }
 
     @include media-breakpoint-down(lg) {
@@ -61,7 +60,7 @@
 
     svg {
         height: 100%;
-        width: auto;
+        width: 100%;
 
         @include media-breakpoint-down(lg) {
             width: 100%;
@@ -75,6 +74,23 @@
             position: fixed;
             top: 4.9rem;
             z-index: 1000;
+            width: calc(#{$container-max-width-xl} * 0.6);
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: calc(#{$container-max-width-xl} * 0.6);
+        }
+
+        @include media-breakpoint-up(xxl) {
+            width: calc(#{$container-max-width-xxl} * 0.6);
+        }
+
+        @include media-breakpoint-up(xxxl) {
+            width: calc(#{$container-max-width-xxxl} * 0.6);
+        }
+
+        @include media-breakpoint-up(xxxxl) {
+            width: calc(#{$container-max-width-xxxxl} * 0.6);
         }
     }
 }

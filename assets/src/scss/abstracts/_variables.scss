@@ -74,6 +74,13 @@ $container-max-widths: (
     xxxxl: 1770px
 );
 
+// Convenience variables for use in calc()
+$container-max-width-lg:    map-get($container-max-widths, lg);    // 960px
+$container-max-width-xl:    map-get($container-max-widths, xl);    // 1140px
+$container-max-width-xxl:   map-get($container-max-widths, xxl);   // 1440px
+$container-max-width-xxxl:  map-get($container-max-widths, xxxl);  // 1640px
+$container-max-width-xxxxl: map-get($container-max-widths, xxxxl); // 1770px
+
 $spacers: (
     0: 0,
     1: 1rem,
