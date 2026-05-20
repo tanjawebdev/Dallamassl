@@ -26,6 +26,10 @@
         grid-column: 1;
     }
 
+    @include media-breakpoint-only(lg) {
+        grid-column: 1 / 7;
+    }
+
     @include media-breakpoint-up(lg) {
         align-items: flex-end;
         display: flex;

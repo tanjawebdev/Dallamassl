@@ -49,6 +49,10 @@
         grid-row: 2;
     }
 
+    @include media-breakpoint-only(lg) {
+        grid-column: 7 / 11;
+    }
+
     p {
         margin-bottom: 1rem;
 
@@ -69,6 +73,10 @@
         grid-column: 1/3;
         grid-row: 1;
         margin-top: 2rem;
+    }
+
+    @include media-breakpoint-only(lg) {
+        grid-column: 7 / 12;
     }
 
     h2 {

@@ -66,6 +66,10 @@
         grid-column: 1;
         grid-row: auto;
     }
+
+    @include media-breakpoint-only(lg) {
+        grid-column: 7 / 13;
+    }
 }
 
 // Right Image - Bottom right

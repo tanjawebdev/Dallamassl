@@ -22,6 +22,10 @@
         grid-column: 1;
     }
 
+    @include media-breakpoint-only(lg) {
+        grid-column: 2/8;
+    }
+
     picture {
         position: relative;
         display: block;
@@ -47,6 +51,10 @@
 
     @include media-breakpoint-up(lg) {
         margin-top: 10rem;
+    }
+
+    @include media-breakpoint-only(lg) {
+        grid-column: 9/12;
     }
 
     p {
