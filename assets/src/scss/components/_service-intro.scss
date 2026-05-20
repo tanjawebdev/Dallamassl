@@ -8,6 +8,10 @@
         padding: 6rem 0;
     }
 
+    @include media-breakpoint-down(xl) {
+        padding: 6rem 0 0;
+    }
+
     @include media-breakpoint-down(lg) {
         display: flex;
         flex-direction: column;
@@ -25,6 +29,10 @@
         margin-bottom: 5rem;
     }
 
+    @include media-breakpoint-down(xl) {
+        grid-column: 1 / 8;
+    }
+
     @include media-breakpoint-down(md) {
         grid-column: 1;
         margin-bottom: 1rem;
@@ -39,9 +47,15 @@
     grid-column: 3 / 6;
     grid-row: 2;
 
+    @include media-breakpoint-down(xl) {
+        grid-column: 1 / 7;
+    }
+
     @include media-breakpoint-down(md) {
         grid-column: 1;
     }
+
+
 }
 
 .service-intro__services-title {
@@ -75,6 +89,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include media-breakpoint-down(xl) {
+        grid-column: 7 / 13;
+    }
 
     @include media-breakpoint-down(md) {
         grid-column: 1;

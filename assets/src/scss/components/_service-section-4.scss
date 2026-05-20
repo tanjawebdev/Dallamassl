@@ -24,6 +24,10 @@
     flex-direction: column;
     gap: 3rem;
 
+    @include media-breakpoint-only(lg) {
+        grid-column: 5 / 12;
+    }
+
     @include media-breakpoint-down(md) {
         grid-column: 1;
         gap: 2rem;
@@ -66,12 +70,22 @@
     text-decoration: none;
     color: inherit;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-only(md) {
+        grid-column: 1 / 7;
+        grid-row: 1;
+    }
+
+    @include media-breakpoint-only(lg) {
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+
+    @include media-breakpoint-down(md) {
         grid-column: 1;
         grid-row: 2;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         margin-top: -10rem;
     }
 }
