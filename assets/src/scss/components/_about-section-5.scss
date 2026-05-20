@@ -167,6 +167,10 @@
     grid-row: 6;
     align-self: end;
 
+    @include media-breakpoint-down(lg) {
+        align-self: start;
+    }
+
     @include media-breakpoint-down(md) {
         grid-column: 1;
     }
