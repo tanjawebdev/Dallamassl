@@ -8,8 +8,8 @@
     bottom: 3rem;
     right: 3rem;
     z-index: 999;
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,6 +20,11 @@
     &.is-hidden {
         opacity: 0;
         pointer-events: none;
+    }
+
+    @include media-breakpoint-up(sm) {
+        width: 12rem;
+        height: 12rem;
     }
 
     @include media-breakpoint-up(lg) {

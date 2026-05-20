@@ -1,3 +1,9 @@
+.home_service_teaser {
+    @include media-breakpoint-down(md) {
+        margin: 7rem 0;
+    }
+}
+
 .home-service-teaser__grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));

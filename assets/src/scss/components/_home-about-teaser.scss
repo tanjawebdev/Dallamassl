@@ -64,6 +64,7 @@
     @include media-breakpoint-down(md) {
         grid-column: 1;
         grid-row: auto;
+        margin-top: 6rem;
     }
 
     @include media-breakpoint-up(lg) {
