@@ -21,13 +21,13 @@
 
 // Small Images Gallery
 .project-text-small-images__gallery {
-    grid-column: 8 / 12;
+    grid-column: 9 / 13;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 
     @include media-breakpoint-down(lg) {
-        grid-column: 7 / 12;
+        grid-column: 9 / 13;
     }
 
     @include media-breakpoint-down(md) {
