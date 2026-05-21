@@ -17,7 +17,7 @@ $caption_right = get_sub_field('caption_right');
     
     <!-- Left Image -->
     <?php if ($image_left) : ?>
-      <div class="about-section-6__image-left">
+      <div class="about-section-6__image-left fade-in">
         <?php 
         echo wp_get_attachment_image(
           $image_left['ID'], 

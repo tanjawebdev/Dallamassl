@@ -25,7 +25,7 @@ $images_small_bottom_right = get_sub_field('images_small_bottom-right');
 
     <!-- Medium Image Left (4:5) -->
     <?php if ($image_left) : ?>
-      <div class="about-section-3__image-left">
+      <div class="about-section-3__image-left fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
@@ -41,7 +41,7 @@ $images_small_bottom_right = get_sub_field('images_small_bottom-right');
 
     <!-- Medium Image Top One (4:5) -->
     <?php if ($image_top_one) : ?>
-      <div class="about-section-3__image-top-one">
+      <div class="about-section-3__image-top-one fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image_top_one['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
@@ -50,7 +50,7 @@ $images_small_bottom_right = get_sub_field('images_small_bottom-right');
 
     <!-- Medium Image Top Two (4:5) -->
     <?php if ($image_top_two) : ?>
-      <div class="about-section-3__image-top-two">
+      <div class="about-section-3__image-top-two fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image_top_two['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
@@ -59,7 +59,7 @@ $images_small_bottom_right = get_sub_field('images_small_bottom-right');
 
     <!-- Small Images Bottom Right (Gallery 1-3 images) -->
     <?php if ($images_small_bottom_right) : ?>
-      <div class="about-section-3__images-small">
+      <div class="about-section-3__images-small fade-in">
         <?php foreach ($images_small_bottom_right as $image) : ?>
           <div class="about-section-3__small-image">
             <picture>

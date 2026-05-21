@@ -16,7 +16,7 @@ $big_image_right = get_sub_field('big_image_right');
     
     <!-- Large Image Left (Portrait 4:5) -->
     <?php if ($big_image_left) : ?>
-      <div class="about-section-2__image-left">
+      <div class="about-section-2__image-left fade-in">
         <picture>
           <?php echo wp_get_attachment_image($big_image_left['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
         </picture>
@@ -39,7 +39,7 @@ $big_image_right = get_sub_field('big_image_right');
 
     <!-- Large Image Right (Portrait 4:5) -->
     <?php if ($big_image_right) : ?>
-      <div class="about-section-2__image-right">
+      <div class="about-section-2__image-right fade-in">
         <picture>
           <?php echo wp_get_attachment_image($big_image_right['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
         </picture>

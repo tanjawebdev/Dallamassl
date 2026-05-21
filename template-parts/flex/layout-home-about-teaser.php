@@ -18,7 +18,7 @@ $linktext = get_sub_field('linktext');
 
   <!-- Gallery: 4 small mood images (top left) -->
   <?php if ($gallery) : ?>
-    <div class="home-about-teaser__gallery">
+    <div class="home-about-teaser__gallery fade-in">
       <?php foreach ($gallery as $img) : ?>
         <div class="home-about-teaser__gallery-item">
           <?php echo wp_get_attachment_image($img['ID'], 'small_size', false, ['loading' => 'lazy']); ?>
@@ -30,7 +30,7 @@ $linktext = get_sub_field('linktext');
 
   <!-- Large image (right) -->
   <?php if ($image) : ?>
-    <div class="home-about-teaser__image">
+    <div class="home-about-teaser__image fade-in">
       <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
     </div>
   <?php endif; ?>

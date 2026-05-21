@@ -51,7 +51,7 @@ $service = $service_id ? get_term($service_id) : null;
       $right_url = get_permalink($right_id);
     ?>
       <?php if ($right_image_acf) : ?>
-        <a href="<?php echo esc_url($right_url); ?>" class="service-section-2__project-teaser service-section-2__project-teaser--right">
+        <a href="<?php echo esc_url($right_url); ?>" class="service-section-2__project-teaser service-section-2__project-teaser--right fade-in">
           <div class="service-section-2__project-image hover-round">
             <?php echo wp_get_attachment_image($right_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
           </div>
@@ -70,7 +70,7 @@ $service = $service_id ? get_term($service_id) : null;
       $left_url = get_permalink($left_id);
     ?>
       <?php if ($left_image_acf) : ?>
-        <a href="<?php echo esc_url($left_url); ?>" class="service-section-2__project-teaser service-section-2__project-teaser--left">
+        <a href="<?php echo esc_url($left_url); ?>" class="service-section-2__project-teaser service-section-2__project-teaser--left fade-in">
           <div class="service-section-2__project-image hover-round">
             <?php echo wp_get_attachment_image($left_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
           </div>

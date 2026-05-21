@@ -23,7 +23,7 @@ $small_images = get_sub_field('small_images');
 
     <!-- Small Images Gallery -->
     <?php if ($small_images) : ?>
-      <div class="project-text-small-images__gallery">
+      <div class="project-text-small-images__gallery fade-in">
         <?php foreach ($small_images as $image) : ?>
           <div class="project-text-small-images__gallery-item">
             <picture>

@@ -9,7 +9,7 @@ $image_bottom_right = get_sub_field('image_bottom-right');
 
     <!-- Bottom Left Image -->
     <?php if ($image_bottom_left) : ?>
-      <div class="project-two-big-images-2__image project-two-big-images-2__image--bottom-left">
+      <div class="project-two-big-images-2__image project-two-big-images-2__image--bottom-left fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image_bottom_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
@@ -18,7 +18,7 @@ $image_bottom_right = get_sub_field('image_bottom-right');
 
     <!-- Bottom Right Image -->
     <?php if ($image_bottom_right) : ?>
-      <div class="project-two-big-images-2__image project-two-big-images-2__image--bottom-right">
+      <div class="project-two-big-images-2__image project-two-big-images-2__image--bottom-right fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image_bottom_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>

@@ -7,6 +7,7 @@ import StickyD from './_sticky-d';
 import AboutSection5LogoSwap from './_about-section-5-logo-swap';
 import BadgeRotate from './_badge-rotate';
 import ProjectQuoteSlider from './_project-quote-slider';
+import FadeIn from './_fade-in';
 
 const App = {
 	/**
@@ -66,6 +67,12 @@ const App = {
 			return new ProjectQuoteSlider();
 		}
 		initProjectQuoteSlider();
+
+		// Fade In — IntersectionObserver for .fade-in elements
+		function initFadeIn() {
+			return new FadeIn();
+		}
+		initFadeIn();
 	},
 };
 

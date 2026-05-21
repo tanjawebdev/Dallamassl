@@ -1,0 +1,34 @@
+// ============================================================
+// Fade In Utility — .fade-in
+//
+// Usage:
+//   <div class="fade-in">…</div>
+//
+// Optional delay via data attribute (in ms, e.g. 200 steps):
+//   <div class="fade-in" data-delay="200">…</div>
+//   <div class="fade-in" data-delay="400">…</div>
+//
+// JS adds .is-visible when element enters the viewport.
+// ============================================================
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition:
+        opacity 1s ease-in,
+        transform 1s ease-out;
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Respect users who prefer reduced motion
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

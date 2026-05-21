@@ -46,7 +46,7 @@ $project_teaser_three = get_sub_field('project_teaser_three'); // Post Object â€
     $t1_any = $t1_portrait_acf ?: $t1_landscape_acf;
   ?>
     <?php if ($t1_any) : ?>
-      <a href="<?php echo esc_url($t1_url); ?>" class="home-project-teaser__teaser home-project-teaser__teaser--one">
+      <a href="<?php echo esc_url($t1_url); ?>" class="home-project-teaser__teaser home-project-teaser__teaser--one fade-in">
         <div class="home-project-teaser__image hover-round">
           <picture>
             <?php if ($t1_landscape_acf) :
@@ -69,7 +69,7 @@ $project_teaser_three = get_sub_field('project_teaser_three'); // Post Object â€
   <?php endif; ?>
 
 
-  <div class="home-project-teaser__teaser--two">
+  <div class="home-project-teaser__teaser--two fade-in">
     <!-- Headline (top left) -->
   <?php if ($headline) : ?>
     <div class="home-project-teaser__headline">
@@ -127,7 +127,7 @@ $project_teaser_three = get_sub_field('project_teaser_three'); // Post Object â€
     $t3_url = get_permalink($t3_id);
   ?>
     <?php if ($t3_landscape_acf) : ?>
-      <a href="<?php echo esc_url($t3_url); ?>" class="home-project-teaser__teaser home-project-teaser__teaser--three">
+      <a href="<?php echo esc_url($t3_url); ?>" class="home-project-teaser__teaser home-project-teaser__teaser--three fade-in">
         <div class="home-project-teaser__image hover-round">
           <?php echo wp_get_attachment_image($t3_landscape_acf['ID'], 'medium_size', false, ['loading' => 'lazy', 'alt' => esc_attr($t3_title)]); ?>
         </div>

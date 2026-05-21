@@ -23,7 +23,7 @@ $image_bottom_right = get_sub_field('image_bottom-right');
 
     <!-- Top Right Image -->
     <?php if ($image_top_right) : ?>
-      <div class="project-text-three-images__image project-text-three-images__image--top-right">
+      <div class="project-text-three-images__image project-text-three-images__image--top-right fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image_top_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
@@ -32,7 +32,7 @@ $image_bottom_right = get_sub_field('image_bottom-right');
 
     <!-- Bottom Left Image -->
     <?php if ($image_bottom_left) : ?>
-      <div class="project-text-three-images__image project-text-three-images__image--bottom-left">
+      <div class="project-text-three-images__image project-text-three-images__image--bottom-left fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image_bottom_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
@@ -41,7 +41,7 @@ $image_bottom_right = get_sub_field('image_bottom-right');
 
     <!-- Bottom Right Image -->
     <?php if ($image_bottom_right) : ?>
-      <div class="project-text-three-images__image project-text-three-images__image--bottom-right">
+      <div class="project-text-three-images__image project-text-three-images__image--bottom-right fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image_bottom_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>

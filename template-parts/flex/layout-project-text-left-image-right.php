@@ -20,7 +20,7 @@ $image_top_right = get_sub_field('image_top-right');
 
     <!-- Top Right Image -->
     <?php if ($image_top_right) : ?>
-      <div class="project-text-left-image-right__image project-text-left-image-right__image--top-right">
+      <div class="project-text-left-image-right__image project-text-left-image-right__image--top-right fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image_top_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>

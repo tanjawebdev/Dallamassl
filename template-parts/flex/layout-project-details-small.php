@@ -24,7 +24,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     <!-- Mobile: side by side inside the wrapper -->
 
     <?php /* Desktop-only individual images */ ?>
-    <div class="project-details-small__image project-details-small__image--big-top-left project-details-small__desktop-only">
+    <div class="project-details-small__image project-details-small__image--big-top-left project-details-small__desktop-only fade-in">
       <?php if ($image_big_top_left) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_big_top_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
@@ -33,7 +33,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     </div>
 
     <!-- Big Top Right Image (desktop only individual placement) -->
-    <div class="project-details-small__image project-details-small__image--big-top-right project-details-small__desktop-only">
+    <div class="project-details-small__image project-details-small__image--big-top-right project-details-small__desktop-only fade-in">
       <?php if ($image_big_top_right) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_big_top_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
@@ -104,7 +104,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     </div>
 
     <!-- Small Images Bottom -->
-    <div class="project-details-small__image project-details-small__image--small-bottom">
+    <div class="project-details-small__image project-details-small__image--small-bottom fade-in">
       <?php if ($images_small_bottom) : ?>
         <?php foreach ($images_small_bottom as $image) : ?>
           <div class="project-details-small__image--small-bottom__item">

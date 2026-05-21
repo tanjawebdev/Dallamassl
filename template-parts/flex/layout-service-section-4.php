@@ -54,7 +54,7 @@ $service = $service_id ? get_term($service_id) : null;
       $right_url = get_permalink($right_id);
     ?>
       <?php if ($right_image_acf) : ?>
-        <a href="<?php echo esc_url($right_url); ?>" class="service-section-4__project-teaser">
+        <a href="<?php echo esc_url($right_url); ?>" class="service-section-4__project-teaser fade-in">
           <div class="service-section-4__project-image hover-round">
             <?php echo wp_get_attachment_image($right_image_acf['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
           </div>

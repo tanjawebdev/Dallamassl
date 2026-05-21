@@ -77,7 +77,7 @@ $moodtexts = get_sub_field('moodtexts');
         $mobile_image_acf  = $mobile_image_acf  ?: $desktop_image_acf;
 
       ?>
-        <div class="project-overview__teaser project-overview__teaser--pos-<?php echo $position; ?>">
+        <div class="project-overview__teaser project-overview__teaser--pos-<?php echo $position; ?> fade-in">
           <a href="<?php echo esc_url($project_url); ?>" class="project-overview__link">
             <?php if ($desktop_image_acf || $mobile_image_acf) : ?>
               <div class="project-overview__image hover-round">

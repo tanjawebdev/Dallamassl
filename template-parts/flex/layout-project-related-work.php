@@ -63,7 +63,7 @@ if ($prev_post || $next_post) :
               $prev_thumbnail_acf = get_field('featured_image_landscape', $prev_post->ID);
             ?>
               <a href="<?php echo get_permalink($prev_post->ID); ?>" class="project-related-work__link">
-                <div class="project-related-work__image hover-round <?php echo !$prev_thumbnail_acf ? 'project-related-work__image--placeholder' : ''; ?>">
+                <div class="project-related-work__image fade-in hover-round <?php echo !$prev_thumbnail_acf ? 'project-related-work__image--placeholder' : ''; ?>">
                   <?php if ($prev_thumbnail_acf) : ?>
                     <?php echo wp_get_attachment_image($prev_thumbnail_acf['ID'], 'medium_size', false, ['class' => 'img-fluid', 'loading' => 'lazy']); ?>
                   <?php endif; ?>
@@ -92,7 +92,7 @@ if ($prev_post || $next_post) :
               $next_thumbnail_acf = get_field('featured_image_landscape', $next_post->ID);
               ?>
                 <a href="<?php echo get_permalink($next_post->ID); ?>" class="project-related-work__link">
-                  <div class="project-related-work__image hover-round <?php echo !$next_thumbnail_acf ? 'project-related-work__image--placeholder' : ''; ?>">
+                  <div class="project-related-work__image fade-in hover-round <?php echo !$next_thumbnail_acf ? 'project-related-work__image--placeholder' : ''; ?>">
                     <?php if ($next_thumbnail_acf) : ?>
                       <?php echo wp_get_attachment_image($next_thumbnail_acf['ID'], 'medium_size', false, ['class' => 'img-fluid', 'loading' => 'lazy']); ?>
                     <?php endif; ?>

@@ -15,7 +15,7 @@ $image = get_sub_field('image');
 
     <!-- Large Image Center (1:1) -->
     <?php if ($image) : ?>
-      <div class="about-section-4__image">
+      <div class="about-section-4__image fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
         </picture>

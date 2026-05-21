@@ -12,7 +12,7 @@ $image = get_sub_field('image');
   <div class="project-one-big-image__grid">
     
     <?php if ($image) : ?>
-      <div class="project-one-big-image__image">
+      <div class="project-one-big-image__image fade-in">
         <picture>
           <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
         </picture>

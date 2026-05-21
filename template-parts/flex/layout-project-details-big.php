@@ -22,7 +22,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
   <div class="project-details-big__grid">
     
     <!-- Big Top Left Image (desktop: grid-positioned individually) -->
-    <div class="project-details-big__image project-details-big__image--big-top-left project-details-big__desktop-only">
+    <div class="project-details-big__image project-details-big__image--big-top-left project-details-big__desktop-only fade-in">
       <?php if ($image_big_top_left) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_big_top_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
@@ -38,7 +38,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     </div>
 
     <!-- Small Top Right Image (hidden on mobile via CSS) -->
-    <div class="project-details-big__image project-details-big__image--small-top-right">
+    <div class="project-details-big__image project-details-big__image--small-top-right fade-in">
       <?php if ($image_small_top_right) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_small_top_right['ID'], 'small_size', false, ['loading' => 'lazy']); ?>
@@ -47,7 +47,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     </div>
 
     <!-- Big Top Right Image (desktop: grid-positioned individually) -->
-    <div class="project-details-big__image project-details-big__image--big-top-right project-details-big__desktop-only">
+    <div class="project-details-big__image project-details-big__image--big-top-right project-details-big__desktop-only fade-in">
       <?php if ($image_big_top_right) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_big_top_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
@@ -111,7 +111,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     </div>
 
     <!-- Big Bottom Left Image (desktop only individual) -->
-    <div class="project-details-big__image project-details-big__image--big-bottom-left project-details-big__desktop-only">
+    <div class="project-details-big__image project-details-big__image--big-bottom-left project-details-big__desktop-only fade-in">
       <?php if ($image_big_bottom_left) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_big_bottom_left['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
@@ -120,7 +120,7 @@ $locations = get_the_terms(get_the_ID(), 'location');
     </div>
 
     <!-- Big Bottom Right Image (desktop only individual) -->
-    <div class="project-details-big__image project-details-big__image--big-bottom-right project-details-big__desktop-only">
+    <div class="project-details-big__image project-details-big__image--big-bottom-right project-details-big__desktop-only fade-in">
       <?php if ($image_big_bottom_right) : ?>
         <picture>
           <?php echo wp_get_attachment_image($image_big_bottom_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
