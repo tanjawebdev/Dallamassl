@@ -1,44 +1,103 @@
-.project-hero-big-left {
-    @include media-breakpoint-up(lg) {
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column;
-        gap: 8rem;
-        padding-top: 25rem;
-        padding-right: 6%;
+// ============================================================
+// Project Hero — Big Image (Landscape right, small portrait left)
+// Layout (desktop):
+//   col 2-4              | col 5-12 (big landscape image)
+//   [title               ] [                               ]
+//   [                    ] [                               ]
+//   [small portrait img  ] [                               ]
+// ============================================================
+
+.project-hero-big-image>.container-lg {
+    @include media-breakpoint-down(lg) {
+        padding: 0;
+        margin-top: 3rem;
     }
+}
+
+.project-hero-big-image__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 1fr auto;
+    gap: 0 2rem;
+    min-height: 60vh;
 
     @include media-breakpoint-down(lg) {
-        padding: 0 5px;
-        margin-top: 4rem;
+        grid-template-columns: 1fr;
+        min-height: unset;
+        gap: 1.5rem;
     }
 }
 
-.project-hero-big-left-text h1 {
-    @include media-breakpoint-up(lg) {
-        margin-bottom: 4rem;
+// Title — left column, top
+.project-hero-big-image__title {
+    grid-column: 2 / 5;
+    grid-row: 1;
+    align-self: center;
+
+    @include media-breakpoint-down(lg) {
+        grid-column: 1;
+        grid-row: 1;
+        padding-top: 2rem;
+    }
+
+    h1 {
+        margin: 0;
     }
 }
 
-.project-hero-big-left-image {
-    display: none;
+// Small portrait image — left column, bottom
+.project-hero-big-image__small-image {
+    grid-column: 3;
+    grid-row: 2/4;
 
-    @include media-breakpoint-up(lg) {
-        width: 50%;
+    @include media-breakpoint-down(lg) {
+        display: none; // hidden on mobile per original design
+    }
+
+    picture {
         display: block;
+        position: relative;
+        padding-top: 150%;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 
-.project-hero-big-left-image picture {
-    padding-top: 150%;
-}
+// Main landscape image — right column, spans both rows
+.project-hero-big-image__main-image {
+    grid-column: 5 / 12;
+    grid-row: 1 / 3;
+    align-self: stretch;
 
-.project-hero-big-right {
     @include media-breakpoint-down(lg) {
-        padding: 0 5px;
+        grid-column: 1;
+        grid-row: 2;
     }
-}
 
-.project-hero-big-right picture {
-    padding-top: 66%;
+    picture {
+        display: block;
+        position: relative;
+        height: 100%;
+        padding-top: 66%;
+
+        @include media-breakpoint-down(lg) {
+            height: auto;
+            padding-top: 66%;
+        }
+
+        img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
