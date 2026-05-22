@@ -1,7 +1,8 @@
 <?php
 // Get ACF fields
 $image_bottom_left = get_sub_field('image_bottom-left');
-$image_bottom_right = get_sub_field('image_bottom-right');
+$image_bottom_right = get_sub_field('image_bottom-right');  
+$text = get_sub_field('text');
 ?>
 
 <section class="project-two-big-images-2">
@@ -23,6 +24,10 @@ $image_bottom_right = get_sub_field('image_bottom-right');
           <?php echo wp_get_attachment_image($image_bottom_right['ID'], 'medium_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
+    <?php endif; ?>
+
+    <?php if ($text) : ?>
+      <div class="project-two-big-images-2__text"><?php echo $text; ?></div>
     <?php endif; ?>
 
   </div>

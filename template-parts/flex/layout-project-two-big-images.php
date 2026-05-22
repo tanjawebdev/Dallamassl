@@ -7,6 +7,8 @@
 // Get ACF fields
 $left_image = get_sub_field('left_image');
 $right_image = get_sub_field('right_image');
+$text = get_sub_field('text');
+
 ?>
 
 <section class="project-two-big-images">
@@ -28,6 +30,10 @@ $right_image = get_sub_field('right_image');
           <?php echo wp_get_attachment_image($right_image['ID'], 'large_size', false, ['loading' => 'lazy']); ?>
         </picture>
       </div>
+    <?php endif; ?>
+
+    <?php if ($text) : ?>
+      <div class="project-two-big-images__text"><?php echo $text; ?></div>
     <?php endif; ?>
 
   </div>
