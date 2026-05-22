@@ -13,10 +13,10 @@
 
 .fade-in {
     opacity: 0;
-    transform: translateY(10rem);
+    transform: translateY(8rem);
     transition:
-        opacity 1s ease-in,
-        transform 1s ease-out;
+        opacity 0.2s ease-in,
+        transform 0.6s ease-out;
 
     &.is-visible {
         opacity: 1;
