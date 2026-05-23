@@ -228,6 +228,10 @@
             background: none !important;
             color: $primary !important;
         }
+
+        &:active {
+            background-color: none !important;
+        }
     }
 
     // Hide WPForms branding/recaptcha if present
