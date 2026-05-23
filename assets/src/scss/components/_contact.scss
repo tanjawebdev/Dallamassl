@@ -84,6 +84,11 @@
 
     .wpforms-field-container {
         position: relative;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 30vh !important;
+        }
+
     }
 
     .wpforms-field {
@@ -159,6 +164,8 @@
             min-height: 15vw !important;
         }
     }
+
+
 
     .wpforms-field-text,
     .wpforms-field-email,
