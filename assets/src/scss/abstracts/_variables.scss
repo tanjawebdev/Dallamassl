@@ -11,7 +11,7 @@
  * @see https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
  */
 $font-size-root: 62.5%; // 1rem = 10px
-$font-size-base: 1.8rem;
+$font-size-base: 1.7rem;
 $line-height-base: 1.35;
 $font-weight-base: 400;
 $font-family-sans-serif: 'neue-haas-unica', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -75,10 +75,10 @@ $container-max-widths: (
 );
 
 // Convenience variables for use in calc()
-$container-max-width-lg:    map-get($container-max-widths, lg);    // 960px
-$container-max-width-xl:    map-get($container-max-widths, xl);    // 1140px
-$container-max-width-xxl:   map-get($container-max-widths, xxl);   // 1440px
-$container-max-width-xxxl:  map-get($container-max-widths, xxxl);  // 1640px
+$container-max-width-lg: map-get($container-max-widths, lg); // 960px
+$container-max-width-xl: map-get($container-max-widths, xl); // 1140px
+$container-max-width-xxl: map-get($container-max-widths, xxl); // 1440px
+$container-max-width-xxxl: map-get($container-max-widths, xxxl); // 1640px
 $container-max-width-xxxxl: map-get($container-max-widths, xxxxl); // 1770px
 
 $spacers: (
