@@ -49,7 +49,7 @@
         <div class="footer-logo-large">
            <img src="<?php echo get_template_directory_uri(); ?>/static/img/dm-logo-white.svg" alt="Dallamassl">
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright test">
           <span class="h4">COPYRIGHT, <?php echo date('Y'); ?></span>
         </div>
       </div>
