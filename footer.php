@@ -22,7 +22,7 @@
 
         <!-- Column 3: Tagline + Legal Menu -->
         <div class="footer-column footer-legal-column col-md-3">
-          <p class="footer-subtitle">Mitglied der Ingenieursbüros<br>für Innenarchitektur</p>
+          <p class="footer-subtitle">Mitglied der Ingenieurbüros<br>für Innenarchitektur</p>
           <?php 
           wp_nav_menu( array( 
             'theme_location' => 'menu-legal', 
