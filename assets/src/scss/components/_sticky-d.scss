@@ -30,6 +30,9 @@
     }
 
     svg {
+        width: 80px;
+        height: auto;
+
         @include media-breakpoint-down(lg) {
             width: 8%;
             height: auto;
@@ -40,7 +43,7 @@
 .sticky-d-text {
     position: relative;
     top: 0;
-    left: 18rem;
+    left: 12rem;
     width: 50%;
 
     @include media-breakpoint-down(lg) {
