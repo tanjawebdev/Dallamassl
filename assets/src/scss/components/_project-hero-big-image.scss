@@ -42,6 +42,10 @@
 
     h1 {
         margin: 0;
+
+        @include media-breakpoint-up(xxxl) {
+            line-height: 1.5em;
+        }
     }
 }
 
