@@ -78,7 +78,6 @@ if ($prev_post || $next_post) :
       </div>
 
       <div class="col-12 col-md-4 project-related-work__text-wrapper">
-        <h4 class="project-related-work__title">RELATED WORK</h4>
         <h3 class="project-related-work__tagline">
           <p>THE <br>ESSENCE <br>OF ROOMS</p>
         </h3>
