@@ -32,7 +32,7 @@
 
 // Milestones (middle, numbered list)
 .home-service-teaser__milestones {
-    grid-column: 3/6;
+    grid-column: 3/7;
     grid-row: 3;
     align-self: center;
 
@@ -56,6 +56,10 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 0.75rem;
+}
+
+.home-service-teaser__milestone-number {
+    min-width: 4rem;
 }
 
 // Subheadline (top right)
